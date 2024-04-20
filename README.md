@@ -110,6 +110,9 @@ The same testbench can be used to verify RTL and Synthesized Netlist.
 
 <img width="800" alt="intro_yosys" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0920be6f-770d-447d-a2cf-eaf73280539e">
 
+## Introduction to Logic Synthesis
+
+
 
 
 
