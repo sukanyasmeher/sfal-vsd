@@ -33,6 +33,11 @@ $ sudo apt install gtkwave
 # Day 1 - Introduction to Verilog RTL Design and Synthesis
 ## Introduction to open-source simulator Iverilog
 
+Folder structure of the git clone:
+- lib - will contain sky130 standard cell library
+- my_lib/verilog_models - will contain standard cell verilog model
+- verilog_files -contains the lab experiments source files
+  
 Example of a design good_mux.v 
 
 ```
