@@ -20,7 +20,7 @@ $ sudo apt-get install iverilog
 ```
 <img width="702" alt="iverilog" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e660c9fc-0d6d-4ab7-b75f-9992133771ef">
 
-## gtkwave
+## GTKWave
 ```
 $ sudo apt update
 $ sudo apt install gtkwave
@@ -93,6 +93,7 @@ iverilog good_mux.v tb_good_mux.v
 ```
 The output of the iverilog is a .vcd file and a.out file is created. By executing a.out iverilog dump the vcd file.
 
+## Introduction to GTKWave
 gtkwave will be used to generate the waveforms and display in visual format.
 
 Command to view the vcd file in gtkwave 
@@ -113,6 +114,8 @@ The same testbench can be used to verify RTL and Synthesized Netlist.
 ## Introduction to Logic Synthesis
 
 <img width="611" alt="intro_logic_synthesis1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d01c7771-7bb7-42cd-b7a1-24472ca61226">
+
+## Lab using Yosys and Sky130 PDKs
 
 
 
