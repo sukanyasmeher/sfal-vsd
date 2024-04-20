@@ -37,7 +37,10 @@ Folder structure of the git clone:
 - lib - will contain sky130 standard cell library
 - my_lib/verilog_models - will contain standard cell verilog model
 - verilog_files -contains the lab experiments source files
-  
+
+<img width="762" alt="intro_iverilog" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ceceb871-47f9-4edc-8ec7-ac273dc5352c">
+
+
 Example of a design good_mux.v 
 
 ```
@@ -96,3 +99,16 @@ Command to view the vcd file in gtkwave
 ```
 gtkwave tb_good_mux.vcd
 ```
+The waveform in gtwave is shown below
+
+<img width="993" alt="lab1-gtkwave" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2f27e5f2-6c6c-491a-b6be-8c8974ed1303">
+
+## Introduction to Yosys
+It is the synthesizer used to convert RTL to netlist.
+Netlist should be the same as the Design but represented in the form of standard cells.
+
+<img width="800" alt="intro_yosys" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0920be6f-770d-447d-a2cf-eaf73280539e">
+
+
+
+
