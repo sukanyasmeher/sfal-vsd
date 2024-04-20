@@ -106,6 +106,7 @@ The waveform in gtwave is shown below
 ## Introduction to Yosys
 It is the synthesizer used to convert RTL to netlist.
 Netlist should be the same as the Design but represented in the form of standard cells.
+The same testbench can be used to verify RTL and Synthesized Netlist.
 
 <img width="800" alt="intro_yosys" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0920be6f-770d-447d-a2cf-eaf73280539e">
 
