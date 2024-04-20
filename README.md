@@ -1,5 +1,5 @@
 # sfal-vsd
-# Tools Installation
+# Day 0 - Tools Installation
 ## Yosys
 ```
 $ git clone https://github.com/YosysHQ/yosys.git
