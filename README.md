@@ -130,13 +130,23 @@ The same testbench can be used to verify RTL and Synthesized Netlist.
 Libraries are characterized based on PVT (process, voltage, temperature) \
 Process -> Variations due to fabrication \
 Voltage -> Variations due to voltage \
-Temperature -> Variations due to temperature \
+Temperature -> Variations due to temperature 
 
 As seen in the screenshot below \
-tt stands typical in the .lib name \
-025C stands temperature in the .lib name \
+tt stands for typical in the .lib name \
+025C stands for temperature of 25 C in the .lib name \
+1v80 stands for voltage of 1.8V in the .lib name
 
 <img width="903" alt="libertyfile1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4d70123b-e2a7-406b-9d19-9f7bfc958840">
+
+-cell defines the beginning of the cell. Other information of cells mentioned are:
+- Leakage power based on the combination of inputs
+- Area
+- Power ports
+- Input capacitance
+- Power associated with the pin
+- Transition
+- Delay
 
 
 
