@@ -169,9 +169,12 @@ Screenshot shows the command, synthesized netlist and the logical diagram.
 <img width="1534" alt="multiplemodulesflat1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b9045858-4928-4503-9fdf-597848406a43">
 
 ### Sub-module Level Synthesis
+RTL (Register Transfer Level) designs are often modular, with various functional blocks or sub-modules. Sub-module level synthesis allows each of these sub-modules to be synthesized independently.
 
-Why is the sub-module level synthesis necessary ?
-
+Why is the sub-module level synthesis necessary?
+- Optimization and Area Reduction: By synthesizing sub-modules separately, the synthesis tool can optimize each one individually. It performs logic optimization, technology mapping, and area minimization for each sub-module. This leads to more efficient use of resources and reduced overall chip area.
+- Resuability: Each submodule can be designed, verified, and optimized independently. They can be re-used in a large design multiple times saving time and enhancing efficiency. 
+- Parallel Processing: Sub-module level synthesis enables parallel processing. Different sub-modules can be synthesized concurrently, improving efficiency. For large designs, parallel synthesis significantly reduces turnaround time.
 
 
 
