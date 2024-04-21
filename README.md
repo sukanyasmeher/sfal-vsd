@@ -148,6 +148,13 @@ tt stands for typical in the .lib name \
 - Transition
 - Delay
 
+## Hierarchical vs Flat Synthesis
+
+Report after synthesizing multiple_modules.v. As shown below the sub_modules statistics are printed. For example, sub-module1 has 1 AND gate and sub-module2 has 1 OR gate. This is an example of Hierarchical Synthesis.
+
+<img width="1284" alt="multiplemodules1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a3fe130b-84ba-4605-9bb5-b6ea0600162f">
+
+
 
 
 
