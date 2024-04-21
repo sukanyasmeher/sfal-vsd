@@ -124,7 +124,9 @@ The same testbench can be used to verify RTL and Synthesized Netlist.
 
 <img width="636" alt="show_logic" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/19d70533-9d4e-4cec-81c5-7ad2fafc381f">
 
-# Day 2 - Timing libs, hierarchical vs flat synthesis and efficient flop coding styles
+# Day 2 - Timing libs, Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles
+
+
 
 
 
