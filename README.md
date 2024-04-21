@@ -150,6 +150,7 @@ tt stands for typical in the .lib name \
 
 ## Hierarchical vs Flat Synthesis
 
+### Hierarchical Synthesis
 Report after synthesizing multiple_modules.v. As shown below the sub_modules statistics are printed. For example, sub-module1 has 1 AND gate and sub-module2 has 1 OR gate. This is an example of Hierarchical Synthesis.
 
 <img width="1284" alt="multiplemodules1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a3fe130b-84ba-4605-9bb5-b6ea0600162f">
@@ -160,11 +161,17 @@ Hierarchy is preserved. sub_module1 and sub_module2 are instantiated separately 
 
 If we look into the sub_module2 in synthesized netlist 'multiple_modules_hier.v', we see that rather than OR gate, the inputs a & b, pass through the inverter and then NAND gate. It is because in CMOS, stacking PMOS, which happens in 'OR' gate is bad as PMOS has lower mobility and always have to be wider to get some meaningful output. Next step is to check .lib file for the answer.
 
+### Flat Synthesis
 The design can be flattened by using the command flatten.
 
 Screenshot shows the command, synthesized netlist and the logical diagram.
 
 <img width="1534" alt="multiplemodulesflat1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b9045858-4928-4503-9fdf-597848406a43">
+
+### Sub-module Level Synthesis
+
+Why is the sub-module level synthesis necessary ?
+
 
 
 
