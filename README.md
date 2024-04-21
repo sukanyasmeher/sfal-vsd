@@ -176,8 +176,17 @@ Why is the sub-module level synthesis necessary?
 - Resuability: Each submodule can be designed, verified, and optimized independently. They can be re-used in a large design multiple times saving time and enhancing efficiency. 
 - Parallel Processing: Sub-module level synthesis enables parallel processing. Different sub-modules can be synthesized concurrently, improving efficiency. For large designs, parallel synthesis significantly reduces turnaround time.
 
+The commands to run sub-module synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog multiple_modules.v
+synth -top sub_module1
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
 
-
+The screenshot shows that when sub_module1 is synthesized, only AND gate is generated. 
+<img width="1003" alt="submodulesynth" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1e3c7a7e-7ae2-41af-89ce-27e3b7a198ec">
 
 
 
