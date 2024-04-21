@@ -126,6 +126,19 @@ The same testbench can be used to verify RTL and Synthesized Netlist.
 
 # Day 2 - Timing libs, Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles
 
+## Introduction to timing .libs
+Libraries are characterized based on PVT (process,voltage,temperature)
+Process -> Variations due to fabrication
+Voltage -> Variations due to voltage
+Temperature -> Variations due to temperature
+
+As seen in the screenshot below
+tt -> typical
+025C -> temperature 
+
+<img width="903" alt="libertyfile1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4d70123b-e2a7-406b-9d19-9f7bfc958840">
+
+
 
 
 
