@@ -188,6 +188,17 @@ show
 The screenshot shows that when sub_module1 is synthesized, only AND gate is generated. 
 <img width="1003" alt="submodulesynth" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1e3c7a7e-7ae2-41af-89ce-27e3b7a198ec">
 
+## Various Flop Coding Styles and Optimization
+
+### Why do we need flops and how do they prevent glitches in the circuit?
+
+Glitches can occur in digital circuits due to various reasons such as signal delays, noise, or timing issues. Flops prevent glitches during the operation in the following ways:
+- Synchronization: Flops are edge-triggered devices, meaning they respond only to transitions of the input signal (e.g., rising edge, falling edge). This synchronization ensures that the output changes only at specific points, reducing the likelihood of glitches caused by transient signal variations.
+- Timing Control: Flops are typically controlled by a clock signal, which ensures that all the operations within a circuit occur synchronously. This eliminates timing issues that could lead to glitches due to data arriving at different times.
+
+<img width="846" alt="flops1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/32aab966-261a-4e42-9f49-59572586cd0f">
+
+
 
 
 
