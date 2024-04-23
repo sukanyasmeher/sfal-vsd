@@ -221,6 +221,9 @@ show
 ```
 <img width="1142" alt="dff_asyncres_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1beb6298-6b1c-4c6b-a2dd-ac28de40f108">
 
+On synthesizing DFF with synchronous reset we get AND gate with inverted `reset` as shown in the screenshot below. However, on evaluating the boolean expression, we reached the same logic realization. 
+
+
 
 
 
