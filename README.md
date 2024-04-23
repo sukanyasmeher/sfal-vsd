@@ -198,6 +198,12 @@ Glitches can occur in digital circuits due to various reasons such as signal del
 
 <img width="846" alt="flops1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/32aab966-261a-4e42-9f49-59572586cd0f">
 
+To initialize flops, we need set and reset which can be synchronous or asynchronous.
+
+<img width="775" alt="syn_async_reset_flop1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/338b941f-4a51-4cf3-9289-f344afac2922">
+
+<img width="967" alt="sync_async_reset_flop2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/22ef5caa-be1d-4cfe-be44-b1dc7083c377">
+
 
 
 
