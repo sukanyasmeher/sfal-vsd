@@ -219,6 +219,7 @@ dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
+<img width="1142" alt="dff_asyncres_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1beb6298-6b1c-4c6b-a2dd-ac28de40f108">
 
 
 
