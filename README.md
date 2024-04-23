@@ -34,9 +34,9 @@ $ sudo apt install gtkwave
 ## Introduction to open-source simulator Iverilog
 
 Folder structure of the git clone:
-- lib - will contain sky130 standard cell library
-- my_lib/verilog_models - will contain standard cell verilog model
-- verilog_files -contains the lab experiments source files
+- `lib` - will contain sky130 standard cell library
+- `my_lib/verilog_models` - will contain standard cell verilog model
+- `verilog_files` -contains the lab experiments source files
 
 <img width="762" alt="intro_iverilog" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ceceb871-47f9-4edc-8ec7-ac273dc5352c">
 
@@ -198,15 +198,28 @@ Glitches can occur in digital circuits due to various reasons such as signal del
 
 <img width="846" altthe ="flops1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/32aab966-261a-4e42-9f49-59572586cd0f">
 
-To initialize flops, we need to set and reset which can be synchronous or asynchronous.
+### Different types of flops
+To initialize flops, we need to `set` and `reset` which can be synchronous or asynchronous.
 
 <img width="775" alt="syn_async_reset_flop1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/338b941f-4a51-4cf3-9289-f344afac2922">
 
 <img width="967" alt="sync_async_reset_flop2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/22ef5caa-be1d-4cfe-be44-b1dc7083c377">
 
-The screenshot below shows DFF with asynchronous reset HDL simulation in Iverilog and  waveform display in GTKwave. Irrespective of the clock and d, as soon as async_rest=1, q=0.
+The screenshot below shows DFF with asynchronous reset HDL simulation in Iverilog and  waveform display in GTKwave. Irrespective of the clock and d, as soon as async_reset=1, q=0.
 
 <img width="1011" alt="async_reset_flop_hdl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4f4c5e04-85c9-4492-90cd-00a6dddcbbb3">
+
+### Synthesizing flops
+The command to synthesize DFF with asynchronous reset as an example
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_asyncres.v
+synth -top dff_asyncres
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
 
 
 
