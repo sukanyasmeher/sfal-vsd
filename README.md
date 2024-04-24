@@ -222,12 +222,18 @@ show
 <img width="1142" alt="dff_asyncres_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1beb6298-6b1c-4c6b-a2dd-ac28de40f108">
 
 
-On synthesizing ***DFF with synchronous reset*** we get NOR gate with inverted `d` as shown in the screenshot below. However, on evaluating the boolean expression, we reached the same logic realization. 
+On synthesizing ***DFF with synchronous reset*** we get NOR gate with inverted `d` as shown in the screenshot below. However,on evaluating the boolean expression, we reached the same logic realization. 
 
 
 <img width="1211" alt="dff_sync_reset1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/45f7fc3b-d87f-43bc-94fd-0d9f3870382f">
 
 <img alt="dff_sync_reset2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/81c0b90f-06af-4ee9-9f10-b8f4f8f743a7" width="700" height="500">
+
+Using the `stat` command, all the cells used for logic synthesis are visible even though it is not evident from the statistics of doing synthesis.
+
+<img width="572" alt="dff_syncres2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/15ff7c0a-cec7-4aac-8385-a0b59f99ec04">
+
+
 
 ### Synthesizing mult2 (multiply by 2)
 
