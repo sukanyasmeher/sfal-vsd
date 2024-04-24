@@ -210,7 +210,7 @@ The screenshot below shows DFF with asynchronous reset HDL simulation in Iverilo
 <img width="1011" alt="async_reset_flop_hdl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4f4c5e04-85c9-4492-90cd-00a6dddcbbb3">
 
 ### Synthesizing flops
-The command to synthesize DFF with asynchronous reset as an example
+The command to synthesize ***DFF with asynchronous reset*** as an example
 ```
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_asyncres.v
@@ -221,7 +221,21 @@ show
 ```
 <img width="1142" alt="dff_asyncres_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1beb6298-6b1c-4c6b-a2dd-ac28de40f108">
 
-On synthesizing DFF with synchronous reset we get AND gate with inverted `reset` as shown in the screenshot below. However, on evaluating the boolean expression, we reached the same logic realization. 
+
+On synthesizing ***DFF with synchronous reset*** we get NOR gate with inverted `d` as shown in the screenshot below. However, on evaluating the boolean expression, we reached the same logic realization. 
+
+
+<img width="1211" alt="dff_sync_reset1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/45f7fc3b-d87f-43bc-94fd-0d9f3870382f">
+
+<img alt="dff_sync_reset2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/81c0b90f-06af-4ee9-9f10-b8f4f8f743a7" width="700" height="500">
+
+### Synthesizing mult2 (multiply by 2)
+
+Multiplication by 2 is the same as appending input with 0 i.e., {input,0}. This is also equal to left shift the bits by 1. So we expect no hardware which is also seen in the screenshot below, analysis after synthesis and show. The command 'abc' is not required for mapping when there is no cell.
+
+<img width="980" alt="mult2_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4114bda3-89f7-4109-b326-927704e597b1">
+
+
 
 
 
