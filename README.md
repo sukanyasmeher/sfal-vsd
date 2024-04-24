@@ -231,9 +231,19 @@ On synthesizing ***DFF with synchronous reset*** we get NOR gate with inverted `
 
 ### Synthesizing mult2 (multiply by 2)
 
-Multiplication by 2 is the same as appending input with 0 i.e., {input,0}. This is also equal to left shift the bits by 1. So we expect no hardware which is also seen in the screenshot below, analysis after synthesis and show. The command 'abc' is not required for mapping when there is no cell.
+Multiplication by 2 is the same as appending input with 0 i.e., {input,0}. This is also equal to left shift the input bits by 1. So we expect no hardware which is also seen in the screenshot below, analysis after synthesis and show. The command 'abc' is not required for mapping when there are no cells.
 
-<img width="980" alt="mult2_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4114bda3-89f7-4109-b326-927704e597b1">
+<img width="972" alt="mult2_syn2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d2cd1b79-d13b-4478-83f3-e73f16a7fce9">
+
+### Synthesizing mult9 (multiply by 9 or 8+1)
+
+Multiplication by 9 is the same as appending input with 000 and adding input again i.e., {input,000 + input}. This is also equal to left shift the input bits by 3 and add the input again. So we expect no hardware which is also seen in the screenshot below, analysis after synthesis and show. The command 'abc' is not required for mapping when there are no cells.
+
+<img width="918" alt="mult8_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dd1b4634-50ed-4229-9d82-80689bafb7e7">
+
+
+
+
 
 
 
