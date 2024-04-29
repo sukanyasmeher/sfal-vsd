@@ -253,17 +253,26 @@ So we expect no hardware which is also seen in the screenshot below, analysis af
 
 <img width="918" alt="mult8_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dd1b4634-50ed-4229-9d82-80689bafb7e7">
 
-# Day 3 - Combinational and Sequential Optmizations
+# Day 3 - Combinational and Sequential Optimizations
 
 ## Introduction to Optimizations
 
 ### Combinational Logic Optimization
-It means squeezing the logic to get the most optimized design in terms of area and power. the most commnly used techniques are:
+It means squeezing the logic to get the most optimized design in terms of area and power. the most commonly used techniques are:
 1) Constant propagation using direct optimization
 2) Boolean logic optimization using K-map and Quine McKlusky
 
-An example of contant propagation optimization is highlighted below.
+An example of constant propagation optimization is highlighted below.
 <img width="618" alt="1_const_prop" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c8bd1118-52f7-441b-8cff-254d851cb892">
+
+An example of boolean optimization is highlighted below.
+
+<img width="619" alt="2-boolean-opt" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/aa864102-ef33-4d45-9ec9-929738172cd4">
+
+### Sequential Logic Optimization
+
+
+
 
    
 
