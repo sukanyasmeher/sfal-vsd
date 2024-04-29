@@ -270,6 +270,17 @@ An example of boolean optimization is highlighted below.
 <img width="619" alt="2-boolean-opt" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/aa864102-ef33-4d45-9ec9-929738172cd4">
 
 ### Sequential Logic Optimization
+The technqiues used are:
+1) Basic
+   - Sequential constant propagation
+2) Advanced (not covered as part of lab)
+   - Static optimization
+   - Retiming
+   - Sequential logic cloning (floorplan aware synthesis)
+
+An example of sequential constant propagation is highlighted below of DFF with asynchronous reset where D input is grounded. To note, the same technique cannot be applied to DFF with the asynchronous set because while `Q=1` when `Set=1`, but `Q=0` at `Set=0` at the next CLK pulse. Q is dependent not only on Set but also on the clock edge.
+
+<img width="629" alt="3-seq-const-prop" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3e31a212-a0b0-42c3-be92-d0075a9f7d1c">
 
 
 
