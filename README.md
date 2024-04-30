@@ -579,14 +579,17 @@ As shown in the screenshot below, `always` block is evaluated only when `sel` is
  - Executes the statements in the order it is written inside always block
  - So the first statement is evaluated before the second statement
 
-   The left side of the screenshot below gives us correct execution. While the right side can lead to serious issues as `d` is assigned to `q` directly.
-   
-   <img width="537" alt="3-blocking-statement" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1e0a7902-da94-46d6-8443-5e484291e34d">
-
-
 ##### Non-Blocking Statements
 - Represented by `<=`
 - Executes all the RHS when always block is entered and assigns to LHS
+- Parallel execution
+
+   The left side of the screenshot below gives us the correct execution. While the right side can lead to serious issues as `d` is assigned to `q` directly. So choosing non-blocking statements is best practice (highlighted in the screenshot below).
+
+<img width="612" alt="4-blocking-statement" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/bde53551-9858-4eee-afd2-f37cd0dff762">
+
+
+
  
 </details>
 
