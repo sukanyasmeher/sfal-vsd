@@ -636,6 +636,10 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
 ./a.out
 gtkwave tb_ternary_operator_mux.vcd
 ```
+The GLS output is shown below.
+<img width="982" alt="8-ternary-op-mux" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7c1e66fd-c9dd-40be-9112-9e33da3e5ebb">
+
+
 
 </details>
 
