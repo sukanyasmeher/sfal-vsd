@@ -526,7 +526,7 @@ We see only 3 flops after the synthesis and also seen in synthesis report after 
 
 <img width="1167" alt="21-counter-opt2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/11cd582b-4ccd-4b99-82e2-1c68c92db131">
 
- <details> # Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+ < # Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch >
 
 ## GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements
 
