@@ -286,6 +286,25 @@ Retiming is a technique to improve the performance of the circuit.
 
 <img width="600" alt="4-seq-adv" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/23bcc15c-813b-496a-aebf-ebbf5ceba557">
 
+## Combinational Logic Optimizations
+Syntax for opt_check.v
+```
+module opt_check (input a , input b , output y);
+        assign y = a?b:0;
+endmodule
+```
+Syntax for opt_check2.v
+```
+module opt_check2 (input a , input b , output y);
+        assign y = a?1:b;
+endmodule
+
+```
+For opt_check.v the assignment `y = a?b:0` reduces to `y = ab`. For opt_check.v the assignment `y = a?1:b` reduces to `y = a + b`. The screenshot shown below explains this
+
+
+## Sequential Logic Optimizations
+
 
 
 
