@@ -364,6 +364,28 @@ The logic implementation after synthesis for multiple_module_opt.v is shown belo
 
 ## Sequential Logic Optimizations
 
+Both the dff_const1.v and dff_const2 are explained below.
+
+<img width="851" alt="12-dff-const1-const2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b9bede59-edaa-4f4f-ad90-9036c63aa4da">
+
+### Optimizing dff_const1.v
+
+Syntax for dff_const1.v
+```
+module dff_const1(input clk, input reset, output reg q);
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b0;
+	else
+		q <= 1'b1;
+end
+
+endmodule
+```
+For dff_const1.v, `q=0` as long as `reset=1`. However, when `reset=0` `q` doesn't immediately becomes `1` rather at the next rising edge of the `clk` as shown below.
+
+<img width="998" alt="11-dff-const1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b046fd71-f0bd-4b79-9345-81ace8795e11">
 
 
 
