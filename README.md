@@ -383,11 +383,11 @@ end
 
 endmodule
 ```
-For dff_const1.v, `q=0` as long as `reset=1`. However, when `reset=0` `q` doesn't immediately becomes `1` rather at the next rising edge of the `clk` as shown below.
+For dff_const1.v, `q=0` as long as `reset=1`. However, when `reset=0` `q` doesn't immediately becomes `1` rather at the next rising edge of the `clk` as shown below. ***So the optimization cannot be applied***.
 
 <img width="998" alt="11-dff-const1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b046fd71-f0bd-4b79-9345-81ace8795e11">
 
-The commands to run synthesis
+The commands to run the synthesis
 ```
 read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog dff_const1.v
@@ -397,12 +397,58 @@ abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 show
 ```
 
-
 The logic implementation after synthesis for dff_const1.v is shown below.
 
 <img width="1680" alt="13-dff-const1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dcde9e56-06b9-4b20-9b7c-4e44477df7ba">
 
-<complete dff_const2,3,4>
+***complete dff_const2,4,5***
+
+### Optimizing dff_const3.v
+
+Syntax for dff_const3.v
+```
+module dff_const3(input clk, input reset, output reg q);
+reg q1;
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+	begin
+		q <= 1'b1;
+		q1 <= 1'b0;
+	end
+	else
+	begin
+		q1 <= 1'b1;
+		q <= q1;
+	end
+end
+
+endmodule
+```
+For dff_const3.v, there are two flops.  `q1=0` as long as `reset=1`. However, when `reset=0` `q1` doesn't immediately becomes `1` rather at the next rising edge of the `clk` with some propagation delay as shown below. `q=1` as long as `reset=1`, acting as `set` rather than `reset`. However, when `reset=0` `q` samples `q1` as `0` as there are some propagation delay for `q1`as shown below. At the next `clk` edge `q` samples `q1` as `1`.
+***So the optimization cannot be applied***.
+
+<img width="973" alt="14-dff-const3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6bf8a7c4-07f1-4f70-9878-e2773b3eeab5">
+
+The HDL simulation is shown below.
+
+<img width="997" alt="15-dff-const3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3e9440d3-a562-4365-90fb-d17e8ea5c7a2">
+
+The commands to run the synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog dff_const3.v
+synth -top dff_const3
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+
+The logic implementation after synthesis for dff_const3.v is shown below.
+
+<img width="1066" alt="16-dff-const3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6d30d2b7-0c21-464f-9dad-02db228e8c5c">
+
 
 
 
