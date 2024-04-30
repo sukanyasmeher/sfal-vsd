@@ -298,9 +298,19 @@ Syntax for opt_check2.v
 module opt_check2 (input a , input b , output y);
         assign y = a?1:b;
 endmodule
-
 ```
 For opt_check.v the assignment `y = a?b:0` reduces to `y = ab`. For opt_check.v the assignment `y = a?1:b` reduces to `y = a + b`. The screenshot shown below explains this
+<img width="533" alt="5-seq-opt" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f4b6a999-f665-412f-a705-9496bfdd04c2">
+
+Commands for optimization
+
+```
+opt_clean -purge
+```
+The logic implementation after synthesis for opt_check.v is shown below.
+<img width="1120" alt="6-opt_check" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1375f89b-a78f-4702-a1b3-ae9fbcc85ffc">
+
+
 
 
 ## Sequential Logic Optimizations
