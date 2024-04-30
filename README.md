@@ -287,33 +287,54 @@ Retiming is a technique to improve the performance of the circuit.
 <img width="600" alt="4-seq-adv" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/23bcc15c-813b-496a-aebf-ebbf5ceba557">
 
 ## Combinational Logic Optimizations
+Commands for optimization
+
+```
+opt_clean -purge
+```
+### Optimization of opt_check.v
 Syntax for opt_check.v
 ```
 module opt_check (input a , input b , output y);
         assign y = a?b:0;
 endmodule
 ```
+For opt_check.v the assignment `y = a?b:0` reduces to `y = ab`. The screenshot shown below explains this
+
+<img width="533" alt="5-seq-opt" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f4b6a999-f665-412f-a705-9496bfdd04c2">
+
+The logic implementation after synthesis for opt_check.v is shown below, showing only AND gate.
+
+<img width="1120" alt="6-opt_check" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1375f89b-a78f-4702-a1b3-ae9fbcc85ffc">
+
+
+### Optimization of opt_check2.v
 Syntax for opt_check2.v
 ```
 module opt_check2 (input a , input b , output y);
         assign y = a?1:b;
 endmodule
 ```
-For opt_check.v the assignment `y = a?b:0` reduces to `y = ab`. For opt_check.v the assignment `y = a?1:b` reduces to `y = a + b`. The screenshot shown below explains this
-<img width="533" alt="5-seq-opt" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f4b6a999-f665-412f-a705-9496bfdd04c2">
+For opt_check2.v the assignment `y = a?1:b` reduces to `y = a + b`. 
 
-Commands for optimization
-
-```
-opt_clean -purge
-```
-The logic implementation after synthesis for opt_check.v is shown below, showing only AND gate.
-
-<img width="1120" alt="6-opt_check" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1375f89b-a78f-4702-a1b3-ae9fbcc85ffc">
-
-The logic implementation after synthesis for opt_check.v is shown below, showing only OR gate.
+The logic implementation after synthesis for opt_check2.v is shown below, showing only OR gate.
 
 <img width="1115" alt="7-opt-check2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6c8b8eea-c605-4110-9a74-f3b2737ff29f">
+
+### Optimization of opt_check3.v
+Syntax for opt_check3.v
+```
+module opt_check3 (input a , input b, input c , output y);
+	assign y = a?(c?b:0):0;
+endmodule
+```
+For opt_check.v the assignment `y = a?(c?b:0):0` reduces to `y = abc`. The screenshot shown below explains this.
+
+<img width="541" alt="8-opt-check3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c9fb59d8-d080-4776-bec6-46e3b48b3d68">
+
+The logic implementation after synthesis for opt_check3.v is shown below, showing 3 input AND gate.
+
+<img width="1046" alt="9-opt-check3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e0306198-1dd2-4504-9f97-7d7541316160">
 
 ## Sequential Logic Optimizations
 
