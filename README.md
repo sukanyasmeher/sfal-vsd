@@ -455,6 +455,80 @@ The logic implementation after synthesis for dff_const3.v is shown below.
 
 <img width="1066" alt="16-dff-const3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6d30d2b7-0c21-464f-9dad-02db228e8c5c">
 
+## Sequential Optimzations for Unused Outputs
+
+### Optimization of Case1: 3-bit Up Counter with q[0] used (counter_opt.v)
+Example of a counter where bits at the position of [2] and [1] are unused.
+
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = count[0];
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+The screenshot explains the logic of the counter. Only q[0] is used. ***So the optimization can be applied***.
+
+<img width="1200" alt="17-counter" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dbdbd8d5-a305-4f31-b8ba-a8c33d53d67a">
+
+The commands to run the synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+We see only one flop after the synthesis and also seen in synthesis report after `synth -top counter_opt.v`
+
+<img width="1672" alt="18-counter-opt" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/42d260a1-72bc-4d5f-b891-9fea58a57813">
+
+### Optimization of Case2: 3-bit Up Counter (counter_opt2.v)
+
+Example of a counter where all the bits are used.
+```
+module counter_opt (input clk , input reset , output q);
+reg [2:0] count;
+assign q = (count[2:0] == 3'b100);
+
+always @(posedge clk ,posedge reset)
+begin
+	if(reset)
+		count <= 3'b000;
+	else
+		count <= count + 1;
+end
+
+endmodule
+```
+The commands to run the synthesis
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog counter_opt.v
+synth -top counter_opt
+dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+```
+We see only 3 flops after the synthesis and also seen in synthesis report after `synth -top counter_opt.v`
+<img width="829" alt="19-counter-opt2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a7c68bda-5619-4dd6-89d4-d8773c1bf345">
+
+<img width="1669" alt="20-counter-opt2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/95bbe05c-bdde-4bdd-8fe7-492be015dc9f">
+
+<img width="1167" alt="21-counter-opt2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/11cd582b-4ccd-4b99-82e2-1c68c92db131">
+
+
+
+
 
 
 
