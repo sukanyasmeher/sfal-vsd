@@ -307,11 +307,13 @@ Commands for optimization
 ```
 opt_clean -purge
 ```
-The logic implementation after synthesis for opt_check.v is shown below.
+The logic implementation after synthesis for opt_check.v is shown below, showing only AND gate.
+
 <img width="1120" alt="6-opt_check" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1375f89b-a78f-4702-a1b3-ae9fbcc85ffc">
 
+The logic implementation after synthesis for opt_check.v is shown below, showing only OR gate.
 
-
+<img width="1115" alt="7-opt-check2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6c8b8eea-c605-4110-9a74-f3b2737ff29f">
 
 ## Sequential Logic Optimizations
 
