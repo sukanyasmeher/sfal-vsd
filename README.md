@@ -282,6 +282,11 @@ An example of sequential constant propagation is highlighted below of DFF with a
 
 <img width="629" alt="3-seq-const-prop" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3e31a212-a0b0-42c3-be92-d0075a9f7d1c">
 
+Retiming is a technique to improve the performance of the circuit.
+
+<img width="600" alt="4-seq-adv" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/23bcc15c-813b-496a-aebf-ebbf5ceba557">
+
+
 
 
 
