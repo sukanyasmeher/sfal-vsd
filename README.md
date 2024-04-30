@@ -162,7 +162,7 @@ Hierarchy is preserved. sub_module1 and sub_module2 are instantiated separately 
 If we look into the sub_module2 in synthesized netlist 'multiple_modules_hier.v', we see that rather than OR gate, the inputs a & b, pass through the inverter and then NAND gate. It is because in CMOS, stacking PMOS, which happens in 'OR' gate is bad as PMOS has lower mobility and always have to be wider to get some meaningful output. The next step is to check .lib file for the answer.
 
 ### Flat Synthesis
-The design can be flattened by using the command flatten.
+The design can be flattened by using the command `flatten`.
 
 Screenshot shows the command, synthesized netlist and the logical diagram.
 
@@ -335,6 +335,32 @@ For opt_check.v the assignment `y = a?(c?b:0):0` reduces to `y = abc`. The scree
 The logic implementation after synthesis for opt_check3.v is shown below, showing 3 input AND gate.
 
 <img width="1046" alt="9-opt-check3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e0306198-1dd2-4504-9f97-7d7541316160">
+
+### Optimization of multiple_module_opt.v
+
+Syntax of multiple_module_opt.v
+```
+module sub_module1(input a , input b , output y);
+ assign y = a & b;
+endmodule
+
+module sub_module2(input a , input b , output y);
+ assign y = a^b;
+endmodule
+
+module multiple_module_opt(input a , input b , input c , input d , output y);
+wire n1,n2,n3;
+
+sub_module1 U1 (.a(a) , .b(1'b1) , .y(n1));
+sub_module2 U2 (.a(n1), .b(1'b0) , .y(n2));
+sub_module2 U3 (.a(b), .b(d) , .y(n3));
+
+assign y = c | (b & n1); 
+endmodule
+```
+The logic implementation after synthesis for multiple_module_opt.v is shown below.
+<img width="1080" alt="10-multiple-module-opt" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f2486353-e1f9-44e3-97b1-4b235912b69d">
+
 
 ## Sequential Logic Optimizations
 
