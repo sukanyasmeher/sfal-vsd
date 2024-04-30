@@ -526,6 +526,17 @@ We see only 3 flops after the synthesis and also seen in synthesis report after 
 
 <img width="1167" alt="21-counter-opt2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/11cd582b-4ccd-4b99-82e2-1c68c92db131">
 
+ <details> # Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+
+## GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements
+
+### Why is Gate Level Simulation (GLS) necessary?
+- Verify the correctness of the design after synthesis
+- Ensure the timing of the design is met which is done with delay annotation (timing aware)
+
+  <img width="628" alt="1-gls-iverilog" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e3bef5db-4722-4561-ad10-0370a924fdc9">
+
+
 
 
 
