@@ -598,6 +598,9 @@ This issue is resolved by using ***non-blocking statements***.
 
  <img width="615" alt="5-blocking-statement" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/aed8bcbb-ca5e-467d-bfd7-8c679ce91263">
 
+## Labs on GLS and Synthesis-Simulation Mismatch
+
+
 </details>
 
 
