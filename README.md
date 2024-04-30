@@ -387,6 +387,10 @@ For dff_const1.v, `q=0` as long as `reset=1`. However, when `reset=0` `q` doesn'
 
 <img width="998" alt="11-dff-const1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b046fd71-f0bd-4b79-9345-81ace8795e11">
 
+The logic implementation after synthesis for dff_const1.v is shown below.
+
+<img width="1680" alt="13-dff-const1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dcde9e56-06b9-4b20-9b7c-4e44477df7ba">
+
 
 
 
