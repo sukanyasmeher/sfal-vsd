@@ -685,9 +685,64 @@ iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_
 ./a.out
 gtkwave tb_bad_mux.vcd
 ```
-The GLS output is shown below. This shows correct functionality which is different from HDL simulation, leading to ***synthesis simulation mismatch***
+The GLS output is shown below. This shows correct functionality which is different from HDL simulation, leading to ***synthesis simulation mismatch***.
 
 <img width="985" alt="11-bad-mux" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/98dad98d-c46e-4b72-9857-e6b30c42367f">
+
+## Labs on Synthesis-Simulation Mismatch for Blocking Statements
+
+### Blocking Caveat (blocking_caveat.v)
+
+The logic to simulate is shown below.
+<img width="594" alt="12-blocking-caveat" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d7e6ea20-93fb-41d4-9f56-9910fe8f9931">
+
+The Verilog code of blocking_caveat.v
+```
+module blocking_caveat (input a , input b , input  c, output reg d); 
+reg x;
+always @ (*)
+begin
+	d = x & c;
+	x = a | b;
+end
+endmodule
+```
+
+The command to run HDL simulation
+```
+iverilog blocking_caveat.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+HDL Simulation waveform of blocking_caveat.v is shown in the screenshot below. `d` takes the old value of `x` causing incorrect functionality.
+
+<img width="976" alt="13-blocking caveat" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0a3a28b9-9647-47b5-83dd-eec1d81092cc">
+
+
+The commands to run the synthesis for bad_mux.v.
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog blocking_caveat.v
+synth -top blocking_caveat
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog blocking_caveat_net.v
+```
+
+The synthesis report and logic synthesis is shown below.
+
+<img width="1007" alt="14-blocking-caveat" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2e61c1bd-37b6-4a38-bf5f-39c345f2305b">
+
+
+The commands to do GLS for bad_mux.v
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+./a.out
+gtkwave tb_blocking_caveat.vcd
+```
+The GLS output is shown below. In this case, `d` takes the current value of `x` causing incorrect functionality.The waveform shows correct functionality which is different from HDL simulation, leading to ***synthesis simulation mismatch***.
+
+<img width="981" alt="15-blocking-caveat" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b8fcd356-8743-4098-aae8-bdbd8ab88a15">
 
 </details>
 
