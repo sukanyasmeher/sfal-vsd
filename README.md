@@ -1,6 +1,7 @@
 # sfal-vsd
 <details>
 	<summary>Day 0</summary>
+	
 # Day 0 - Tools Installation
 ## Yosys
 ```
@@ -547,16 +548,46 @@ We see only 3 flops after the synthesis and also seen in synthesis report after 
 
  <summary>Day 4 </summary>
  
-# Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
+# Day 4 - GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch
 
-## GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements
+## GLS, Synthesis-Simulation Mismatch, and Blocking/Non-blocking Statements
 
 ### Why is Gate Level Simulation (GLS) necessary?
 - Verify the correctness of the design after synthesis
 - Ensure the timing of the design is met which is done with delay annotation (timing aware)
 
   <img width="628" alt="1-gls-iverilog" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e3bef5db-4722-4561-ad10-0370a924fdc9">
+  
+### Synthesis Simulation Mismatches
 
+It happens because of the following reasons
+- Missing sensitivity list
+- Blocking vs non-blocking assignments
+- Non-standard verilog coding
+
+#### (1) Missing sensitivity list
+
+As shown in the screenshot below, `always` block is evaluated only when `sel` is changing. So output `y` is not evaluated when `sel` is not changing although `i0` and `i1` are changing. Rather it acts like a latch. The code on the right side represents the correct design coding for `mux`. In this case `always` is evaluated for any signal changes. 
+
+<img width="632" alt="2-missing-sensitivity-list" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5c494646-600e-4b19-a3ce-7db8c1baa5a7">
+
+#### (2) Blocking vs Non-blocking Assignments
+
+ ##### Blocking Statements
+ 
+ - Represented by `=`
+ - Executes the statements in the order it is written inside always block
+ - So the first statement is evaluated before the second statement
+
+   The left side of the screenshot below gives us correct execution. While the right side can lead to serious issues as `d` is assigned to `q` directly.
+   
+   <img width="537" alt="3-blocking-statement" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1e0a7902-da94-46d6-8443-5e484291e34d">
+
+
+##### Non-Blocking Statements
+- Represented by `<=`
+- Executes all the RHS when always block is entered and assigns to LHS
+ 
 </details>
 
 
