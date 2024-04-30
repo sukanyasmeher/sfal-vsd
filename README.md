@@ -600,6 +600,42 @@ This issue is resolved by using ***non-blocking statements***.
 
 ## Labs on GLS and Synthesis-Simulation Mismatch
 
+### Ternary operator MUX (ternary_operator_mux.v)
+
+The Verilog code of ternary_operator_mux.v
+```
+module ternary_operator_mux (input i0 , input i1 , input sel , output y);
+	assign y = sel?i1:i0;
+	endmodule
+```
+The command to run HDL simulation
+```
+iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
+HDL Simulation waveform of ternary_operator_mux.v is shown in the screenshot below
+
+<img width="1013" alt="6-ternary-op-mux" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/14d13e7f-e5f7-4d61-9942-5e5e57433db5">
+
+The commands to run the synthesis for ternary_operator_mux.v
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog ternary_operator_mux.v
+synth -top ternary_operator_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog ternary_operator_mux_net.v
+```
+
+<img width="1002" alt="7-ternary-op-mux" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/de35d1cd-8e62-470f-983c-6364f2a76447">
+
+The commands to do GLS for ternary_operator_mux.v
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+./a.out
+gtkwave tb_ternary_operator_mux.vcd
+```
 
 </details>
 
