@@ -639,7 +639,55 @@ gtkwave tb_ternary_operator_mux.vcd
 The GLS output is shown below.
 <img width="982" alt="8-ternary-op-mux" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7c1e66fd-c9dd-40be-9112-9e33da3e5ebb">
 
+### Bad MUX (bad_mux.v)
 
+The `always` block is executed only at `sel` signal. It works like a flop rather than mux.
+The Verilog code of bad_mux.v
+```
+module bad_mux (input i0 , input i1 , input sel , output reg y);
+always @ (sel)
+begin
+	if(sel)
+		y <= i1;
+	else 
+		y <= i0;
+end
+endmodule
+```
+
+The command to run HDL simulation
+```
+iverilog bad_mux.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+HDL Simulation waveform of bad_mux.v is shown in the screenshot below
+
+<img width="978" alt="9-bad-mux" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a4c9addd-c225-4c1e-a2bd-32187373e56d">
+
+The commands to run the synthesis for bad_mux.v.
+```
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog bad_mux.v
+synth -top bad_mux
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+write_verilog bad_mux_net.v
+```
+
+The synthesis report shows it is still inferring the mux but not the flop.
+
+<img width="1035" alt="10-bad-mux" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3851798a-31c7-4030-a81d-63325bd4d6f3">
+
+The commands to do GLS for bad_mux.v
+```
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+./a.out
+gtkwave tb_bad_mux.vcd
+```
+The GLS output is shown below. This shows correct functionality which is different from HDL simulation, leading to ***synthesis simulation mismatch***
+
+<img width="985" alt="11-bad-mux" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/98dad98d-c46e-4b72-9857-e6b30c42367f">
 
 </details>
 
