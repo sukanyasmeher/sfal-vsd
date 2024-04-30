@@ -1,4 +1,6 @@
 # sfal-vsd
+<details>
+	<summary>Day 0</summary>
 # Day 0 - Tools Installation
 ## Yosys
 ```
@@ -28,7 +30,10 @@ $ sudo apt install gtkwave
 <img width="604" alt="gtkwave2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/843a73bc-20ec-4417-bdc8-883caa6a299b">
 
 <img width="1008" alt="gtkwave1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1e0c0704-f9a8-4ce4-b364-55a1fb0fc9ca">
+</details>
 
+<details>
+<summary>Day 1</summary>
 
 # Day 1 - Introduction to Verilog RTL Design and Synthesis
 ## Introduction to open-source simulator Iverilog
@@ -123,6 +128,12 @@ The same testbench can be used to verify RTL and Synthesized Netlist.
 <img width="727" alt="yosyslab3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a96c3730-0071-49c2-b2f9-d61f9640ba20">
 
 <img width="636" alt="show_logic" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/19d70533-9d4e-4cec-81c5-7ad2fafc381f">
+
+</details>
+
+<details>
+
+<summary>Day 2</summary>
 
 # Day 2 - Timing libs, Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles
 
@@ -252,7 +263,11 @@ This can be realized just by wiring.
 So we expect no hardware which is also seen in the screenshot below, analysis after synthesis and show. The command 'abc' is not required for mapping when there are no cells.
 
 <img width="918" alt="mult8_syn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dd1b4634-50ed-4229-9d82-80689bafb7e7">
+</details>
 
+<details>
+	<summary>Day 3</summary>
+	
 # Day 3 - Combinational and Sequential Optimizations
 
 ## Introduction to Optimizations
@@ -526,7 +541,13 @@ We see only 3 flops after the synthesis and also seen in synthesis report after 
 
 <img width="1167" alt="21-counter-opt2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/11cd582b-4ccd-4b99-82e2-1c68c92db131">
 
- < # Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch >
+</details>
+
+<details>
+
+ <summary>Day 4 </summary>
+ 
+# Day 4 - GLS, blocking vs non-blocking and Synthesis-Simulation mismatch
 
 ## GLS, Synthesis-Simulation mismatch and Blocking/Non-blocking statements
 
@@ -536,6 +557,7 @@ We see only 3 flops after the synthesis and also seen in synthesis report after 
 
   <img width="628" alt="1-gls-iverilog" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e3bef5db-4722-4561-ad10-0370a924fdc9">
 
+</details>
 
 
 
