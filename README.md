@@ -431,6 +431,12 @@ For dff_const3.v, there are two flops.  `q1=0` as long as `reset=1`. However, wh
 
 <img width="973" alt="14-dff-const3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6bf8a7c4-07f1-4f70-9878-e2773b3eeab5">
 
+The command to run HDL simulation
+```
+iverilog dff_const3.v tb_dff_const3.v
+./a.out
+gtkwave tb_dff_const3.vcd
+```
 The HDL simulation is shown below.
 
 <img width="997" alt="15-dff-const3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3e9440d3-a562-4365-90fb-d17e8ea5c7a2">
