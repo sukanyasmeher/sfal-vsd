@@ -809,6 +809,17 @@ For example, in the image shown below, if we want to observe `Node1`, we need to
 
 <img width="1082" alt="4-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a0fd5dd4-6c48-45e6-b5eb-10ec1589ba60">
 
+### Fault
+It is a physical damage/defect compared to the good system, which may or may not cause a failure.
+
+### Error
+An error is caused by a fault because of which the system went to an erroneous state.
+
+### Failure
+Failure is when the system is not providing the expected service.
+
+A ***fault*** causes an ***error*** which leads to a system ***failure***.
+
 </details>
 
 
