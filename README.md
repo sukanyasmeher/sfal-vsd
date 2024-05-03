@@ -876,6 +876,11 @@ gui_start
 
 ### Introduction to STA
 
+#### Max and Min Delay Constraints
+
+<img width="1203" alt="11-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1a2d7a37-5a80-4aeb-b28a-f122d47efcba">
+
+
 
   
 </details>
