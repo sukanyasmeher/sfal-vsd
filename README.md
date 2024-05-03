@@ -751,10 +751,10 @@ The GLS output is shown below. In this case, `d` takes the current value of `x` 
 	
 ## Day 5 - Introduction to DFT
 ### List of some possible issues that arise while manufacturing chips:
-- Density Issue: Fabrication processes have become quite complicated with the advent of deep-submicron design technologies. Design elements are coming closer and closer; they are becoming smaller and thinner. Billions of transistors are involved in present-day VLSI chips. So, the chances of two wires touching each other or a very thin wire breaking in between are high. These are a few sources of errors or faults. The point is, there can be many such errors that can creep in during the design and fabrication processes. So, with an increase in density, the probability of failure also becomes high.
+- Density Issue: Fabrication processes have become quite complicated with the advent of deep-submicron design technologies. Design elements are coming closer and closer; they are becoming smaller and thinner. Billions of transistors are involved in present-day VLSI chips. So, the chances of two wires touching each other or a very thin wire breaking in between are high. These are a few sources of errors or faults. The point is, that there can be many such errors that can creep in during the design and fabrication processes. So, with an increase in density, the probability of failure also becomes high.
 - Software Issue: Moreover, apart from fabrication, there can even be errors in the translation process due to the bugs in CAD software tools used to design the chip.
 - Application Issue: There are several critical applications, in which we can’t afford to have faults in the chip at any cost. For example, in medical or healthcare applications, a single fault in the equipment controllers may even risk the life of an individual. For rockets or space shuttles that run on cryogenic fuel, they may need their microcontroller or microprocessor to run on a broader temperature range. Hence the test conditions for these chips should be very application-specific and on an extreme level to prevent any future failures.
-- Maintenance Issue: In case of any future failure, for repairing or maintenance, we need to identify the proper coordinates of fault. Since PCB sizes are also decreasing, multimeter testing isn’t a viable option anymore. Moreover, moving towards SoC (System on Chip) design, the modular design is losing its relevance, thereby making the maintenance process more expensive.
+- Maintenance Issue: In case of any future failure, for repair or maintenance, we need to identify the proper coordinates of fault. Since PCB sizes are also decreasing, multimeter testing isn’t a viable option anymore. Moreover, moving towards SoC (System on Chip) design, the modular design is losing its relevance, thereby making the maintenance process more expensive.
 - Business Issue: If designed chips are found to be faulty, then it transforms into a substantial loss and penalty for the company. Later, we will discuss how detecting a fault earlier decreases the cost of doing business significantly.
   
   Source - (https://technobyte.org/what-is-dft-design-for-testability-introduction/#What_is_Design_for_Testability_and_why_we_need_it)
@@ -763,14 +763,30 @@ The GLS output is shown below. In this case, `d` takes the current value of `x` 
 In VLSI terms, it means " If a design is well-controllable and well-observable, it is said to be easily testable".  
   
 ### What is Design for Testability (DFT)?
-It a technique which facilitates a design to become testable after production. In another way, adding an extra design for an existing design to make sure it is tested after fabricated.
+It a technique that facilitates a design to become testable after production. In another way, adding an extra design for an existing design to make sure it is tested after fabricated.
 Some of the examples are 
 - For `macros`, we use `MBist logic`
 - For `flops`, we use `scan chains`
 - for `combinational circuits`, we use `generate test patterns`
 
 
-### Why is DFT necessary?
+### Why do we do DFT?
+It makes the testing easy at the post-production process.
+
+There are namely 3 levels of testing after a chip is fabricated.
+- `Chip-level` or `die-level` where the chip is manufacture, usually done at foundry.
+- `Board-level` when chips are integrated on the board/packages to make sure it works with other modules
+- `System-level`, when several boards are assembled such as a chip within a laptop.
+
+***DFT is also done due to economical and market needs.*** 
+
+### When and where the DFT design is included?
+
+When is it included? - At the beginning of the ASIC design flow
+
+Where exactly is it included? - during the synthesis (front-end)
+
+
 
 
 </details>
