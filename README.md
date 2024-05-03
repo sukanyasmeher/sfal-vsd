@@ -749,7 +749,7 @@ The GLS output is shown below. In this case, `d` takes the current value of `x` 
 <details>
 	<summary>Day 5</summary>
 	
-## Day 5 - Introduction to DFT
+# Day 5 - Introduction to DFT
 ## List of some possible issues that arise while manufacturing chips:
 - Density Issue: Fabrication processes have become quite complicated with the advent of deep-submicron design technologies. Design elements are coming closer and closer; they are becoming smaller and thinner. Billions of transistors are involved in present-day VLSI chips. So, the chances of two wires touching each other or a very thin wire breaking in between are high. These are a few sources of errors or faults. The point is, that there can be many such errors that can creep in during the design and fabrication processes. So, with an increase in density, the probability of failure also becomes high.
 - Software Issue: Moreover, apart from fabrication, there can even be errors in the translation process due to the bugs in CAD software tools used to design the chip.
@@ -844,7 +844,7 @@ The DFT compiler converts the flops to scan-enabled flops.
 
 <img width="1083" alt="7-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/67e00b4e-244b-49c5-9090-f670dae65d9e">
 
-## dc_shell
+## Design Compiler (dc_shell)
 
 The commands to start DC shell and open GUI
 ```
@@ -853,7 +853,7 @@ gui_start
 ```
 <img width="1444" alt="8-dc-shell" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e59c6e46-bcea-42e3-b00e-aa9fd1cd7298">
 
-##lc_shell
+## Library compiler (lc_shell)
 
 The commands to start LC shell and open GUI
 ```
@@ -863,15 +863,19 @@ gui_start
 
 <img width="1475" alt="9-lc-shell" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0fa1f072-1ead-49c2-87b9-f717693c5ec7">
 
-##icc2_shell
+## IC Compiler (icc2_shell)
 
 The commands to start ICC2 shell and open GUI
 ```
 icc2_shell
 gui_start
 ```
-
 <img width="1593" alt="10-icc2-shell" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/68630b50-acc3-475e-9def-0bc7cee6e9f8">
+
+## Basics of Static Timing Analysis (STA)
+
+### Introduction to STA
+
 
   
 </details>
