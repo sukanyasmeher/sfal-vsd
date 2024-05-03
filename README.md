@@ -750,7 +750,7 @@ The GLS output is shown below. In this case, `d` takes the current value of `x` 
 	<summary>Day 5</summary>
 	
 ## Day 5 - Introduction to DFT
-### List of some possible issues that arise while manufacturing chips:
+## List of some possible issues that arise while manufacturing chips:
 - Density Issue: Fabrication processes have become quite complicated with the advent of deep-submicron design technologies. Design elements are coming closer and closer; they are becoming smaller and thinner. Billions of transistors are involved in present-day VLSI chips. So, the chances of two wires touching each other or a very thin wire breaking in between are high. These are a few sources of errors or faults. The point is, that there can be many such errors that can creep in during the design and fabrication processes. So, with an increase in density, the probability of failure also becomes high.
 - Software Issue: Moreover, apart from fabrication, there can even be errors in the translation process due to the bugs in CAD software tools used to design the chip.
 - Application Issue: There are several critical applications, in which we can’t afford to have faults in the chip at any cost. For example, in medical or healthcare applications, a single fault in the equipment controllers may even risk the life of an individual. For rockets or space shuttles that run on cryogenic fuel, they may need their microcontroller or microprocessor to run on a broader temperature range. Hence the test conditions for these chips should be very application-specific and on an extreme level to prevent any future failures.
@@ -759,6 +759,7 @@ The GLS output is shown below. In this case, `d` takes the current value of `x` 
   
   Source - (https://technobyte.org/what-is-dft-design-for-testability-introduction/#What_is_Design_for_Testability_and_why_we_need_it)
 
+## 3 W's for DFT - ***What***, ***Why***, ***When/Where***
 ### What is testability?
 In VLSI terms, it means " If a design is well-controllable and well-observable, it is said to be easily testable".  
   
@@ -788,10 +789,20 @@ When is it included? - At the beginning of the ASIC design flow
 
 Where exactly is it included? - during the synthesis (front-end)
 
-### What are the pros and cons of DFT?
+## Pros and Cons of DFT
 
 <img width="1087" alt="2-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d7b9c887-2da9-4436-87dd-ed6c1cf01ec4">
 
+## Basic Terminologies
+
+### Controllability
+By controllability from DFT point of view, we intend if both `0` and `1` are able to propagate to each and every node within the target patterns. A point is said to be controllable if both `0` and `1` propagated through the scan chains.
+
+For example, there is no way to ***control*** `Node1` shown on the left side of the image below. But adding `MUX` allows that flexibility. However, it increases area, power and timing, ***PPA increases***.
+
+<img width="1091" alt="3-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4da1589b-3cb8-4c91-babb-0f796235a6ca">
+
+### Observability
 
 
 
