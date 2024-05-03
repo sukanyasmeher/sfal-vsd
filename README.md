@@ -820,6 +820,60 @@ Failure is when the system is not providing the expected service.
 
 A ***fault*** causes an ***error*** which leads to a system ***failure***.
 
+### Fault Coverage
+Percentage of the total number of logical faults that can be tested using a given test set T.
+
+### Defect Level
+The fraction of shipped parts that are defective. Or the proportion of the faulty chip in which fault isn't detected and has been classified as good.
+
+## DFT Techniques
+
+<img width="1082" alt="5-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a1325dda-da31-4320-8ada-633d3f84648a">
+
+The DFT compiler converts the flops to scan-enabled flops.
+
+<img width="879" alt="6-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e9bd6e07-ab6e-4f9d-8b2e-3df551707347">
+
+### Scan Chain Techniques
+- Specify the scan constraints
+- Specify scan ports and scan enables
+- Compiling the DFT
+- Identifying the no. of scan chains
+
+### Scan-based technique, Scan chains
+
+<img width="1083" alt="7-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/67e00b4e-244b-49c5-9090-f670dae65d9e">
+
+## dc_shell
+
+The commands to start DC shell and open GUI
+```
+dc_shell
+gui_start
+```
+<img width="1444" alt="8-dc-shell" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e59c6e46-bcea-42e3-b00e-aa9fd1cd7298">
+
+##lc_shell
+
+The commands to start LC shell and open GUI
+```
+lc_shell
+gui_start
+```
+
+<img width="1475" alt="9-lc-shell" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0fa1f072-1ead-49c2-87b9-f717693c5ec7">
+
+##icc2_shell
+
+The commands to start ICC2 shell and open GUI
+```
+icc2_shell
+gui_start
+```
+
+<img width="1593" alt="10-icc2-shell" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/68630b50-acc3-475e-9def-0bc7cee6e9f8">
+
+  
 </details>
 
 
