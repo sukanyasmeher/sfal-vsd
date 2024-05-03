@@ -771,7 +771,9 @@ Some of the examples are
 
 
 ### Why do we do DFT?
-It makes the testing easy at the post-production process.
+It makes the testing easy in the post-production process.
+
+<img width="1652" alt="1-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d08e387a-96cb-42f9-80a1-1275f688e3d6">
 
 There are namely 3 levels of testing after a chip is fabricated.
 - `Chip-level` or `die-level` where the chip is manufacture, usually done at foundry.
@@ -785,6 +787,10 @@ There are namely 3 levels of testing after a chip is fabricated.
 When is it included? - At the beginning of the ASIC design flow
 
 Where exactly is it included? - during the synthesis (front-end)
+
+### What are the pros and cons of DFT?
+
+<img width="1087" alt="2-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d7b9c887-2da9-4436-87dd-ed6c1cf01ec4">
 
 
 
