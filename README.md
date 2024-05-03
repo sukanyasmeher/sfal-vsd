@@ -803,8 +803,11 @@ For example, there is no way to ***control*** `Node1` shown on the left side of 
 <img width="1091" alt="3-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4da1589b-3cb8-4c91-babb-0f796235a6ca">
 
 ### Observability
+By observability we are talking about the ability to measure the state of the logic signal. when we say that a node is observable, we mean that the value of the node can be shifted out through scan patterns and can be observed through scan put patterns.
 
+For example, in the image shown below, if we want to observe `Node1`, we need to include a `flip-flop`. In this case, the area and power get affected by increasing, but the timing is not affected as the flop is not on the signal path.
 
+<img width="1082" alt="4-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a0fd5dd4-6c48-45e6-b5eb-10ec1589ba60">
 
 </details>
 
