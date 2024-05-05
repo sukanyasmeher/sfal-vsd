@@ -862,6 +862,8 @@ There are various reasons, but 2 main reasons are noted below:
 
 <img width="888" alt="14-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/916c17b8-3c47-46de-80c0-9ee37fd536e3">
 
+<img width="1033" alt="15-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/75a4e905-9c8e-472f-9e14-a43fe7e428a7">
+
 
 ## Design Compiler (dc_shell)
 
