@@ -850,9 +850,17 @@ There are various reasons, but 2 main reasons are noted below:
 - To test stuck-at faults in the manufactured devices
 - To test the path in the manufactured devices for delay that is to test whether each path is working at a functional frequency or not
 
-### FAQs on Scan Chain
+#### FAQs on Scan Chain
 
 <img width="1081" alt="12-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cbd27c87-6f7b-4137-b0f6-2f99015bb49b">
+
+### When do we use ATPG?
+
+<img width="1082" alt="13-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a7ccec92-3f60-41d7-a40c-611bdf7ac67f">
+
+### Overview of DFT Compiler?
+
+<img width="888" alt="14-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/916c17b8-3c47-46de-80c0-9ee37fd536e3">
 
 
 ## Design Compiler (dc_shell)
