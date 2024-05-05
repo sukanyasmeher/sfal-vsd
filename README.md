@@ -850,6 +850,10 @@ There are various reasons, but 2 main reasons are noted below:
 - To test stuck-at faults in the manufactured devices
 - To test the path in the manufactured devices for delay that is to test whether each path is working at a functional frequency or not
 
+### FAQs on Scan Chain
+
+<img width="1081" alt="12-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cbd27c87-6f7b-4137-b0f6-2f99015bb49b">
+
 
 ## Design Compiler (dc_shell)
 
