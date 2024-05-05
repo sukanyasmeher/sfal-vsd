@@ -897,7 +897,9 @@ gui_start
 <details> 
 	<summary> Day 6 </summary>
 
- ## Day 6 - Introduction to Logic Synthesis
+ # Day 6 - Introduction to Logic Synthesis
+
+ ## About the course
 
  ### Tools that will be used for the lab
  
@@ -917,9 +919,9 @@ gui_start
 <details> 
 	<summary> Day 7 </summary>
 
-## Day 7 - Basics of Static Timing Analysis (STA)
+# Day 7 - Basics of Static Timing Analysis (STA)
 
-### Introduction to STA
+## Introduction to STA
 
 #### Max and Min Delay Constraints
 
