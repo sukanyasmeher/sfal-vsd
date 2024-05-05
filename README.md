@@ -864,6 +864,7 @@ There are various reasons, but 2 main reasons are noted below:
 
 <img width="1033" alt="15-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/75a4e905-9c8e-472f-9e14-a43fe7e428a7">
 
+# Introcution to the Synopsys Tools
 
 ## Design Compiler (dc_shell)
 
