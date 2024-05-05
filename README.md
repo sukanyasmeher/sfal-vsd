@@ -896,20 +896,31 @@ gui_start
 <details> 
 	<summary> Day 6 </summary>
 
- ## Introduction to Logic Synthesis
+ ## Day 6 - Introduction to Logic Synthesis
 
+ ### Tools that will be used for the lab
  
+ - `Iverilog` - for Verilog compilation and simulation
+ - `GTKwave` - for viewing the simulation output
+ - `Synopsys Design Compiler` - for logic synthesis
+ - `Skywater 130nm Library` - for standard cell library
+
 
 
 </details>
 
-## Basics of Static Timing Analysis (STA)
+<details> 
+	<summary> Day 7 </summary>
+
+## Day 7 - Basics of Static Timing Analysis (STA)
 
 ### Introduction to STA
 
 #### Max and Min Delay Constraints
 
 <img width="1203" alt="11-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1a2d7a37-5a80-4aeb-b28a-f122d47efcba">
+
+</details>
 
 
 
