@@ -844,6 +844,13 @@ The DFT compiler converts the flops to scan-enabled flops.
 
 <img width="1083" alt="7-dft" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/67e00b4e-244b-49c5-9090-f670dae65d9e">
 
+#### What is the purpose of scan flops?
+
+There are various reasons, but 2 main reasons are noted below:
+- To test stuck-at faults in the manufactured devices
+- To test the path in the manufactured devices for delay that is to test whether each path is working at a functional frequency or not
+
+
 ## Design Compiler (dc_shell)
 
 The commands to start DC shell and open GUI
@@ -871,6 +878,16 @@ icc2_shell
 gui_start
 ```
 <img width="1593" alt="10-icc2-shell" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/68630b50-acc3-475e-9def-0bc7cee6e9f8">
+
+<details> 
+	<summary> Day 6 </summary>
+
+ ## Introduction to Logic Synthesis
+
+ 
+
+
+</details>
 
 ## Basics of Static Timing Analysis (STA)
 
