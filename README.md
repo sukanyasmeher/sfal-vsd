@@ -905,7 +905,11 @@ gui_start
  - `Synopsys Design Compiler` - for logic synthesis
  - `Skywater 130nm Library` - for standard cell library
 
-
+### Expectations from the course
+- Understand the various steps involved in ***Digital Logic Synthesis***
+- Understand and write ***Synopsys Design Constraints (SDC)*** for the given module
+- Perform ***Synthesis*** and write out ***Netlist using Design Compiler***
+- Generate and analysis the ***Synthesis Reports and STA Reports***
 
 </details>
 
