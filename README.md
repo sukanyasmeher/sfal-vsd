@@ -993,7 +993,90 @@ Link the design means to know that all the information in the design can be impl
 
 <img width="1680" alt="16-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b72c28f4-8337-4ad9-b188-75e0a3ba8060">
 
+## Lab 1 - Invoking DC Basic Setup
 
+The DC is invoked in the folder `/home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop`
+Commands to invoke the DC compiler
+```
+csh
+dc_shell
+echo $target_library //It generates your_library.db
+echo $link_library
+read_verilog DC_WORKSHOP/verilog_files/lab1_flop_with_en.v
+write -f verilog -out lab1_net.v
+sh gvim lab1_net.v
+```
+`your_library.db` is imaginary non-existent library, a dummy library invoked in the DC.
+
+The Verilog syntax of `lab1_flop_with_en.v` (DFF with Asynchronous Reset)
+```
+module lab1_flop_with_en ( input res , input clk , input d , input en , output reg q);
+always @ (posedge clk , posedge res)
+begin
+	if(res)
+		q <= 1'b0;
+	else if(en)
+		q <= d;	
+end
+endmodule
+```
+
+The screenshot after `read_verilog` command is shown below. Let's try to understand the meaning of the messages generated. `gtech.db` and `standard.sldb` are internal dbs (virtual library) in DC memory for understanding the design. It is invoking HDL compiler or `Presto HDL Compiler`.
+The line `Warning: Can't read link_library file 'your_library.db'. (UID-3)` means that DC compiler can't read your_library.db which was created for a dummy purpose. We need to point to the correct library.
+In the line `Compiling source file /home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/verilog_files/lab1_flop_with_en.v`, it is compiling the source file and it infers the registers or memory device which is 1-bit flip-flop with asynchronous reset.
+
+We need to link the design properly and point to the proper technology library.
+
+<img width="1025" alt="17-lslab" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/137c6aa2-a57d-4de8-82a4-4ff555a4f363">
+
+With the commands below we still get that the dummy library can't be linked. Since no proper standard cell library is provided, it has used `gtech` as the reference library to synthesize. 
+```
+dc_shell> write -f verilog -out lab1_net.v
+Warning: Can't read link_library file 'your_library.db'. (UID-3)
+Writing verilog file '/home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/lab1_net.v'.
+1
+```
+The Verilog netlist for lab1_net.v is opened using the command `sh gvim lab1_net.v` looks like as shown below. The netlist is not in form of sky130 library cells.
+
+```
+module lab1_flop_with_en ( res, clk, d, en, q );
+  input res, clk, d, en;
+  output q;
+
+
+  \**SEQGEN**  q_reg ( .clear(res), .preset(1'b0), .next_state(d), 
+        .clocked_on(clk), .data_in(1'b0), .enable(1'b0), .Q(q), .synch_clear(
+        1'b0), .synch_preset(1'b0), .synch_toggle(1'b0), .synch_enable(en) );
+endmodule
+```
+
+The correct commands for reading the correct library using DC Compiler
+```
+csh
+dc_shell
+read_db DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
+set target_library /home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
+set link_library {* /home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db}
+link
+read_verilog DC_WORKSHOP/verilog_files/lab1_flop_with_en.v
+compile
+write -f verilog -out lab1_net_sky130.v
+sh gvim llab1_net_sky130.v
+```
+There may be multiple libraries in DC memory. * represents all the libraries already loaded in DC memory. So we are appending an additional library without overwriting the already loaded library.
+With the correct library specification, the Verilog netlist is appropriately generated as shown below
+
+```
+module lab1_flop_with_en ( res, clk, d, en, q );
+  input res, clk, d, en;
+  output q;
+  wire   n2, n3;
+
+  sky130_fd_sc_hd__dfrtp_1 q_reg ( .D(n3), .CLK(clk), .RESET_B(n2), .Q(q) );
+  sky130_fd_sc_hd__mux2_1 U5 ( .A0(q), .A1(d), .S(en), .X(n3) );
+  sky130_fd_sc_hd__clkinv_1 U6 ( .A(res), .Y(n2) );
+endmodule
+```
 
 
 </details>
