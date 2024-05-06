@@ -1054,9 +1054,9 @@ The correct commands for reading the correct library using DC Compiler
 ```
 csh
 dc_shell
-read_db DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set target_library /home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set link_library {* /home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db}
+read_db DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 read_verilog DC_WORKSHOP/verilog_files/lab1_flop_with_en.v
 link
 compile
@@ -1101,6 +1101,11 @@ If we type `read_verlog` in GUI, it reads only the Verilog file. But `read_ddc` 
 
 <img width="1193" alt="19-lslab" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ce191f29-98c2-4c86-98f6-23d80f10430f">
 
+# Lab 3 - DC Compiler
+`.synopsys_dc.setup` from `User home directory` overwrites the `default .synopsys_dc.setup` that is installed under DC.
+
+
+<img width="1218" alt="20-lslab" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dbabdc56-57e4-4aee-bc4c-6dbc96c98488">
 
 
 </details>
