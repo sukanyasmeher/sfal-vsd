@@ -1057,14 +1057,14 @@ dc_shell
 read_db DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set target_library /home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set link_library {* /home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db}
-link
 read_verilog DC_WORKSHOP/verilog_files/lab1_flop_with_en.v
+link
 compile
 write -f verilog -out lab1_net_sky130.v
-sh gvim llab1_net_sky130.v
+sh gvim lab1_net_sky130.v
 ```
 There may be multiple libraries in DC memory. * represents all the libraries already loaded in DC memory. So we are appending an additional library without overwriting the already loaded library.
-With the correct library specification, the Verilog netlist is appropriately generated as shown below
+With the correct library specification, the Verilog netlist is appropriately generated with skywater130 libraries as shown below
 
 ```
 module lab1_flop_with_en ( res, clk, d, en, q );
@@ -1077,6 +1077,30 @@ module lab1_flop_with_en ( res, clk, d, en, q );
   sky130_fd_sc_hd__clkinv_1 U6 ( .A(res), .Y(n2) );
 endmodule
 ```
+# Lab 2 - Introduction to DDC GUI using Design Vision
+
+Command to write the DDC file after compilation of the design
+```
+write -f verilog -out lab1_net_sky130.v
+```
+
+Commands to launch Design Vision (GUI format of Design Compiler)
+```
+csh
+design_vision
+start_gui //If GUI doesn't start automatically
+```
+
+Once GUI is opened, the command to open DDC is 
+```
+read_ddc lab1.ddc
+```
+If we type `read_verlog` in GUI, it reads only the Verilog file. But `read_ddc` reads the library as well. So, DDC will save all the information in the tool memory in that particular session. Only disadvantage is DDC is Synopsys's proprietary format.
+
+<img width="1301" alt="18-lslab" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b38fc689-4a24-4798-8106-d68b2b61537b">
+
+<img width="1193" alt="19-lslab" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ce191f29-98c2-4c86-98f6-23d80f10430f">
+
 
 
 </details>
