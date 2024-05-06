@@ -915,7 +915,7 @@ gui_start
 - Perform ***Synthesis*** and write out ***Netlist using Design Compiler***
 - Generate and analysis the ***Synthesis Reports and STA Reports***
 
-### Digital Logic and Synthesis
+## Digital Logic and Synthesis
 - Digital logic is a switching function
 - Behavioral model of design is written in HDL or a programming language called Register Transfer Logic such as VHDL, Verilog, and System Verilog
 - The conversion of RTL to gate-level translation is called ***Synthesis*** as shown in the screenshot below.
@@ -940,6 +940,25 @@ This is done through `constraints`.
 
 <img width="1274" alt="6-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b8636231-01cd-4e9c-9026-bb569066b068">
 
+Let's look at this through an example below.
+
+An illustration of the synthesis is described in the screenshot below.
+
+<img width="1076" alt="7-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d22c5400-6eee-41ee-8014-767b5a1a72e9">
+
+The next question is which is the correct implementation from the 3 options shown below.
+
+<img width="1680" alt="8-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/557b88d2-9447-44ae-860b-7e5d357474b3">
+
+<img width="1680" alt="9-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9b67d51b-5f3b-4fc7-86bc-033b921c6f58">
+
+<img width="1680" alt="10-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/283bf723-7ab8-430c-9fcf-bbe8ab3ea852">
+
+From the above discussion, `Implementation 3` is the best. But the question is, is it always the case?
+
+Not really, especially on the following conditions
+- If the logic is present in the hold-sensitive path.
+- Additional buffers will add to both power and area.
 
 </details>
 
