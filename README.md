@@ -934,6 +934,13 @@ gui_start
 
 <img width="1482" alt="5-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5e77d25c-65ff-4535-ae40-eed814706123">
 
+### How do we select the cells?
+
+This is done through `constraints`.
+
+<img width="1274" alt="6-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b8636231-01cd-4e9c-9026-bb569066b068">
+
+
 </details>
 
 <details> 
