@@ -976,12 +976,22 @@ In conclusion, all the 3 implementations are correct and will be picked based on
 
 <img width="1680" alt="13-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/662cd37d-5ddc-4aea-90df-83a42961ac3c">
 
+
+### How do we set up Design Compiler (DC)?
+
+<img width="1680" alt="14-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0a1cfc9d-b846-4d85-89d8-6f161f9653ab">
+
 ### Implementation flow of ASIC
 
-Steps in converting RTL to physical database or GDS
+Steps in converting RTL to the physical database or GDS
 
+<img width="1680" alt="15-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/72da8396-4912-4b63-82a5-02ec2ebb334f">
 
-### How do we setup Design Compiler (DC)?
+### DC Synthesis Flow
+
+Link the design means to know that all the information in the design can be implemented in the form of standard cell libraries.
+
+<img width="1680" alt="16-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b72c28f4-8337-4ad9-b188-75e0a3ba8060">
 
 
 
