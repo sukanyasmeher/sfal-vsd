@@ -960,6 +960,32 @@ Not really, especially on the following conditions
 - If the logic is present in the hold-sensitive path.
 - Additional buffers will add to both power and area.
 
+In conclusion, all the 3 implementations are correct and will be picked based on the need. These needs are defined by the `constraints`. Constraints guide the synthesizer to select the correct library cells that are the most appropriate for the design.
+
+## Introduction to Design Compiler
+
+### What is DC?
+
+<img width="1680" alt="11-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/284a27c2-a065-489c-b04f-da70d776a251">
+
+### Common terminologies associated with DC
+
+<img width="1680" alt="12-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cf07287d-9fb8-44ad-808c-a7a6a0445af0">
+
+### Synopsys Design Constraints (SDC)
+
+<img width="1680" alt="13-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/662cd37d-5ddc-4aea-90df-83a42961ac3c">
+
+### Implementation flow of ASIC
+
+Steps in converting RTL to physical database or GDS
+
+
+### How do we setup Design Compiler (DC)?
+
+
+
+
 </details>
 
 <details> 
