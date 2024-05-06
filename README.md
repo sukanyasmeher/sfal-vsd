@@ -893,6 +893,7 @@ icc2_shell
 gui_start
 ```
 <img width="1593" alt="10-icc2-shell" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/68630b50-acc3-475e-9def-0bc7cee6e9f8">
+</details>
 
 <details> 
 	<summary> Day 6 </summary>
@@ -913,6 +914,25 @@ gui_start
 - Understand and write ***Synopsys Design Constraints (SDC)*** for the given module
 - Perform ***Synthesis*** and write out ***Netlist using Design Compiler***
 - Generate and analysis the ***Synthesis Reports and STA Reports***
+
+### Digital Logic and Synthesis
+- Digital logic is a switching function
+- Behavioral model of design is written in HDL or a programming language called Register Transfer Logic such as VHDL, Verilog, and System Verilog
+- The conversion of RTL to gate-level translation is called ***Synthesis*** as shown in the screenshot below.
+  
+<img width="1056" alt="1-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cf3260e5-7cd5-4477-83da-b3e9a88e66cd">
+
+### What is .lib?
+
+<img width="876" alt="2-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8d8c1854-3667-42c5-afc0-fdfc3e45e454">
+
+### Why do we need different flavors of cells?
+
+<img width="1181" alt="3-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/59a9d03d-e6d7-4988-bb33-dd058e1bdf7d">
+
+<img width="1586" alt="4-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d97b5e7f-004a-487d-90de-558882cf08b3">
+
+<img width="1482" alt="5-logicsyn" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5e77d25c-65ff-4535-ae40-eed814706123">
 
 </details>
 
