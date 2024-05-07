@@ -1077,7 +1077,7 @@ module lab1_flop_with_en ( res, clk, d, en, q );
   sky130_fd_sc_hd__clkinv_1 U6 ( .A(res), .Y(n2) );
 endmodule
 ```
-# Lab 2 - Introduction to DDC GUI using Design Vision
+## Lab 2 - Introduction to DDC GUI using Design Vision
 
 Command to write the DDC file after compilation of the design
 ```
@@ -1101,7 +1101,7 @@ If we type `read_verilog` in GUI, it reads only the Verilog file. But `read_ddc`
 
 <img width="1193" alt="19-lslab" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ce191f29-98c2-4c86-98f6-23d80f10430f">
 
-# Lab 3 - DC Compiler
+## Lab 3 - DC Compiler
 `.synopsys_dc.setup` from `User home directory` overwrites the `default .synopsys_dc.setup` that is installed under DC.
 
 <img width="1218" alt="20-lslab" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dbabdc56-57e4-4aee-bc4c-6dbc96c98488">
@@ -1112,6 +1112,16 @@ Invoke the setup file by `gvim .synopsys_dc.setup` and copy paste the commands
 set target_library ~/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set link_library {* $tarhet_library}
 ```
+## Tool Command Language (TCL) Quick Refresher
+Location of `{` `}` are very important.
+
+<img width="937" alt="21-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1c319176-2690-4042-a55b-4fb1001e2cc5">
+<img width="1008" alt="22-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/31146aa1-4156-4b1d-8474-bb06b1435ce9">
+<img width="1181" alt="23-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e772cbba-0958-4460-90a1-977cab6c0187">
+<img width="1185" alt="26-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/40832bcf-d0da-4524-8b24-7bab17dafc98">
+<img width="1172" alt="25-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4f1a6890-55fe-4780-ac7c-06787aef3990">
+<img width="878" alt="24-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f582ee10-1671-48c8-a205-244dfd1ca714">
+
 
 
 </details>
