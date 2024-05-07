@@ -1110,10 +1110,10 @@ Invoke the setup file by `gvim .synopsys_dc.setup` and copy paste the commands
 
 ```
 set target_library ~/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
-set link_library {* $tarhet_library}
+set link_library {* $target_library}
 ```
 ## Tool Command Language (TCL) Quick Refresher
-Location of `{` `}` are very important.
+The location of `{` `}` is very important.
 
 <img width="937" alt="21-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1c319176-2690-4042-a55b-4fb1001e2cc5">
 <img width="1008" alt="22-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/31146aa1-4156-4b1d-8474-bb06b1435ce9">
@@ -1122,6 +1122,14 @@ Location of `{` `}` are very important.
 <img width="1172" alt="25-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4f1a6890-55fe-4780-ac7c-06787aef3990">
 <img width="878" alt="24-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f582ee10-1671-48c8-a205-244dfd1ca714">
 
+## Lab 4 - TCL Scripting
+
+<img width="1178" alt="27-lab-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3f3d85b2-ba62-4a24-bfa1-5e3a02f07ea9">
+
+Command to launch `gvim` within DC compiler
+```
+sh gvim &
+```
 
 
 </details>
