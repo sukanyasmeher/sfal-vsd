@@ -1109,7 +1109,7 @@ If we type `read_verilog` in GUI, it reads only the Verilog file. But `read_ddc`
 Invoke the setup file by `gvim .synopsys_dc.setup` and copy paste the commands
 
 ```
-set target_library ~/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
+set target_library /home/sukanya/VLSI/sky130RTLDesignAndSynthesisWorkshop/DC_WORKSHOP/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set link_library {* $target_library}
 ```
 ## Tool Command Language (TCL) Quick Refresher
