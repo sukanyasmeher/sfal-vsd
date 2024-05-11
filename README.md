@@ -1213,8 +1213,56 @@ So delay is a function of `input transition` (inflow) and `load capacitance` (th
 
 <img width="1216" alt="7-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a62047e5-0ead-4cbe-bf81-b5a67eeb7845">
 
+## What are Constraints and Why are They Needed?
+
+The path that decides or limits the max clock frequency is the `critical path`. If the critical path delay is reduced, a better frequency can be achieved. We need to tell the tools to pick library cells with specific delays. This is defined through `constraints`.
+
+<img width="1214" alt="8-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3a34189f-8d5f-489e-9ab2-db87273d6c9a">
+
+<img width="1220" alt="9-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/815ddb1d-a08d-4d67-a302-3f8cc910d0ad">
+
+## Different Timing Paths
+
+<img width="1161" alt="10-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/674af831-0b39-4d47-8e60-36f032b3781e">
+
+Let's assume the clock frequency is 500MHz or the clock period is 2ns. So if the delay of flops is 0.5ns each, by combining they account for a 2ns delay in the path. So we only have the rest 1ns delay leverage for combinational logic. As shown in the screenshot below,it is actually the clock period that limits the combinational logic.
+
+<img width="1177" alt="11-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/089ace72-3b1f-4409-9eb8-fe8511725847">
+
+***So a couple of constraints that can be specified are:***
+
+(1) So the constraint given to the synthesis tool is the `acceptable clock period as constraint`. So the tool will pick appropriate cells for the combinational logic.
+
+(2) Input constraint
+
+<img width="1197" alt="12-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/655e47e8-ef65-49db-a848-8e63d7e76f47">
 
 
+(3) `REG3` is sending the output to the external outside flop `REG_EXT_3` through `Output Logic` and both the flops are clocked by the same clock `CLK`. This becomes a synchronous path. There should be a limit in the output logic, how much delay this logic can consume on the path. So we need to constraint the output path.
+
+<img width="1223" alt="13-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2bc2390f-2957-4541-9147-cd0c9b3bcb85">
+
+<img width="1148" alt="14-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4772a70e-2972-4d77-9aa1-6adcd789aff6">
+
+We can constraint I/O logic by specifying the input and output external delay with the associated clock `CLK`. 
+I/O delay modelling can come from:
+- Standard interface specifications like I2C, SPI
+- IO budgeting based on interactions with other modules
+
+<img width="1229" alt="15-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5ba038af-005e-43df-a3de-a74e9315f494">
+
+## Input Transition and Output Load
+
+### Is IO Delay Modeling Sufficient?
+
+<img width="1184" alt="16-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/fa7b7093-3640-4290-a843-718997a16b6a">
+
+<img width="1215" alt="17-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2d5dd211-6f47-481b-af0e-61afa63208e3">
+
+70% of clock period for external delay and 30% of clock period for internal delay as rule of thumb.
+
+
+<img width="1134" alt="18-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6da5358d-a587-4663-870c-0041a317908f">
 
 </details>
 
