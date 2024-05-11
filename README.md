@@ -1130,6 +1130,54 @@ Command to launch `gvim` within DC compiler
 ```
 sh gvim &
 ```
+<img width="841" alt="28-lab-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0b1d4aca-fdff-4f33-8d46-b22c6b3cb95b">
+
+Command to see `and` gates in `.lib` file
+<img width="1675" alt="29-lab-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ccf3ed5d-c112-4cc2-9c49-a1ceb62385dd">
+
+Syntax to print each `and` gate in `.lib` file
+
+```
+foreach_in_collection my_var [get_lib_cells */*and*] {
+	set my_var_name [get_object_name $my_var];
+	echo $my_var_name;
+}
+```
+
+The output looks like the one shown in the screenshot
+
+<img width="1047" alt="30-lab-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4896877e-a751-486a-8d25-443ede1e27a5">
+
+Syntax to print `multiplication` table
+
+```
+echo "Printing Multiplication Table"
+
+set i 10;
+set j 1;
+while {$j < 21} {
+	echo [expr $i*$j];
+	incr j;
+}
+```
+
+The output is shown below
+
+<img width="453" alt="31-lab-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c92d4b29-9d7d-4f09-9288-a57dd9b487b1">
+
+Syntax to read from a list
+
+```
+set mylist [list a b c d e f g];
+
+foreach myvar $mylist {
+	echo $myvar;
+}
+echo $mylist;
+```
+The output is shown below
+
+<img width="268" alt="32-lab-tcl" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8f455335-ccde-400b-9d27-39d60b488a9a">
 
 
 </details>
@@ -1141,9 +1189,30 @@ sh gvim &
 
 ## Introduction to STA
 
-#### Max and Min Delay Constraints
+### Max and Min Delay Constraints
 
-<img width="1203" alt="11-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1a2d7a37-5a80-4aeb-b28a-f122d47efcba">
+<img width="1203" alt="1-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/772ea1c9-ca38-4967-ac99-869232150a6c">
+
+### Water Bucket Analogy for Delay
+
+The inflow of water translates to the inflow of current. Fast current sourcing (fast rise time of input) => less delay.
+
+So delay is a function of `input transition` (inflow) and `load capacitance` (the size of the bucket).
+
+<img width="1215" alt="2-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a0bb9c46-f2ea-409c-8426-ac74dad8bfba">
+
+<img width="1223" alt="3-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/24aca3cf-2d0b-482e-b088-72af7a8baab7">
+
+<img width="1149" alt="4-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/45daf929-b61f-4964-bde6-4c0faa584ea0">
+
+### Timing Arcs
+
+<img width="1180" alt="5-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/fdd5bb66-8b88-4ceb-86d9-b741e7d89379">
+
+<img width="1163" alt="6-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ea55b5b2-28b1-415c-95d9-d557887597cf">
+
+<img width="835" alt="7-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0a936b6d-1dd4-4230-bea0-99f8be3ee04e">
+
 
 </details>
 
