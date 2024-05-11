@@ -1211,7 +1211,9 @@ So delay is a function of `input transition` (inflow) and `load capacitance` (th
 
 <img width="1163" alt="6-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ea55b5b2-28b1-415c-95d9-d557887597cf">
 
-<img width="835" alt="7-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0a936b6d-1dd4-4230-bea0-99f8be3ee04e">
+<img width="1216" alt="7-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a62047e5-0ead-4cbe-bf81-b5a67eeb7845">
+
+
 
 
 </details>
