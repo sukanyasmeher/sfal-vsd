@@ -1261,8 +1261,42 @@ I/O delay modelling can come from:
 
 70% of clock period for external delay and 30% of clock period for internal delay as rule of thumb.
 
-
 <img width="1134" alt="18-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6da5358d-a587-4663-870c-0041a317908f">
+
+## Lab 1 - Timing .lib
+
+- PVT operating conditions are mentioned
+- Technology - CMOS
+
+### Max_transition 
+
+```
+default_max_transition : 1.5000000000;
+```
+Output has a pin capacitance, net has capacitance and there is input capacitance at the next gate or sum of all input capacitance for fan out > 1.
+If the library has a max capacitance limit of 1.5pF, the DC will use this value and divide the net and add buffer in the path as shown in the green diagram.
+
+<img width="1101" alt="19-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6da90ea8-5785-4479-96a5-71dadd8f9e1d">
+
+### Delay Model Look Up Table
+
+<img width="1172" alt="20-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d296138a-4d4e-4648-89ca-61651df2176b">
+
+There are attributes associated with the pin such as whether it is clock or not, pin capacitance, direction, and more. 
+
+### Unateness
+
+<img width="1218" alt="21-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c28286f2-c3d0-42d4-bbe9-62326d0319d1">
+
+## Lab 2 - Exploring .lib
+
+- `CLK_N` is the active low clock. Attribute `clock` is `true`. While for the `D` pin, attribute `clock` is `false`.
+- `timing_sense : "non_unate"` - `non_unate` means concerning clock `Q` may be rising or falling (called no unateness).
+- `timing_type : "falling_edge"` - sequential timing arc
+
+
+
+
 
 </details>
 
