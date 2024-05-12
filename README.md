@@ -1397,9 +1397,36 @@ list_attributes -app
 
 # Day 8 - Advanced Constraints
 
-## 
+## Clock Tree Modelling and Uncertainty
 
+### Till now we have seen the constraints defined are 
+- Reg2Reg - Clock period
+- Input to Reg - Clock period, Input delay and Input transition
+- Reg to Output - Clock period, Output delay and Output transition
+
+### What needs to be constrained for the clock ?
+ One is clock period. But the question is will the clock arrive at the same time to the flop? In practical scenerio, it is not possible.
+ Clock is built only during CTS, before which clock is an ideal network. But clock doesn't reach all te flops at the same time.
+ During synthesis, logic is optimized considering ideal clock netwrok. Should synthesis consider the practicality of clock network?
+
+ ### Clock Generation and Jitter
  
+<img width="1195" alt="1-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/505d9576-960a-401d-87da-ca29b06d1c5f">
+
+Jitter happens due to stocastic variations of clock generator. Jitter can have serious effect on clock timing.
+
+### Clock Distribution and Skew
+
+<img width="1242" alt="2-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/58ad127c-e48a-4ee5-ac88-af52d1f059f3">
+ 
+<img width="1222" alt="3-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ced6b409-673a-4a51-a0fb-52bcc0d9363b">
+
+### Factors considered for Clock Modelling
+<img width="1219" alt="4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0243511c-8d7f-401f-9a05-7e6c05f84896">
+
+## IO Delays
+
+
 </details>
 
 
