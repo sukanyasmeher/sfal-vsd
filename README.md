@@ -1426,6 +1426,36 @@ Jitter happens due to stocastic variations of clock generator. Jitter can have s
 
 ## IO Delays
 
+<img width="1173" alt="5-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6b85dabe-7b37-4c7a-a53c-e5e3668284d0">
+
+### Getting the Ports in DC 
+
+<img width="1136" alt="6-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/21a78514-a4b5-4170-bd68-95c8f9044e53">
+
+### Getting the Clock in DC 
+<img width="1173" alt="7-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/bcb23fb3-c904-417f-8f15-f6156f07a918">
+
+### Querying the Cells in the Design
+
+<img width="1173" alt="7-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a45e0199-2573-4de1-a6b0-93d71a69f99c">
+
+<img width="1216" alt="8-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b3e57bab-ff0d-4912-8e09-067d4abaaa0d">
+
+<img width="1217" alt="9-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/274a70ee-d351-482e-8073-00d4175b8f24">
+
+### Creating Clock or Clock Distribution
+
+<img width="1226" alt="10-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/68521f32-cf0a-4cde-8ed0-1bc31ffa601d">
+
+<img width="1207" alt="11-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9192a11d-b1db-4265-8c56-62dd6097230a">
+
+### Constraining IO Paths
+
+<img width="1221" alt="12-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0b31f392-9078-43cb-bc52-32bfba402d71">
+
+<img width="1210" alt="13-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e4c370d5-951e-4d32-b8f8-eb87c70ec2d1">
+
+
 
 </details>
 
