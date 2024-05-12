@@ -1298,6 +1298,9 @@ For example, `CLK` has `setup_rising` attribute while `CLK_N` has `setup_falling
 
 <img width="1675" alt="22-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/49d1624c-24b9-43c2-9981-16f3a40b8920">
 
+<img width="1216" alt="23-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3053204b-d5b3-44db-89ab-2a06c74bd3df">
+
+<img width="1667" alt="24-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2b8878b5-7bc2-4599-bc0b-935a50d6df0c">
 
 
 
