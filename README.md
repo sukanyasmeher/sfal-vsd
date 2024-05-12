@@ -1288,7 +1288,7 @@ There are attributes associated with the pin such as whether it is clock or not,
 
 <img width="1218" alt="21-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c28286f2-c3d0-42d4-bbe9-62326d0319d1">
 
-## Lab 2 - Exploring .lib
+## Lab 2 - Exploring .lib (Part 1)
 
 - `CLK_N` is the active low clock. Attribute `clock` is `true`. While for the `D` pin, attribute `clock` is `false`.
 - `timing_sense : "non_unate"` - `non_unate` means concerning clock `Q` may be rising or falling (called no unateness).
@@ -1304,7 +1304,41 @@ For latch the point when data is sampled is different than flop.
 
 <img width="1667" alt="24-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2b8878b5-7bc2-4599-bc0b-935a50d6df0c">
 
+## Lab 3 - Exploring .lib (Part 2)
 
+### Query the properties of library from dc_shell
+
+Command to check the library loaded in the design
+
+```
+dc_shell> list_lib
+```
+Command to get a particular `cell` in library
+
+```
+get_lib_cells */*and*
+```
+<img width="1061" alt="25-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/12efea20-2b60-4762-b5b3-0e920d9758ef">
+
+Command to get the list of that particular cell as a list but the command below shows only the pointer names
+
+```
+foreach_in_collection my_lib_cell [get_lib_cells */*and*] {
+echo $my_lib_cell;
+}
+```
+
+Command to get the list of that particular cell as a list 
+```
+foreach_in_collection my_lib_cell [get_lib_cells */*and*] {
+set my_lib_cell_name [get_object_name $my_lib_cell]; echo $my_lib_cell_name;
+}
+```
+
+<img width="1058" alt="26-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d14456c1-33fd-4afb-a940-7a990a8c8b09">
+
+Command to get the pins in a cell
+```
 
 </details>
 
