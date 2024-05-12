@@ -1385,6 +1385,11 @@ Command to query all the sequential cells in the library
 get_lib_cells */* -filter "is_sequential == true"
 ```
 
+***Command to list all attributes***
+```
+list_attributes -app
+```
+
 </details>
 
 <details>
