@@ -1343,10 +1343,58 @@ get_lib_pins sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/*
 ```
 <img width="1042" alt="27-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a398bb71-a288-4f66-b6a7-bc0355dbf407">
 
-Script to display the pin direction of each pin
+Functionality is shown on the `output` pin.
+`get_lib_attribute` is the command to query the attribute of pin or cell.
+
+Command to query the function of the `output` pin
+
 ```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/X function
 ```
 
+Output is shown as 
+```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/X function
+Performing get_lib_attribute on library object 'sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/X'. 
+A&B
+```
+Command to query the direction of the `output` pin
+
+```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/X direction
+```
+Command to query the area of the cell 
+```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0 area
+```
+
+Command to query the capacitance of the pin
+
+```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/A capacitance
+```
+Command to query the if a pin is clock or not
+
+```
+get_lib_attribute sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/A clock
+```
+
+Command to query all the sequential cells in the library 
+
+```
+get_lib_cells */* -filter "is_sequential == true"
+```
+
+</details>
+
+<details>
+<summary> Day 8 - Advanced Constraints </summary>
+
+# Day 8 - Advanced Constraints
+
+## 
+
+ 
 </details>
 
 
