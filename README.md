@@ -1294,6 +1294,9 @@ There are attributes associated with the pin such as whether it is clock or not,
 - `timing_sense : "non_unate"` - `non_unate` means concerning clock `Q` may be rising or falling (called no unateness).
 - `timing_type : "falling_edge"` - sequential timing arc
 
+For example, `CLK` has `setup_rising` attribute while `CLK_N` has `setup_falling` attribute as shown below.
+
+<img width="1675" alt="22-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/49d1624c-24b9-43c2-9981-16f3a40b8920">
 
 
 
@@ -1302,8 +1305,6 @@ There are attributes associated with the pin such as whether it is clock or not,
 
 
 
-  
-</details>
 
 
 
