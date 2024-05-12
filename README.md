@@ -1337,7 +1337,14 @@ set my_lib_cell_name [get_object_name $my_lib_cell]; echo $my_lib_cell_name;
 
 <img width="1058" alt="26-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d14456c1-33fd-4afb-a940-7a990a8c8b09">
 
-Command to get the pins in a cell
+Command to get the pins in a cell (sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0)
+```
+get_lib_pins sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__and2_0/*
+```
+<img width="1042" alt="27-lab-sta" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a398bb71-a288-4f66-b6a7-bc0355dbf407">
+
+Script to display the pin direction of each pin
+```
 ```
 
 </details>
