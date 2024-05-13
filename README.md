@@ -1455,7 +1455,47 @@ Jitter happens due to stocastic variations of clock generator. Jitter can have s
 
 <img width="1210" alt="13-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e4c370d5-951e-4d32-b8f8-eb87c70ec2d1">
 
+# Lab 1 - Loading design get_cells, get_ports, get_nets
 
+Verilog code of lab8_circuit.v
+```
+module lab8_circuit (input rst, input clk , input IN_A , input IN_B , output OUT_Y , output out_clk);
+reg REGA , REGB , REGC ; 
+
+always @ (posedge clk , posedge rst)
+begin
+	if(rst)
+	begin
+		REGA <= 1'b0;
+		REGB <= 1'b0;
+		REGC <= 1'b0;
+	end
+	else
+	begin
+		REGA <= IN_A | IN_B;
+		REGB <= IN_A ^ IN_B;
+		REGC <= !(REGA & REGB); 
+	end
+end
+
+assign OUT_Y = ~REGC;
+
+assign out_clk = clk;
+
+endmodule
+```
+The circuit is shown below 
+
+<img width="902" alt="14-lab1-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7c93393e-a166-4543-9687-087af1d62226">
+
+Syntax to run the command in DC under `/verilog_files` folder
+```
+csh
+dc_shell
+read_verilog lab8_circuit.v
+link
+compile_ultra
+```
 
 </details>
 
