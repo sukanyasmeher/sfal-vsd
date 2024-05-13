@@ -1496,6 +1496,68 @@ read_verilog lab8_circuit.v
 link
 compile_ultra
 ```
+After reading the verilog file, make sure that there is no error. It has inferred 3 registers, 1-bit wide, asynchronous reset type as shown below.
+
+<img width="1053" alt="15-lab1-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/655e5e31-2de3-4f98-8107-eb91e6fc95f4">
+
+After compilation make sure that there is no error.
+
+<img width="1049" alt="16-lab1-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f0868f9a-5049-43d8-9b3f-00b13aa7d0dd">
+
+### Commands with get_ports
+<img width="1053" alt="17-lab-ac1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5790ddc4-5d63-449e-bbdb-9719402c18c5">
+
+### Commands with get_cells
+
+Syntax to check if a cell is hierarchical, where U9 is cell
+```
+get_attribute [get_cells U9] is_hierarchical
+```
+Syntax to check all the cells which are hierarchical or not
+```
+get_cells * -hier -filter "is_hierarchical == false"
+or
+get_cells * -hier -filter "is_hierarchical == true"
+```
+To know the reference name of the cell in the library
+
+<img width="1208" alt="18-lab1-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/38a4f8ca-dfab-43bf-b403-268aa1803e91">
+
+Syntax to know the reference name of cell REGA_reg. The output obtained is `sky130_fd_sc_hd__dfrtp_1` where `dfrtp` means DFF with `r` means asynchronous reset, `p` means positive triggered and `t` means with true output.
+```
+get_attribute [get_cells REGA_reg] ref_name
+```
+Syntax to know the reference name of all the cells in the design
+```
+foreach_in_collection my_cell [get_cells * -hier] {
+set my_cell_name [get_object_name $my_cell];
+set rname [get_attribute [get_cells $my_cell_name] ref_name];
+echo $my_cell_name $rname;
+}
+```
+The output is shown below.
+
+<img width="1066" alt="19-lab1-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/dd00b1a8-aa8a-4463-835a-363b31982cb8">
+
+Command to write DDC of the design
+```
+write -f ddc -out lab8_circuit.ddc
+```
+Open the Design Vision with command `design_vision` in the terminal
+Read the DDC of the design in Design Vision GUI
+```
+read_ddc lab8_circuit.ddc
+```
+<img width="1678" alt="20-lab1-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e015dd69-53cc-47fc-b3fc-9a4ed05ac053">
+
+Syntax to get all nets of the design and typed in Design Vision
+```
+get_nets *
+```
+Syntax to check what a particular net such as N1 is connected to 
+```
+all_connected N1
+```
 
 </details>
 
