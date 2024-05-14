@@ -1630,6 +1630,113 @@ Output is shown below.
 
 ## Lab 3 - create_clock waveform
 
+The command `current_design` tells the name of top module
+
+Syntax to create a clock with period of 10ns
+```
+create_clock -name MYCLK -period 10 [get_ports clk]
+```
+
+Syntax to know the clocks
+```
+get_clocks *
+```
+
+Syntax to get the period of the clock
+```
+get_attribute [get_clocks MYCLK] period
+```
+Syntax to check whether the clock is generated or not. If `false` then it is a master clock.
+```
+get_attribute [get_clocks MYCLK] period
+```
+Syntax to know the information about all clock
+```
+report_clocks *
+```
+
+<img width="1065" alt="25-lab3-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1d139938-e81b-4125-bd4d-11ff33925626">
+
+Syntax to query the attributes of all clock pin 
+```
+foreach_in_collection my_pin [get_pins *] {
+	set my_pin_name [get_object_name $my_pin];
+        set dir [get_attribute [get_pins $my_pin_name] direction];                                                                                              
+	if { [regexp $dir in] } {
+		if { [get_attribute [get_pins $my_pin_name] clock ] } { 
+			set clk [get_attribute [get_pins $my_pin_name] clocks]; # 	set clk_name [get_object_name [get_attribute [get_pins $my_pin_name] clocks]];
+			set clk_name [get_object_name $clk];
+ 			echo $my_pin_name $clk_name;
+
+		}
+	}
+}
+```
+Output is shown below
+
+<img width="374" alt="26-lab3-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b3824590-7ff3-449b-904d-f54f0f3522d6">
+
+***Do not create a clock on the pin but rather create one on the port.*** The clock created on the pin will not reach to any pin of any flop.
+
+Syntax to remove the clock, BAD_CLK is the clock name
+```
+remove_clock BAD_CLK
+```
+
+Syntax to create a clock with different rising and falling time
+```
+create_clock -name MYCLK -period 10 [get_ports clk] -wave {5 10}
+```
+
+Syntax to create a clock with a different duty cycle
+```
+create_clock -name MYCLK -period 10 -wave {0 2.5} [get_ports clk]
+```
+The order of command doesn't matter when creating a clock.
+
+# Lab 4 - Clock Network Modelling - Uncertainty, report_timing
+
+<img width="1000" alt="27-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b74e590c-dd64-4712-8436-07698c341956">
+
+Syntax to model the source latency 
+```
+set_clock_latency -source 1 [get_clocks MYCLK]
+```
+Syntax to model the network latency 
+```
+set_clock_latency 1 [get_clocks MYCLK]
+```
+Syntax to model uncertainity for max delay or setup which is default
+```
+set_clock_uncertainty 0.5 [get_clocks MYCLK]
+```
+Syntax to model uncertainity for max delay or hold 
+```
+set_clock_uncertainty -hold 0.1 [get_clocks MYCLK]
+```
+***If no clock is present, `report_timing` shows `path is unconstrained`***
+
+syntax to report clock to register
+```
+report_timing -to REGC_reg/D
+```
+The result is shown below.
+
+<img width="755" alt="28-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/fedfc44a-11da-471f-ba5a-1ba606875fef">
+
+After modeling the clock for following commands
+```
+dc_shell> set_clock_latency -source 2 [get_clocks MYCLK]
+1
+dc_shell> set_clock_latency 1 [get_clocks MYCLK]
+1
+dc_shell> set_clock_uncertainty 0.5 [get_clocks MYCLK]
+1
+dc_shell> set_clock_uncertainty -hold 0.1 [get_clocks MYCLK]
+```
+The result is shown below.
+
+<img width="711" alt="29-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3dcff3bc-37fd-425f-bbe2-2dcf307e46db">
 
 </details>
 
