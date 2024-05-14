@@ -1543,8 +1543,8 @@ Command to write DDC of the design
 ```
 write -f ddc -out lab8_circuit.ddc
 ```
-Open the Design Vision with command `design_vision` in the terminal
-Read the DDC of the design in Design Vision GUI
+Open the Design Vision with command `design_vision` in the terminal.
+Command to read the DDC of the design in Design Vision GUI
 ```
 read_ddc lab8_circuit.ddc
 ```
@@ -1558,6 +1558,75 @@ Syntax to check what a particular net such as N1 is connected to
 ```
 all_connected N1
 ```
+
+***In design digital net can only be driven by one driver***
+
+<img width="1217" alt="21-lab1-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/effadc79-ac28-45a1-84f5-cacba8c64e06">
+
+## Lab 2 - get_pins, get_clocks, querying_clocks
+
+Syntax to get all pins
+```
+get_pins *
+```
+
+Synatx to read all the pins individually
+```
+foreach_in_collection my_pin [get_pins *] {
+set pin_name [get_object_name $my_pin];
+echo $pin_name;
+}
+```
+Output is shown below.
+
+<img width="1071" alt="22-lab2-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0b71cf0b-4248-4429-bd0e-99175a43fff9">
+
+Synatx to check direction of a pin
+```
+get_attribute [get_pins REGC_reg/RESET_B] direction
+```
+Synatx to whether a pin is clock pin or not. ***This attibute should only be queried on input pins***
+```
+get_attribute [get_pins REGC_reg/RESET_B] clock
+```
+Syntax to know the direction of all pins
+```
+foreach_in_collection my_pin [get_pins *] {
+set my_pin_name [get_object_name $my_pin];
+set dir [get_attribute [get_pins $my_pin_name] direction];
+echo $my_pin_name $dir;
+}
+```
+
+Syntax to get the pins with all the clock attibute
+```
+foreach_in_collection my_pin [get_pins *] {                                                                                                                                                                                         set my_pin_name [get_object_name $my_pin];                                                                                                                                                                                            set dir [get_attribute [get_pins $my_pin_name] direction];                                                                                                                                                                    if { [regexp $dir in] } {
+if { [get_attribute [get_pins $my_pin_name] clock ] } {
+echo $my_pin_name;
+}
+}
+}
+```
+
+Synatx of query_clock_pin_sm.tcl
+```
+foreach_in_collection my_pin [get_pins *] {
+	set my_pin_name [get_object_name $my_pin];
+        set dir [get_attribute [get_pins $my_pin_name] direction];                                                                                              
+	if { [regexp $dir in] } {
+		if { [get_attribute [get_pins $my_pin_name] clock ] } { 
+ 			echo $my_pin_name;
+
+		}
+	}
+}
+```
+Output is shown below.
+
+<img width="1069" alt="23-lab2-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cd968e75-15a1-4fa2-9e85-f47984f51586">
+
+<img width="1007" alt="24-lab2-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1de3f211-aefe-431a-bb9b-7543ef46c7fb">
+
 
 </details>
 
