@@ -1738,6 +1738,15 @@ The result is shown below.
 
 <img width="711" alt="29-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3dcff3bc-37fd-425f-bbe2-2dcf307e46db">
 
+Calculation for uncertainty and skew and why are they subtracted from the clock period
+
+<img width="1006" alt="30-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7a83ae1f-adc9-404a-884f-a7c0ff009bbe">
+
+Calculations for hold, uncertainty, and skew
+<img width="990" alt="31-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ba4f8b1f-57dc-4acf-9d3c-0a8c8e23a610">
+
+<img width="721" alt="32-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/515c2466-0c6d-4d1d-a214-a404f3f2320a">
+
 </details>
 
 
