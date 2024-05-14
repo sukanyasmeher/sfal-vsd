@@ -1628,6 +1628,9 @@ Output is shown below.
 <img width="1007" alt="24-lab2-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1de3f211-aefe-431a-bb9b-7543ef46c7fb">
 
 
+## Lab 3 - create_clock waveform
+
+
 </details>
 
 
