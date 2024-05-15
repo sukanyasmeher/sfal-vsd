@@ -1462,7 +1462,7 @@ Jitter happens due to stocastic variations of clock generator. Jitter can have s
 </details>
 
 <details> 
-<summary> 3 - Labs </summary>
+<summary> 2 - Labs </summary>
 
 # Lab 1 - Loading design get_cells, get_ports, get_nets
 
@@ -1802,9 +1802,14 @@ Syntax to set min transition for port IN_A
 set_input_transition -min 0.1 [get_ports IN_A]
 ```
 
-Syntax to model the output port delay
+Syntax to model the max delay of output port
 ```
-set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports OUT_Y]
+set_output_delay -max 5 -clock [get_clocks MYCLK] [get_ports OUT_Y]
+```
+
+Syntax to model the min delay of output port
+```
+set_output_delay -min 1 -clock [get_clocks MYCLK] [get_ports OUT_Y]
 ```
 
 Syntax to model a max load for output port
@@ -1820,10 +1825,139 @@ set_load -min 0.1 [get_ports OUT_Y]
 
 <details>
 <summary> 3- Generated Clock </summary>
-	
+
 ## 3 - Generated Clock
 
-</details>
+<img width="1192" alt="37-gc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/fd0d44fe-4838-4eb4-8adf-e9fd2af3f7f8">
+
+<img width="1221" alt="38-gc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ff6e6a21-38ff-45e3-b836-e60695e17048">
+
+<img width="1182" alt="39-gc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/956b3a9d-ad8f-4300-bb7d-3702975f5be8">
+
+## Lab 1 - Generated Clock
+
+<img width="1023" alt="40-lab-gc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/be7fae7f-01de-4f01-a247-26abc912321a">
+
+### The timing report before the generated clock 
+<img width="771" alt="41-lab-gc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/07e30159-d6c5-45f7-a243-bc17bfeb1ef9">
+
+### Clock Divider Circuit
+
+<img width="700" alt="42-lab-gc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/bd6b463d-ff6a-4716-b594-78f80b99b620">
+
+### Generated clock 
+The next step is how to model the difference between `MYCLK` and `outclk` highlighted in the image above. `outclk` can see more routing delays when it comes from `MYCLK` point. 
+
+Syntax to create a generated clock, no divider
+```
+create_generated_clock -name MYGEN_CLK -master MYCLK -source [get_ports clk] -div 1 [get_ports out_clk]
+```
+
+The output of `report_clocks *` is shown below
+```
+dc_shell> report_clocks *
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : clocks
+Design : lab8_circuit
+Version: T-2022.03-SP5-6
+Date   : Wed May 15 23:39:45 2024
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+MYCLK           10.00   {0 5}                         {clk}
+MYGEN_CLK       10.00   {0 5}               G         {out_clk}
+--------------------------------------------------------------------------------
+
+Generated     Master         Generated      Master         Waveform
+Clock         Source         Source         Clock          Modification
+--------------------------------------------------------------------------------
+MYGEN_CLK     clk            {out_clk}      MYCLK          divide_by(1)
+--------------------------------------------------------------------------------
+1
+```
+The timing of `OUT_Y` is still with respect to `MYCLK`. 
+Syntax to model the timing with respect to `MYGEN_CLK`.
+```
+set_clock_latency -max 1 [get_clocks MYGEN_CLK]
+```
+Syntax to annotate the maximum delay
+```
+set_output_delay -max 5 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]
+```
+Syntax to annotate the minimum delay
+```
+set_output_delay -min 1 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]
+```
+
+<img width="1045" alt="43-lab-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/daf1dd84-9536-4f73-aee0-b3bc3636f972">
+
+Syntax of lab8_circuit_modified.v where `out_div_clk` is added to the original syntax lab8_circuit.v
+```
+module lab8_circuit (input rst, input clk , input IN_A , input IN_B , output OUT_Y , output out_clk , output reg out_div_clk);
+reg REGA , REGB , REGC ; 
+
+always @ (posedge clk , posedge rst)
+begin
+	if(rst)
+	begin
+		REGA <= 1'b0;
+		REGB <= 1'b0;
+		REGC <= 1'b0;
+		out_div_clk <= 1'b0;
+	end
+	else
+	begin
+		REGA <= IN_A | IN_B;
+		REGB <= IN_A ^ IN_B;
+		REGC <= !(REGA & REGB);
+		out_div_clk <= ~out_div_clk; 
+	end
+end
+
+assign OUT_Y = ~REGC;
+
+assign out_clk = clk;
+
+endmodule
+```
+
+Read the design using `read_verilog` command. But all the previous commands are erased. So we create a lab8_cons.tcl where all the commands are mentioned.
+Syntax of lab8_cons.tcl which includes all the commands we have done until now
+```
+create_clock -name MYCLK -per 10 [get_ports clk];
+set_clock_latency -source 2 [get_clocks MYCLK];
+set_clock_latency 1 [get_clocks MYCLK];
+set_clock_uncertainty -setup 0.5 [get_clocks MYCLK];
+set_clock_uncertainty -hold 0.1 [get_clocks MYCLK];
+set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_A];
+set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_B];
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports IN_A];
+set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports IN_B];
+set_input_transition -max 0.4 [get_ports IN_A];
+set_input_transition -max 0.4 [get_ports IN_B];
+set_input_transition -min 0.1 [get_ports IN_A];
+set_input_transition -min 0.1 [get_ports IN_B];
+create_generated_clock -name MYGEN_CLK -master MYCLK -source [get_ports clk] -div 1 [get_ports out_clk];
+create_generated_clock -name MYGEN_DIV_CLK -master MYCLK -source [get_ports clk] -div 2 [get_ports out_div_clk]; 
+set_output_delay -max 5 -clock [get_clocks MYGEN_CLK] [get_ports OUT_Y];
+set_output_delay -min 1 -clock [get_clocks MYGEN_CLK] [get_ports OUT_Y];
+set_load -max 0.4 [get_ports OUT_Y];
+set_load -min 0.1 [get_ports OUT_Y];
+```
+
+
+
+
 
 </details>
 
