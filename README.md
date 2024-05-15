@@ -1,6 +1,6 @@
 # sfal-vsd
 <details>
-	<summary>Day 0</summary>
+	<summary>Day 0 - Tools Installation </summary>
 	
 # Day 0 - Tools Installation
 ## Yosys
