@@ -1756,33 +1756,57 @@ Syntax to know the modeling of ports and pins
 ```
 report_port verbose
 ```
-Synatx to model the input port delay
+Syntax to model the input port delay
 ```
 set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports IN_A]
 ```
-Syntax to know the timing around pin IN_A
+Syntax to know the timing around port IN_A
 ```
 report_timing -from IN_A
 ```
 <img width="915" alt="34-lab5-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/33bebb45-0df9-4126-acc7-450635bfb3ce">
 
-Syntax to model the transition in pin IN_A and write to a file `a`
+Syntax to model the transition in port IN_A and write to a file `a`
 ```
 report_timing -from IN_A -trans -net -cap -nosplit > a
 ```
 <img width="951" alt="35-lab5-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1c596057-579f-4876-958e-8e18251c9077">
 
-Synatx to set the hold time for pin IN_A(or IN_B)
+Syntax to set the hold time for port IN_A(or IN_B)
 ```
 set_input_delay -min 1 -clock [get_clocks MYCLK] [get_ports IN_A]
 ```
 
-Syntax to check the hold timing for pin IN_A
+Syntax to check the hold timing for port IN_A
 ```
 report_timing -from IN_A -trans -net -cap -nosplit -delay_type min > a
 ```
 <img width="946" alt="36-lab5-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2cb84c2c-df05-4b75-b496-8871541aa13f">
 
+Syntax to set a max transition for port IN_A
+```
+set_input_transition -max 0.3 [get_ports IN_A]
+```
+
+Syntax to set min transition for port IN_A
+```
+set_input_transition -min 0.1 [get_ports IN_A]
+```
+
+Syntax to model the output port delay
+```
+set_input_delay -max 5 -clock [get_clocks MYCLK] [get_ports OUT_Y]
+```
+
+Syntax to model a max load for output port
+```
+set_load -max 0.4 [get_ports OUT_Y]
+```
+
+Syntax to model a min load for output port
+```
+set_load -min 0.1 [get_ports OUT_Y]
+```
 
 </details>
 
