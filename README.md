@@ -34,7 +34,7 @@ $ sudo apt install gtkwave
 </details>
 
 <details>
-<summary>Day 1</summary>
+<summary>Day 1 - Introduction to Verilog RTL Design and Synthesis</summary>
 
 # Day 1 - Introduction to Verilog RTL Design and Synthesis
 ## Introduction to open-source simulator Iverilog
@@ -134,7 +134,7 @@ The same testbench can be used to verify RTL and Synthesized Netlist.
 
 <details>
 
-<summary>Day 2</summary>
+<summary>Day 2 - Timing libs, Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles </summary>
 
 # Day 2 - Timing libs, Hierarchical vs Flat Synthesis and Efficient Flop Coding Styles
 
@@ -267,7 +267,7 @@ So we expect no hardware which is also seen in the screenshot below, analysis af
 </details>
 
 <details>
-	<summary>Day 3</summary>
+	<summary>Day 3 - Combinational and Sequential Optimizations </summary>
 	
 # Day 3 - Combinational and Sequential Optimizations
 
@@ -546,7 +546,7 @@ We see only 3 flops after the synthesis and also seen in synthesis report after 
 
 <details>
 
- <summary>Day 4 </summary>
+ <summary>Day 4 - GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch</summary>
  
 # Day 4 - GLS, Blocking vs Non-blocking and Synthesis-Simulation Mismatch
 
@@ -747,9 +747,10 @@ The GLS output is shown below. In this case, `d` takes the current value of `x` 
 </details>
 
 <details>
-	<summary>Day 5</summary>
+	<summary>Day 5 - Introduction to DFT</summary>
 	
 # Day 5 - Introduction to DFT
+
 ## List of some possible issues that arise while manufacturing chips:
 - Density Issue: Fabrication processes have become quite complicated with the advent of deep-submicron design technologies. Design elements are coming closer and closer; they are becoming smaller and thinner. Billions of transistors are involved in present-day VLSI chips. So, the chances of two wires touching each other or a very thin wire breaking in between are high. These are a few sources of errors or faults. The point is, that there can be many such errors that can creep in during the design and fabrication processes. So, with an increase in density, the probability of failure also becomes high.
 - Software Issue: Moreover, apart from fabrication, there can even be errors in the translation process due to the bugs in CAD software tools used to design the chip.
@@ -896,7 +897,7 @@ gui_start
 </details>
 
 <details> 
-	<summary> Day 6 </summary>
+	<summary> Day 6 - Introduction to Logic Synthesis </summary>
 
  # Day 6 - Introduction to Logic Synthesis
 
@@ -1183,7 +1184,7 @@ The output is shown below
 </details>
 
 <details> 
-	<summary> Day 7 </summary>
+	<summary> Day 7 - Basics of Static Timing Analysis (STA) </summary>
 
 # Day 7 - Basics of Static Timing Analysis (STA)
 
@@ -1543,7 +1544,7 @@ Command to write DDC of the design
 ```
 write -f ddc -out lab8_circuit.ddc
 ```
-Open the Design Vision with command `design_vision` in the terminal.
+Open the Design Vision with the command `design_vision` in the terminal.
 Command to read the DDC of the design in Design Vision GUI
 ```
 read_ddc lab8_circuit.ddc
@@ -1716,7 +1717,7 @@ set_clock_uncertainty -hold 0.1 [get_clocks MYCLK]
 ```
 ***If no clock is present, `report_timing` shows `path is unconstrained`***
 
-syntax to report clock to register
+Syntax to report clock to register
 ```
 report_timing -to REGC_reg/D
 ```
@@ -1738,7 +1739,7 @@ The result is shown below.
 
 <img width="711" alt="29-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3dcff3bc-37fd-425f-bbe2-2dcf307e46db">
 
-Calculation for uncertainty and skew and why are they subtracted from the clock period
+The calculation for uncertainty and skew and why are they subtracted from the clock period
 
 <img width="1006" alt="30-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7a83ae1f-adc9-404a-884f-a7c0ff009bbe">
 
@@ -1747,7 +1748,7 @@ Calculations for hold, uncertainty, and skew
 
 <img width="721" alt="32-lab4-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/515c2466-0c6d-4d1d-a214-a404f3f2320a">
 
-# Lab 5 - IO Delays
+## Lab 5 - IO Delays
 
 Status until now
 <img width="902" alt="33-lab5-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0c1046ed-b010-4bd3-855a-413a6fcc3ed2">
@@ -1807,6 +1808,7 @@ Syntax to model a min load for output port
 ```
 set_load -min 0.1 [get_ports OUT_Y]
 ```
+## Generated Clock
 
 </details>
 
