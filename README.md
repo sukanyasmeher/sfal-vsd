@@ -1398,6 +1398,9 @@ list_attributes -app
 
 # Day 8 - Advanced Constraints
 
+<details>
+	<summary> 1- Clock Tree Modelling and IO Delays </summary>
+
 ## Clock Tree Modelling and Uncertainty
 
 ### Till now we have seen the constraints defined are 
@@ -1455,6 +1458,11 @@ Jitter happens due to stocastic variations of clock generator. Jitter can have s
 <img width="1221" alt="12-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0b31f392-9078-43cb-bc52-32bfba402d71">
 
 <img width="1210" alt="13-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e4c370d5-951e-4d32-b8f8-eb87c70ec2d1">
+
+</details>
+
+<details> 
+<summary> 3 - Labs </summary>
 
 # Lab 1 - Loading design get_cells, get_ports, get_nets
 
@@ -1808,7 +1816,14 @@ Syntax to model a min load for output port
 ```
 set_load -min 0.1 [get_ports OUT_Y]
 ```
-## Generated Clock
+</details>
+
+<details>
+<summary> 3- Generated Clock </summary>
+	
+## 3 - Generated Clock
+
+</details>
 
 </details>
 
