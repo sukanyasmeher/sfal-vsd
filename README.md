@@ -1901,7 +1901,9 @@ set_output_delay -min 1 [get_ports OUT_Y] -clock [get_clocks MYGEN_CLK]
 
 <img width="1045" alt="43-lab-ac" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/daf1dd84-9536-4f73-aee0-b3bc3636f972">
 
-Syntax of lab8_circuit_modified.v where `out_div_clk` is added to the original syntax lab8_circuit.v
+Let's try a design 
+
+(1) Update the design lab8_circuit.v where `out_div_clk` is added to the original syntax. Syntax of lab8_circuit_modified.v.
 ```
 module lab8_circuit (input rst, input clk , input IN_A , input IN_B , output OUT_Y , output out_clk , output reg out_div_clk);
 reg REGA , REGB , REGC ; 
@@ -1931,7 +1933,8 @@ assign out_clk = clk;
 endmodule
 ```
 
-Read the design using `read_verilog` command. But all the previous commands are erased. So we create a lab8_cons.tcl where all the commands are mentioned.
+(2) Read the design using `read_verilog` command. But all the previous commands are erased as the design is updated. 
+(3) So we create a lab8_cons.tcl where all the commands are mentioned.
 Syntax of lab8_cons.tcl which includes all the commands we have done until now
 ```
 create_clock -name MYCLK -per 10 [get_ports clk];
@@ -1954,8 +1957,100 @@ set_output_delay -min 1 -clock [get_clocks MYGEN_CLK] [get_ports OUT_Y];
 set_load -max 0.4 [get_ports OUT_Y];
 set_load -min 0.1 [get_ports OUT_Y];
 ```
+(4) Link the design using the command `link`
+(5) Run the TCL commands using `source lab8_cons.tcl`
+
+With the command `report_clocks` all the clocks are listed as shown below
+```
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+MYCLK           10.00   {0 5}                         {clk}
+MYGEN_CLK       10.00   {0 5}               G         {out_clk}
+MYGEN_DIV_CLK   20.00   {0 10}              G         {out_div_clk}
+--------------------------------------------------------------------------------
+
+Generated     Master         Generated      Master         Waveform
+Clock         Source         Source         Clock          Modification
+--------------------------------------------------------------------------------
+MYGEN_CLK     clk            {out_clk}      MYCLK          divide_by(1)
+MYGEN_DIV_CLK clk            {out_div_clk}  MYCLK          divide_by(2)
+--------------------------------------------------------------------------------
+```
+With the command `get_generated_clock`, the generated clocks are displayed as follow
+```
+{MYGEN_CLK MYGEN_DIV_CLK}
+```
+With the command `report_ports -verbose` all the information about ports are displayed as follows
+```
+dc_shell> report_port -verbose
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : port
+        -verbose
+Design : lab8_circuit
+Version: T-2022.03-SP5-6
+Date   : Thu May 16 00:04:23 2024
+****************************************
+
+Attributes:
+    c - port_is_clock_port
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+IN_A           in      0.0000   0.0000   --      --      --         
+IN_B           in      0.0000   0.0000   --      --      --         
+clk            in      0.0000   0.0000   --      --      --         
+rst            in      0.0000   0.0000   --      --      --         
+OUT_Y          out     0.4000   0.0000   --      --      --         
+out_clk        out     0.0000   0.0000   --      --      --         c
+out_div_clk    out     0.0000   0.0000   --      --      --         c
 
 
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+IN_A               1      --              --              --        -- 
+IN_B               1      --              --              --        -- 
+clk                1      --              --              --        -- 
+rst                1      --              --              --        -- 
+OUT_Y              1      --              --              0.1000    -- 
+out_clk            1      --              --              --        -- 
+out_div_clk        1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+IN_A          1.00    1.00    5.00    5.00  MYCLK     --    
+IN_B          1.00    1.00    5.00    5.00  MYCLK     --    
+clk           --      --      --      --      --      -- 
+rst           --      --      --      --      --      -- 
+
+--------------------------------------------------------------------------------
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+IN_A          0.40    0.40    0.10    0.10
+IN_B          0.40    0.40    0.10    0.10
+clk           --      --      --      -- 
+rst           --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+OUT_Y         1.00    1.00    5.00    5.00  MYGEN_CLK
+                                                      0.00  
+out_clk       --      --      --      --      --      0.00
+out_div_clk   --      --      --      --      --      0.00
+
+1
+```
 
 
 
