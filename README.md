@@ -2057,7 +2057,14 @@ out_div_clk   --      --      --      --      --      0.00
 	<summary> 4 - vclk, max_latency, rise_fall IO Delays </summary>
 	
 ## 4 - vclk, max_latency, rise_fall IO Delays
- 
+
+### Input Delay
+
+ <img width="1229" alt="44-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/69703bb2-b667-4142-8689-96bfe3ddc3cf">
+
+### Output Delay
+<img width="1124" alt="45-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5d381098-88b9-486f-82de-56d654350c1c">
+
 </details>
 
 
