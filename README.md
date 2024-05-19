@@ -2113,6 +2113,13 @@ out_div_clk   --      --      --      --      --      0.00
 
 </details>
 
+<details>
+	<summary> 2 - Sequential Logic Optimization </summary>
+
+  ## 2 - Sequential Logic Optimization
+
+ </details>
+
 </details>
 
 
