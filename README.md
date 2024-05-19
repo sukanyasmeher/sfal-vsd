@@ -2124,4 +2124,15 @@ out_div_clk   --      --      --      --      --      0.00
 
 </details>
 
+<details>
+	<summary> Day 11 - Introduction to the BabySOC </summary>
+
+ # Day 11 - Introduction to the BabySOC
+ 
+[Uploading Day11_Introduction to VSDBabySOC.pdf…]()
+
+
+ 
+</details>
+
 
