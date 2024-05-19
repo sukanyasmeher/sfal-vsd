@@ -2070,6 +2070,14 @@ out_div_clk   --      --      --      --      --      0.00
 
 <img width="1236" alt="47-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/35c6e8fe-7226-41c5-937a-a1620179624e">
 
+<img width="1205" alt="48-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1dafa2fc-1f5a-41b9-af8a-d0a66150113d">
+
+<img width="1166" alt="49-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4adbe2b6-4959-42ec-9baf-dedc3909eed3">
+
+### IO Transitions
+
+<img width="1217" alt="50-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c8a70599-a8ec-4f62-ad45-b7825feb2395">
+
 
 </details>
 
@@ -2077,12 +2085,12 @@ out_div_clk   --      --      --      --      --      0.00
 
 
 <details> 
-<summary> Day 9 - Optimizations </summary>
+	<summary> Day 9 - Optimizations </summary>
 	
 # Day 9 - Optimizations
 
 <details>
-	<summary>1 - Optimizations Combinational Opt </summary>
+	<summary> 1 - Optimizations Combinational Opt </summary>
 	
 </details>
 
