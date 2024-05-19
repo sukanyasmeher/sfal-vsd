@@ -2089,7 +2089,7 @@ out_div_clk   --      --      --      --      --      0.00
 # Day 9 - Logic Optimizations
 
 <details>
-	<summary> 1 - Optimizations Combinational Opt </summary>
+	<summary> 1 - Combinational Logic Optimization </summary>
 
  ## 1 - Combinational Logic Optimization
 
@@ -2098,7 +2098,10 @@ out_div_clk   --      --      --      --      --      0.00
 <img width="1159" alt="1-clo" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7a214cb9-f994-47b3-b4a1-6e6755087fdd">
 
  ### Combinational Logic Optimization
+
  
+ <img width="1127" alt="2-clo" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e074ec7f-6bec-4a03-b962-d8efc5de2bd4">
+
  
 	
 </details>
