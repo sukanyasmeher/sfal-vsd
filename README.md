@@ -2083,47 +2083,26 @@ out_div_clk   --      --      --      --      --      0.00
 
 </details>
 
-
 <details> 
-	<summary> Day 9 - Optimizations </summary>
+	<summary> Day 9 - Logic Optimizations </summary>
 	
-# Day 9 - Optimizations
+# Day 9 - Logic Optimizations
 
 <details>
 	<summary> 1 - Optimizations Combinational Opt </summary>
+
+ ## 1 - Combinational Logic Optimization
+
+ ### Optimization Goals
+ 
+<img width="1159" alt="1-clo" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7a214cb9-f994-47b3-b4a1-6e6755087fdd">
+
+ ### Combinational Logic Optimization
+ 
+ 
 	
 </details>
 
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
