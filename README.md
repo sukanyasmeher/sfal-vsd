@@ -2065,8 +2065,26 @@ out_div_clk   --      --      --      --      --      0.00
 ### Output Delay
 <img width="1124" alt="45-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5d381098-88b9-486f-82de-56d654350c1c">
 
+### IO Constraints - Revisited
+<img width="1196" alt="46-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6dcb445a-4b47-4eb8-943f-cca00ff8314b">
+
+<img width="1236" alt="47-io" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/35c6e8fe-7226-41c5-937a-a1620179624e">
+
+
 </details>
 
+</details>
+
+
+<details> 
+<summary> Day 9 - Optimizations </summary>
+	
+# Day 9 - Optimizations
+
+<details>
+	<summary>1 - Optimizations Combinational Opt </summary>
+	
+</details>
 
 </details>
 
