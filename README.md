@@ -2098,12 +2098,13 @@ out_div_clk   --      --      --      --      --      0.00
 <img width="1159" alt="1-clo" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7a214cb9-f994-47b3-b4a1-6e6755087fdd">
 
  ### Combinational Logic Optimization
-
  
  <img width="1127" alt="2-clo" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e074ec7f-6bec-4a03-b962-d8efc5de2bd4">
 
- 
-	
+ <img width="1126" alt="3-clo" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c1d05c63-2862-4d0a-9bb7-6cbfdf19a242">
+
+<img width="1160" alt="4-clo" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c32c2c2b-7980-484a-b6a4-34ce4cb5cee8">
+
 </details>
 
 </details>
