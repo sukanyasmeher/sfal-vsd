@@ -2128,9 +2128,26 @@ out_div_clk   --      --      --      --      --      0.00
 	<summary> Day 11 - Introduction to the BabySOC </summary>
 
  # Day 11 - Introduction to the BabySOC
- 
-[Uploading Day11_Introduction to VSDBabySOC.pdf…]()
 
+<img width="1255" alt="1-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a0255437-044e-4e1c-967a-4166dd952aac">
+
+<img width="1336" alt="2-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/737ac4dc-52cb-42ef-bb11-fc61ef6a394b">
+
+<img width="1375" alt="3-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a027f796-e89d-4972-af84-e94bc2f182b7">
+
+<img width="1362" alt="4-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/92b01cc0-e868-4697-8b4b-51a0fbf6c319">
+
+<img width="1362" alt="5-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/54d15044-6216-43e3-9741-c2d2e86a57e0">
+
+<img width="1356" alt="6-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e5a70d1c-15fe-4bc8-a192-bbd6bfd96636">
+
+<img width="1388" alt="7-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9b1f6634-9674-4bf6-ba84-ff9274a1bc87">
+
+<img width="1283" alt="8-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f5ee8f9b-38fd-40ee-a073-5b606fc8cba8">
+
+<img width="1299" alt="9-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c8b258a3-7c46-495a-9009-bde43ab666de">
+
+<img width="1309" alt="10-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d1f288f7-4979-4c06-ab39-825fea48536c">
 
  
 </details>
