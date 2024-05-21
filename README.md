@@ -2137,6 +2137,8 @@ out_div_clk   --      --      --      --      --      0.00
 
 <img width="1362" alt="4-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/92b01cc0-e868-4697-8b4b-51a0fbf6c319">
 
+<img width="713" alt="a15-bionic" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/edf67644-7bb7-4ab0-ba44-a930ec5c6f87">
+
 <img width="1362" alt="5-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/54d15044-6216-43e3-9741-c2d2e86a57e0">
 
 <img width="1356" alt="6-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e5a70d1c-15fe-4bc8-a192-bbd6bfd96636">
@@ -2149,7 +2151,16 @@ out_div_clk   --      --      --      --      --      0.00
 
 <img width="1309" alt="10-babysoc" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d1f288f7-4979-4c06-ab39-825fea48536c">
 
- 
+### GitHub Reps’s
+- manili/VSDBabySoC: VSDBabySoC is a small mixed-signal SoC including PLL, DAC, and a RISCV-based processor named RVMYTH.(https://github.com/manili/VSDBabySoC#what-is-rvmyth)
+- Devipriya1921/avsddac28nm (https://github.com/Devipriya1921/avsddac28nm)
+- reneann713/PLL (https://github.com/ireneann713/PLL)
+- lakshmi-sathi/avsdpll_1v8: 8x PLL Clock Multiplier IP with an input frequency range of 5Mhz to 12.5Mhz and output frequency range of 40Mhz to 100Mhz, giving a 8x multiplied clock at ~50% duty cycle on tt corner at room temperature. (https://github.com/lakshmi-sathi/avsdpll_1v8)
+
+ ### References
+ - https://microcontrollerslab.com/system-on-chip-soc-introduction/
+ - https://github.com/Devipriya1921/VSDBabySoC_ICC2
+   
 </details>
 
 
