@@ -2201,10 +2201,32 @@ Before that lets understand how each component works.
 - RISC-V(pronounced “risk-five”) ISA is defined as a base integer ISA, which must be present in any implementation, plus optional extensions to the base ISA.
 - Each base integer instruction set is characterized by the width of the integer registers and the corresponding size of the address space and by the number of integer registers.
 - There are two primary base integer variants, RV32I and RV64I.
-- 
+  
 <img width="873" alt="1-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1a0af917-27de-491b-980e-0af2f5d3adc2">
 
-  
+<img width="838" alt="2-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ff4db005-2860-4321-bf2f-cac0c3d694a0">
+
+## Phase Locked Loop
+- A phase-locked loop (PLL) is an electronic circuit with a voltage or voltage-driven oscillator that constantly adjusts to match the frequency of an input signal.
+- PLLs are used to generate, stabilize, modulate, demodulate etc
+- Now, question is why do we need a PLL for our SoC?
+- Before that how is a clock generated? Quartz crystal oscillator. For 100Mhz and below off chip oscillator will do, but for 100Mhz and above it won’t be good enough.-how?
+
+## Why off-chip clocks can’t be used all the time?
+- The clock will be a supply for a lot of blocks on the chip, it will have delays due to long wires(if used only one clock source) - also reasons like clock jitter
+- Some blocks might need 200Mhzs and some might need 100Mhz - point is different frequencies just on one small chip
+- A concept of ppm(clock accuracy) comes in, when ever quartz is acquired, it comes with a x ppm error
+
+## What is this ppm error? {ppm - parts per million}
+- For ex: 20ppm quartz used in watches this translates as 20/1e6 (2e-5) which gives an error over a day of 86400 * 2e-5 = 1.73 seconds per day so in a month it loses 30 x1.72 = 51 seconds or 1 minute a month
+- Now, in terms of a chip, just imagine the mishap it will cause just due to very small error for ,microseconds, when the processor works at nanoseconds -------- it can be a huge blow.
+
+<img width="916" alt="3-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4e3fb504-bf1e-4bb4-bb9d-60829ae83a02">
+
+<img width="958" alt="4-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a4ad521b-4190-4986-a86e-9b5bf1d44509">
+
+
+
 
  </details>
  
