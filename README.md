@@ -2182,6 +2182,29 @@ out_div_clk   --      --      --      --      --      0.00
   3. verification,
   4. and validation of a system,
   5. as well as to communicate certain information.
+ 
+## What are we modelling?
+- Let us look into VSDBabySoC modelling. Here we are going to model and simulate the VSDBabySoC
+- Some initial input signals will be fed into vsdbabysoc module,
+- That will get the pll start generating the proper CLK for the circuit.
+- The clock signal will make the rvmyth to execute instructions and some values are generated, these values are used by DAC core to provide the final output signal named OUT.
+- So we have 3 main elements (IP cores) and a wrapper as an SoC and of-course there would be also a testbench module out there.
+
+## This weeks task is to model the 3 main IP cores
+1. RVMYTH modelling
+2. PLL modelling
+3. DAC modelling
+Before that lets understand how each component works.
+
+## RVMYTH - Risc-V based MYTH (Microprocessor for You in Thirty Hours)
+- RISC stands for Reduced instruction set computer
+- RISC-V(pronounced “risk-five”) ISA is defined as a base integer ISA, which must be present in any implementation, plus optional extensions to the base ISA.
+- Each base integer instruction set is characterized by the width of the integer registers and the corresponding size of the address space and by the number of integer registers.
+- There are two primary base integer variants, RV32I and RV64I.
+- 
+<img width="873" alt="1-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1a0af917-27de-491b-980e-0af2f5d3adc2">
+
+  
 
  </details>
  
