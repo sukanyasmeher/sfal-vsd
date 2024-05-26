@@ -2163,4 +2163,28 @@ out_div_clk   --      --      --      --      --      0.00
    
 </details>
 
+<details>
+	<summary> Day 12 - Modelling of BabySoc </summary>
+
+ <details>
+  <summary> Theory </summary>
+
+## Recap on SoC
+- SoC is a single-die chip that has some different IP cores on it. These IPs could vary from microprocessors (completely digital) to 5G broadband modems (completely analog).
+- SoC with equivalent functionality will have increased performance and reduced power consumption as well as a smaller semiconductor die area.
+
+## What does modelling mean?(electronics terminology)
+- Modeling and simulation is the use of a physical or logical representation of a given system to generate data and help determine decisions or make predictions about the system.
+- Models are representations that can aid in defining, analyzing, and communicating a set of concepts. M&S is widely used in the VLSI domain.
+- System models are specifically developed to
+  1. support analysis, specification,
+  2. design,
+  3. verification,
+  4. and validation of a system,
+  5. as well as to communicate certain information.
+
+ </details>
+ 
+</details>
+
 
