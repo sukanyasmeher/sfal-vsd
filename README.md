@@ -2259,8 +2259,75 @@ executable a.out. This binary executable is later used for simulation.
 
 <img width="919" alt="8-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ea9f2d70-f211-42f9-9cd2-51746ded11c4">
 
-
  </details>
+
+ <details>
+	 <summary> Lab </summary>
+
+## Steps to be followed for pre-synthesis modeling of BabySoC
+
+The repo used for the reference is - https://github.com/manili/VSDBabySoC?tab=readme-ov-file#step-by-step-modeling-walkthrough
+
+1. Make sure that `iverilog` and `GTKwave` are properly installed.
+2. Install `sandpiper-saas` with the following commands
+   ```
+   cd ~
+   pip3 install pyyaml click sandpiper-saas
+   ```
+3. After installing, check if `sandpiper-saas` is present in the path with the command `which sandpiper-saas`. You should get a local path name as shown below.
+   ```
+   [sukanya@sfalvsd ~]$ which sandpiper-saas
+   ~/.local/bin/sandpiper-saas
+   ```
+
+   If it is not present, add it to your `.bashrc` file using the command
+   ```
+   gedit ~/.bashrc
+   export PATH=$PATH:/home/sukanya/.local/bin
+   ```
+4. Now we can clone this repository in an arbitrary directory (we'll choose home directory here):
+   ```
+   cd ~
+   git clone https://github.com/manili/VSDBabySoC.git
+   ```
+5. RVMYTH is designed and created by the TL-Verilog language. So we need a way for compile and transform it to the Verilog language and use the 
+   result in our SoC. Here the `sandpiper-saas` will help us do the job.
+   ```
+   cd VSDBabySoC
+   sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v --bestsv --noline -p verilog --outdir ./src/module/
+   ```
+  The last command translates .tlv definition of rvmyth into .v definition.
+
+6. Create an `output` directory inside `VSDBabySoC` using the command `mkdir output`.
+     
+7. Compile and Simulate the design.
+   ```
+   iverilog -o output/pre_synth_sim.out -DPRE_SYNTH_SIM src/module/testbench.v -I src/include -I src/module
+   cd output
+   ./pre_synth_sim.out
+   ```
+     
+8. Open simulation waveform in GTKwave tool
+   ```
+   gtkwave pre_synth_sim.out
+   ```
+
+<img width="1242" alt="10-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a6051c0a-08f6-4aa3-a819-5521da17987e">
+
+<img width="1672" alt="9-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3a699682-e1c1-4f36-b0f0-f7535d6b86ad">
+
+In this picture we can see the following signals:
+
+***CLK***: This is the input CLK signal of the RVMYTH core. This signal comes from the PLL, originally. \
+***reset***: This is the input reset signal of the RVMYTH core. This signal comes from an external source, originally.\
+***OUT***: This is the output OUT signal of the VSDBabySoC module. This signal comes from the DAC (due to simulation restrictions it behaves like a digital signal which is incorrect), originally.\
+***RV_TO_DAC[9:0]***: This is the 10-bit output [9:0] OUT port of the RVMYTH core. This port comes from the RVMYTH register #17, originally.\
+***OUT***: This is a real datatype wire which can simulate analog values. It is the output wire real OUT signal of the DAC module. This signal comes from the DAC, originally. This can be viewed by changing the `Data Format` of the signal to `Analog -> Step` .
+
+***PLEASE NOTE*** that the sythesis process does not support `real` variables, so we must use the simple `wire` datatype for the `\vsdbabysoc.OUT` instead. The iverilog simulator always behaves `wire` as a digital signal. As a result we can not see the `analog output` via `\vsdbabysoc.OUT` port and we need to use `\dac.OUT` (which is a real datatype) instead.
+
+
+    </details>
  
 </details>
 
