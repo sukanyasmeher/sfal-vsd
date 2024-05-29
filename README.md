@@ -2268,7 +2268,7 @@ executable a.out. This binary executable is later used for simulation.
 
 The repo used for the reference is - https://github.com/manili/VSDBabySoC?tab=readme-ov-file#step-by-step-modeling-walkthrough
 
-1. Make sure that `iverilog` and `GTKwave` are properly installed.
+1. Make sure that the tools `iverilog` and `GTKwave` are properly installed.
 2. Install `sandpiper-saas` with the following commands
    ```
    cd ~
@@ -2327,8 +2327,12 @@ In this picture we can see the following signals:
 ***PLEASE NOTE*** that the sythesis process does not support `real` variables, so we must use the simple `wire` datatype for the `\vsdbabysoc.OUT` instead. The iverilog simulator always behaves `wire` as a digital signal. As a result we can not see the `analog output` via `\vsdbabysoc.OUT` port and we need to use `\dac.OUT` (which is a real datatype) instead.
 
 
-    </details>
- 
+</details>
+    
+</details>
+
+<details>
+	<summary> </summary>
 </details>
 
 
