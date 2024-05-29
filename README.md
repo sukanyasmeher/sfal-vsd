@@ -2225,7 +2225,39 @@ Before that lets understand how each component works.
 
 <img width="958" alt="4-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a4ad521b-4190-4986-a86e-9b5bf1d44509">
 
+## Digital-to-Analog Converter
 
+- A Digital-to-Analog Converter (DAC) converts a digital input signal into an analog output signal.
+- The digital signal is represented with a binary code, which is a combination of bits 0 and 1. A Digital to Analog Converter (DAC) consists of a number of binary inputs and a single output.
+- In general, the number of binary inputs of a DAC will be a power of two.
+- There are two types of DACs :
+  a) Weighted Resistor DAC
+  b) R-2R Ladder DAC
+
+<img width="895" alt="5-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ed488262-19ce-4258-8fa3-1ef4c0edeaa3">
+
+<img width="900" alt="6-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8151c18e-82d4-458a-8af5-1b022dfffc57">
+
+<img width="891" alt="7-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/af6fc5e4-9ed4-4da0-9765-e47b2e5c2495">
+
+## Let's start modelling
+- RVMYTH is a digital block, so yes we can use a HDL for designing and check its functionality using a testbench.
+- But! DAC and PLL are analog what to do?
+- Because verilog can’t synthesis analog design
+- We are going to simulate it using verilog - we will be using data-types such real.
+- Our goal is to be able to simulate “functionality” - to verify its logical correctness.
+
+## Tools used for pre-synthesis modeling
+So we will be using `verilog` to model - and use `iverilog` to compile and simulate. Use `GTKWave` to see the waveforms & debug.
+
+How do we model and simulate them?
+- We will be using iverilog - Icarus Verilog is an implementation of the Verilog hardware description language compiler that generates netlists in the desired format. It supports the 1995, 2001 and 2005 versions of the standard, portions of SystemVerilog, and some extensions.
+- Modelling and simulating on iverilog involves 2 main steps, namely:
+1. Compilation - iverilog builds the instance hierarchy and generates a binary
+executable a.out. This binary executable is later used for simulation.
+2. Simulation - During compilation, iverilog generates a binary executable.
+
+<img width="919" alt="8-mb" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ea9f2d70-f211-42f9-9cd2-51746ded11c4">
 
 
  </details>
