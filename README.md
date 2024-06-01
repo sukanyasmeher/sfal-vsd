@@ -2375,12 +2375,60 @@ Note: Gate level simulation is used to boost the confidence regarding implementa
  </details>
 
  <details>
-	 <summary> Lab </summary>
+	 <summary> Lab - Converting .lib file to .db file  </summary>
 
   ## Converting .lib file to .db file
   The first step is to convert .lib file to .db file. We need .db format for `avsddac.lib`, `avsdpll.lib` & `sky130_fd_sc_hd__tt_025C_1v80.lib` using Synopsys Library Compiler (lc_shell).
 
-  
+The .lib files, `avsddac.lib`, `avsdpll.lib`, and `sky130_fd_sc_hd__tt_025C_1v80.lib` are present in the location `/home/sukanya/VSDBabySoC/src/lib`. 
+
+### Converting avsddac.lib file to  avsddac.db file
+Syntax to convert the avsddac.lib files to avsddac.db
+```
+/home/sukanya/VSDBabySoC/src/lib
+lc_shell
+read_lib avsddac.lib
+write_lib avsddac -format db -output avsddac.db
+```
+The conversion of `avsddac.lib` to `avsddac.db` is successful as shown in screenshot below. If the code runs successfully, it will return 1.
+
+<img width="1235" alt="2-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0b2f64f4-1b1f-488e-ae44-e42c48e08abb">
+
+### Converting avsdpll.lib file to  avsdpll.db file
+
+Syntax to convert the avsdpll.lib files to avsdpll.db
+```
+/home/sukanya/VSDBabySoC/src/lib
+lc_shell
+read_lib avsdpll.lib
+write_lib avsdpll -format db -output avsdpll.db
+```
+
+The `read_lib` command shows some errors for `avsdpll.lib`. The errors are shown below.
+
+<img width="1185" alt="3-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f32dbf0f-693e-43e6-b5b7-d35194687ede">
+
+The modification for `avsdpll.lib` is highlighted in the right with the original shown on the left.
+
+<img width="1185" alt="5-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/36676fae-f0ea-4e79-8b01-b6c10980f85e">
+
+After the modification, the `avsdpll.lib` is converted to `avsdpll.db` successfully.
+
+<img width="1186" alt="4-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e99c228f-22ca-4ea9-937c-0c16aeb39e70">
+
+### Converting sky130_fd_sc_hd__tt_025C_1v80.lib file to asky130_fd_sc_hd__tt_025C_1v80.db file
+
+Syntax to convert thesky130_fd_sc_hd__tt_025C_1v80.lib files to sky130_fd_sc_hd__tt_025C_1v80.db
+```
+/home/sukanya/VSDBabySoC/src/lib
+lc_shell
+read_lib sky130_fd_sc_hd__tt_025C_1v80.lib
+write_libsky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db
+```
+
+
+
+
   </details>
  
 </details>
