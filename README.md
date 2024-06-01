@@ -2461,6 +2461,8 @@ For this the statement `related_bias_pin : "VNB";` is removed as shown the diffe
 
 After the errors are debugged, `sky130_fd_sc_hd__tt_025C_1v80.lib` is successfully converted to `sky130_fd_sc_hd__tt_025C_1v80.db` using the command `write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db`.
 
+<img width="1190" alt="9-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/22bb92f5-7da9-4e71-bd43-c18e2b536563">
+
 
 
 
