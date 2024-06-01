@@ -2442,13 +2442,24 @@ Error: Line 164125, Cell 'sky130_fd_sc_hd__sdlclkp_1', pin 'M0', An invalid attr
 Error: Line 164449, Cell 'sky130_fd_sc_hd__sdlclkp_2', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
 Error: Line 164773, Cell 'sky130_fd_sc_hd__sdlclkp_4', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
 ```
-
 For this `VNB` is replaced with `VGND` as the `related_ground_pin` for the instances are `VGND`.
 
 <img width="1256" alt="7-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0b914e01-9434-4d95-84eb-e6545468d46c">
 
+For the errors shown below, the modifications (right) are in the screenshot compared with the original (left).
+```
+Error: Line 82105, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
+Error: Line 82239, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
+Error: Line 82373, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
+Error: Line 82650, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
+Error: Line 82784, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
+Error: Line 82918, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
+```
+For this the statement `related_bias_pin : "VNB";` is removed as shown the difference between original on the left and the modification on the right.
 
+<img width="1671" alt="8-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cdfbd28e-da82-4d88-8dcd-0b1fad1237a9">
 
+After the errors are debugged, `sky130_fd_sc_hd__tt_025C_1v80.lib` is successfully converted to `sky130_fd_sc_hd__tt_025C_1v80.db` using the command `write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db`.
 
 
 
