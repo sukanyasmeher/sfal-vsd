@@ -2423,8 +2423,32 @@ Syntax to convert thesky130_fd_sc_hd__tt_025C_1v80.lib files to sky130_fd_sc_hd_
 /home/sukanya/VSDBabySoC/src/lib
 lc_shell
 read_lib sky130_fd_sc_hd__tt_025C_1v80.lib
-write_libsky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db
+write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db
 ```
+The `read_lib` command shows some errors for `sky130_fd_sc_hd__tt_025C_1v80.lib`. 
+Syntax for finding the errors and copying them in a separate file
+```
+grep -i '^error' lc_output.txt > sky130_fd_sc_hd__tt_025C_1v80_error.txt
+```
+The errors are shown below.
+<img width="1225" alt="6-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/df9dba85-0447-4810-8ee3-80aebf40747a">
+
+For the errors shown below, the modifications (right) are in the screenshot compared with the original (left).
+```
+Error: Line 57389, Cell 'sky130_fd_sc_hd__dlclkp_1', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
+Error: Line 57628, Cell 'sky130_fd_sc_hd__dlclkp_2', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
+Error: Line 57867, Cell 'sky130_fd_sc_hd__dlclkp_4', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
+Error: Line 164125, Cell 'sky130_fd_sc_hd__sdlclkp_1', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
+Error: Line 164449, Cell 'sky130_fd_sc_hd__sdlclkp_2', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
+Error: Line 164773, Cell 'sky130_fd_sc_hd__sdlclkp_4', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
+```
+
+For this `VNB` is replaced with `VGND` as the `related_ground_pin` for the instances are `VGND`.
+
+<img width="1256" alt="7-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0b914e01-9434-4d95-84eb-e6545468d46c">
+
+
+
 
 
 
