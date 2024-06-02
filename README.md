@@ -2377,6 +2377,8 @@ Note: Gate level simulation is used to boost the confidence regarding implementa
  <details>
 	 <summary> Lab - Converting .lib file to .db file  </summary>
 
+  Use the link for reference - https://github.com/nurnazahah/sd-training/blob/main/readme.md#topic-post-synthesis-simulation
+
   ## Converting .lib file to .db file
   The first step is to convert .lib file to .db file. We need .db format for `avsddac.lib`, `avsdpll.lib` & `sky130_fd_sc_hd__tt_025C_1v80.lib` using Synopsys Library Compiler (lc_shell).
 
@@ -2408,9 +2410,9 @@ The `read_lib` command shows some errors for `avsdpll.lib`. The errors are shown
 
 <img width="1185" alt="3-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f32dbf0f-693e-43e6-b5b7-d35194687ede">
 
-The modification for `avsdpll.lib` is highlighted in the right with the original shown on the left.
+The modification for `avsdpll.lib` is highlighted in the right with the original shown on the left. The power `VDD` and ground `GND` pins are removed along with other commented parts.
 
-<img width="1185" alt="5-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/36676fae-f0ea-4e79-8b01-b6c10980f85e">
+<img width="1115" alt="11-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/67ebe8bc-0fa1-48dd-acc7-0309978380f6">
 
 After the modification, the `avsdpll.lib` is converted to `avsdpll.db` successfully.
 
@@ -2470,7 +2472,12 @@ cd output
 ./post_synth_sim.out
 gtkwave dump.vcd
 ```
+The output of GLS is shown below.
+<img width="1671" alt="9-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5966e53f-5310-468d-95e8-ea6c6c38dcc6">
 
+Comparing the pre-synthesis (top) and post-synthesis (bottom) output shows they match.
+
+<img width="1242" alt="10-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e5424418-ddf2-4e14-a7b7-08c73b487dde">
 
 
   </details>
