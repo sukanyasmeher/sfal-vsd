@@ -2418,6 +2418,12 @@ After the modification, the `avsdpll.lib` is converted to `avsdpll.db` successfu
 
 ### Converting sky130_fd_sc_hd__tt_025C_1v80.lib file to asky130_fd_sc_hd__tt_025C_1v80.db file
 
+Download the latest `sky130_fd_sc_hd__tt_025C_1v80.lib` from the path - https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing
+Synatx to download the raw file in Linux
+```
+wget https://raw.githubusercontent.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/master/timing/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+
 Syntax to convert thesky130_fd_sc_hd__tt_025C_1v80.lib files to sky130_fd_sc_hd__tt_025C_1v80.db
 ```
 /home/sukanya/VSDBabySoC/src/lib
@@ -2425,44 +2431,45 @@ lc_shell
 read_lib sky130_fd_sc_hd__tt_025C_1v80.lib
 write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db
 ```
-The `read_lib` command shows some errors for `sky130_fd_sc_hd__tt_025C_1v80.lib`. 
-Syntax for finding the errors and copying them in a separate file
+The screenshot for successful conversion is shown below.
+
+<img width="1118" alt="6-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f9a67416-49ce-4c99-ae0a-77f9da95071d">
+
+  </details>
+
+  <details>
+	  <summary> Lab - Synthesis and Post Synthesis (Gate Level) Simulation </summary>
+
+   ## Lab - Synthesis and Post Synthesis (Gate Level) Simulation
+
+Syntax to perform synthesis
 ```
-grep -i '^error' lc_output.txt > sky130_fd_sc_hd__tt_025C_1v80_error.txt
+dc_shell
+set target_library /home/sukanya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db
+set link_library {* /home/sukanya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db /home/sukanya/VSDBabySoC/src/lib/avsdpll.db /home/sukanya/VSDBabySoC/src/lib/avsddac.db}
+set search_path {/home/sukanya/VSDBabySoC/src/include /home/sukanya/VSDBabySoC/src/module} # set path where tool will search for design modules/files.
+read_file {sandpiper_gen.vh  sandpiper.vh  sp_default.vh  sp_verilog.vh clk_gate.v rvmyth.v rvmyth_gen.v vsdbabysoc.v} -autoread -top vsdbabysoc # read all mentioned files in list and set top design 
+  `vsdbabysoc`
+link #link design with library and resolve all references(instantiations)
+compile_ultra
+write_file -format verilog -hierarchy -output /home/sukanya/VSDBabySoC/output/vsdbabysoc_net.v # write out netlist file in verilog format at specified output location.
 ```
-The errors are shown below.
-<img width="1225" alt="6-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/df9dba85-0447-4810-8ee3-80aebf40747a">
 
-For the errors shown below, the modifications (right) are in the screenshot compared with the original (left).
+The output after `link` is shown below.
+<img width="1114" alt="7-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3292e965-7463-4ab7-9fba-10c85008bbf3">
+
+The output after compilation is shown below.
+<img width="1116" alt="8-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2b14fa75-9f5e-4a4e-978b-9c83abf72651">
+
+Syntax to perform post-synthesis simulation
+
 ```
-Error: Line 57389, Cell 'sky130_fd_sc_hd__dlclkp_1', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
-Error: Line 57628, Cell 'sky130_fd_sc_hd__dlclkp_2', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
-Error: Line 57867, Cell 'sky130_fd_sc_hd__dlclkp_4', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
-Error: Line 164125, Cell 'sky130_fd_sc_hd__sdlclkp_1', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
-Error: Line 164449, Cell 'sky130_fd_sc_hd__sdlclkp_2', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
-Error: Line 164773, Cell 'sky130_fd_sc_hd__sdlclkp_4', pin 'M0', An invalid attribute 'related_ground_pin' is found. (LBDB-27)
+cd /home/sukanya/VSDBabySoC
+iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 -o ./output/post_synth_sim.out ./src/gls_model/primitives.v ./src/gls_model/sky130_fd_sc_hd.v ./output/vsdbabysoc_net.v ./src/module/avsdpll.v ./src/module/avsddac.v ./src/module/testbench.v
+cd output
+./post_synth_sim.out
+gtkwave dump.vcd
 ```
-For this `VNB` is replaced with `VGND` as the `related_ground_pin` for the instances are `VGND`.
-
-<img width="1256" alt="7-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0b914e01-9434-4d95-84eb-e6545468d46c">
-
-For the errors shown below, the modifications (right) are in the screenshot compared with the original (left).
-```
-Error: Line 82105, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
-Error: Line 82239, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
-Error: Line 82373, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
-Error: Line 82650, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
-Error: Line 82784, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
-Error: Line 82918, Cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4', pg_pin 'VPWR', An invalid attribute 'VNB' is found. (LBDB-27)
-```
-For this the statement `related_bias_pin : "VNB";` is removed as shown the difference between original on the left and the modification on the right.
-
-<img width="1671" alt="8-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cdfbd28e-da82-4d88-8dcd-0b1fad1237a9">
-
-After the errors are debugged, `sky130_fd_sc_hd__tt_025C_1v80.lib` is successfully converted to `sky130_fd_sc_hd__tt_025C_1v80.db` using the command `write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db`.
-
-<img width="1190" alt="9-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/22bb92f5-7da9-4e71-bd43-c18e2b536563">
-
 
 
 
