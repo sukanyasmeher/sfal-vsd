@@ -2449,12 +2449,11 @@ Syntax to perform synthesis
 dc_shell
 set target_library /home/sukanya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set link_library {* /home/sukanya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db /home/sukanya/VSDBabySoC/src/lib/avsdpll.db /home/sukanya/VSDBabySoC/src/lib/avsddac.db}
-set search_path {/home/sukanya/VSDBabySoC/src/include /home/sukanya/VSDBabySoC/src/module} # set path where tool will search for design modules/files.
-read_file {sandpiper_gen.vh  sandpiper.vh  sp_default.vh  sp_verilog.vh clk_gate.v rvmyth.v rvmyth_gen.v vsdbabysoc.v} -autoread -top vsdbabysoc # read all mentioned files in list and set top design 
-  `vsdbabysoc`
-link #link design with library and resolve all references(instantiations)
+set search_path {/home/sukanya/VSDBabySoC/src/include /home/sukanya/VSDBabySoC/src/module} 
+read_file {sandpiper_gen.vh  sandpiper.vh  sp_default.vh  sp_verilog.vh clk_gate.v rvmyth.v rvmyth_gen.v vsdbabysoc.v} -autoread -top vsdbabysoc 
+link 
 compile_ultra
-write_file -format verilog -hierarchy -output /home/sukanya/VSDBabySoC/output/vsdbabysoc_net.v # write out netlist file in verilog format at specified output location.
+write_file -format verilog -hierarchy -output /home/sukanya/VSDBabySoC/output/vsdbabysoc_net.v
 ```
 
 The output after `link` is shown below.
