@@ -2539,7 +2539,7 @@ The output of GLS with SDC constraints is shown below.
 <img width="1668" alt="12-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ab63bb9d-2344-4c94-a9ce-6b0fd211c84e">
 
 
-Comparing the post-synthesis with sdc constraints (top) and pre-synthesis (bottom) output shows they match.
+Comparing the post-synthesis with sdc constraints (top) and pre-synthesis (bottom) output shows they match in behavior but output value varies.
 
 <img width="1425" alt="13-pss" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7c4d64b2-f09e-4f95-8986-8f5048f868c9">
 
