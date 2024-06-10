@@ -2426,7 +2426,7 @@ Synatx to download the raw file in Linux
 wget https://raw.githubusercontent.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/master/timing/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 
-Syntax to convert thesky130_fd_sc_hd__tt_025C_1v80.lib files to sky130_fd_sc_hd__tt_025C_1v80.db
+Syntax to convert the `sky130_fd_sc_hd__tt_025C_1v80.lib files` to `sky130_fd_sc_hd__tt_025C_1v80.db`
 ```
 /home/sukanya/VSDBabySoC/src/lib
 lc_shell
