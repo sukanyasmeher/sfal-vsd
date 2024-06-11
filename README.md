@@ -2387,7 +2387,7 @@ The .lib files, `avsddac.lib`, `avsdpll.lib`, and `sky130_fd_sc_hd__tt_025C_1v80
 ### Converting avsddac.lib file to  avsddac.db file
 Syntax to convert the avsddac.lib files to avsddac.db
 ```
-/home/sukanya/VSDBabySoC/src/lib
+cd /home/sukanya/VSDBabySoC/src/lib
 lc_shell
 read_lib avsddac.lib
 write_lib avsddac -format db -output avsddac.db
@@ -2400,7 +2400,7 @@ The conversion of `avsddac.lib` to `avsddac.db` is successful as shown in screen
 
 Syntax to convert the avsdpll.lib files to avsdpll.db
 ```
-/home/sukanya/VSDBabySoC/src/lib
+cd /home/sukanya/VSDBabySoC/src/lib
 lc_shell
 read_lib avsdpll.lib
 write_lib avsdpll -format db -output avsdpll.db
@@ -2428,7 +2428,7 @@ wget https://raw.githubusercontent.com/efabless/skywater-pdk-libs-sky130_fd_sc_h
 
 Syntax to convert the `sky130_fd_sc_hd__tt_025C_1v80.lib files` to `sky130_fd_sc_hd__tt_025C_1v80.db`
 ```
-/home/sukanya/VSDBabySoC/src/lib
+cd /home/sukanya/VSDBabySoC/src/lib
 lc_shell
 read_lib sky130_fd_sc_hd__tt_025C_1v80.lib
 write_lib sky130_fd_sc_hd__tt_025C_1v80 -format db -output sky130_fd_sc_hd__tt_025C_1v80.db
@@ -2446,6 +2446,7 @@ The screenshot for successful conversion is shown below.
 
 Syntax to perform synthesis
 ```
+cd /home/sukanya/VSDBabySoC
 dc_shell
 set target_library /home/sukanya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db
 set link_library {* /home/sukanya/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.db /home/sukanya/VSDBabySoC/src/lib/avsdpll.db /home/sukanya/VSDBabySoC/src/lib/avsddac.db}
@@ -2829,6 +2830,51 @@ Attributes:
 ```
 
   </details>
+ 
+</details>
+
+<details>
+	<summary> Day 14 - Synopsys DC and Timing Analysis </summary>
+
+ # Day 14 - Synopsys DC and Timing Analysis
+
+ <details> 
+	 <summary> Theory </summary>
+
+  ## 
+  	 
+ </details>
+
+ <details>
+	 <summary> Lab - Timing Analysis for PVT corners </summary>
+
+  ## Lab - Timing Analysis for PVT corners
+
+  Download the timing libraries in the path `/home/sukanya/VSDBabySoC/src/timing_libs` from https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing
+
+  Syntax to convert .lib to .db for each
+```
+cd /home/sukanya/VSDBabySoC/src/timing_libs
+lc_shell
+read_lib sky130_fd_sc_hd__ff_100C_1v65.lib
+write_lib sky130_fd_sc_hd__ff_100C_1v65 -format db -output sky130_fd_sc_hd__ff_100C_1v65.db
+```
+Syntax to perform synthesis with SDC constraints
+```
+cd /home/sukanya/VSDBabySoC
+dc_shell
+set target_library /home/sukanya/VSDBabySoC/src/timing_libs/sky130_fd_sc_hd__ff_100C_1v65.db
+set link_library {* /home/sukanya/VSDBabySoC/src/timing_libs/sky130_fd_sc_hd__ff_100C_1v65.db /home/sukanya/VSDBabySoC/src/lib/avsdpll.db /home/sukanya/VSDBabySoC/src/lib/avsddac.db}
+set search_path {/home/sukanya/VSDBabySoC/src/include /home/sukanya/VSDBabySoC/src/module} 
+read_file {sandpiper_gen.vh  sandpiper.vh  sp_default.vh  sp_verilog.vh clk_gate.v rvmyth.v rvmyth_gen.v vsdbabysoc.v} -autoread -top vsdbabysoc 
+link
+read_sdc /home/sukanya/VSDBabySoC/src/sdc/vsdbabysoc_synthesis.sdc
+compile_ultra
+write_file -format verilog -hierarchy -output /home/sukanya/VSDBabySoC/output/vsdbabysoc_net_ff_100C_1v65.v
+report_qor > report/report_qor_ff_100C_1v65.txt
+```
+  
+ </details>
  
 </details>
 
