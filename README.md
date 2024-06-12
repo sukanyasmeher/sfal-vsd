@@ -2878,6 +2878,11 @@ Table below shows the Worst Negative Slack (WNS) and Worst Hold Slack (WHS) for 
 
 ![image](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cd948f79-13c5-4d69-aa4b-24ddbd7b0d40)
 
+![1-WNS_PVT](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0d135345-b53e-4cf7-abc3-e37066539955)
+
+![2-WHS-PVT](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a1009e80-de27-40ba-a1c5-96ad3a07effd)
+
+
   
  </details>
  
