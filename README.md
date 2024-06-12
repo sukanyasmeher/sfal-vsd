@@ -2873,6 +2873,11 @@ compile_ultra
 write_file -format verilog -hierarchy -output /home/sukanya/VSDBabySoC/output/vsdbabysoc_net_ff_100C_1v65.v
 report_qor > report/report_qor_ff_100C_1v65.txt
 ```
+Repeat the above process for all the PVT corners inside `timing_libs`
+Table below shows the Worst Negative Slack (WNS) and Worst Hold Slack (WHS) for PVT corners
+
+![image](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cd948f79-13c5-4d69-aa4b-24ddbd7b0d40)
+
   
  </details>
  
