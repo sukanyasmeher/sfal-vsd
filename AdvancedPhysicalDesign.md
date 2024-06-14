@@ -38,9 +38,34 @@ A Process Design Kit (PDK) is an essential set of documents and data files used 
 - **Efficiency**: Speeds up the design process by providing pre-characterized components and automated tools.
 - **Accuracy**: Improves the accuracy of simulations, leading to better predictions of the final IC performance.
 
-### Usage in the Design Flow
+#### Usage in the Design Flow
 
 PDKs are used throughout the IC design flow, from initial schematic capture and simulation through physical layout and verification. They are essential for both custom IC designs and designs using standard cells.
 
-  
+### Simplified RTL-to-GDS
+
+<img width="1150" alt="3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b5b84f28-f3f0-492d-9d15-248fd5005be8">
+
+<img width="1145" alt="4" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b5b5fad4-aa6c-47f0-86bd-f58adc3eab60">
+
+<img width="1133" alt="5" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9000684b-1c0b-492a-9f43-b34d26c7dcf1">
+
+<img width="1133" alt="6" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/96915a87-3a80-4780-8262-d73963f4f005">
+
+<img width="1131" alt="7" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/43391ede-6889-44f3-a227-4f56970d836d">
+
+<img width="1129" alt="8" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/21edccc1-e419-461a-a063-ce35518f8d10">
+
+<img width="1132" alt="9" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/711df054-dce3-4279-bbfc-2e5b6ec62467">
+
+<img width="1130" alt="10" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/eed690fe-9de9-45fe-903f-89f5b5388c44">
+
+<img width="1133" alt="11" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c33b4c48-5e6d-4a2d-b46b-fbf362e622c1">
+
+<img width="1132" alt="12" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2a04ebf9-5209-42f6-bf6d-1b5348e3a323">
+
+
+
+
+
 </details>
