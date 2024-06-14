@@ -3,6 +3,10 @@
 
   # Day 1 - Inception of EDA and PDK
 
+  <details>
+    <summary> Theory </summary>
+
+
 ## From Software Applications to Hardware 
 
 - Application software (Apps) enters into system software which converts the apps into binary language to be understood by hardware.
@@ -64,8 +68,16 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 
 <img width="1132" alt="12" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2a04ebf9-5209-42f6-bf6d-1b5348e3a323">
 
+### OpenLane ASIC Flow
 
+<img width="1132" alt="13" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6fa1e1a1-58e4-4fd4-ba6f-82eaf4fce854">
 
+</details>
 
+<details>
+  <summary> Lab </summary>
+
+  
+</details>
 
 </details>
