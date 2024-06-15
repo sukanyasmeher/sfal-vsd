@@ -94,6 +94,10 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
   
 <details>
   <summary> Theory </summary>
+
+Following are the considerations for chip floorplan
+  - Define the height and width of the core and die
+  - Define the location of pre-placed cells 
   
 ## Utilization Factor and Aspect Ratio
 
@@ -102,12 +106,29 @@ Steps to define the height and width of the core and die
 - Convert the symbols of gates into the physical dimension
 - Find out the dimensions of standard cells (not wires as of now). Let's assume the rough dimensions of standard cells as 1unit X 1unit. Thus area is 1 sq. unit.
 - With the help of this information, next, we can calculate the area occupied by the netlist on a silicon wafer. The total are occupied by this netlist will be no. of cells X 1sq. unit.
+- Utilization Ration = Area occupied by netlist/Total area of the core
+- Aspect Ratio = Height/ Width
 
 <img width="1201" alt="1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/41a290f0-da05-4dfd-a6d3-bc9bfb8f81c7">
 
 <img width="1175" alt="2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/04b8fadc-c5c7-4735-b685-85afcac71706">
 
-  
+## Concept of pre-placed Cells
+
+Steps to define the location of pre-placed cells 
+- Define the combinational operation in terms of gates
+- Cut them into parts, in this case may be 2 parts or 2 separate blocks. Each block will be implemented separately.
+- Extend the IO pins and black box the two blocks
+- Separate the black boxes as separate IPs or modules. The advantage of this is these IPs or modules can be used multiple times in the chip as required. This is the concept of re-used modules. Similarly there are other IPs available such as memory, clock gating cell, comparator, mux. 
+
+<img width="1168" alt="3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c6a7ba53-56cb-4d73-9c6b-62a3f1cecc8c">
+
+  <img width="1152" alt="4" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3451e244-a469-418f-ba8a-1f7f2f6fc682">
+
+</details>
+
+<details>
+  <summary> Lab </summary>
 </details>
   
 </details>
