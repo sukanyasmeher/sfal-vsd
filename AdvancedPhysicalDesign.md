@@ -97,7 +97,8 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 
 Following are the considerations for chip floorplan
   - Define the height and width of the core and die
-  - Define the location of pre-placed cells 
+  - Define the location of pre-placed cells
+  - Surround the pre-placed cells with de-coupling capacitor
   
 ## Utilization Factor and Aspect Ratio
 
@@ -113,17 +114,28 @@ Steps to define the height and width of the core and die
 
 <img width="1175" alt="2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/04b8fadc-c5c7-4735-b685-85afcac71706">
 
-## Concept of pre-placed Cells
+## Concept of pre-placed cells
 
 Steps to define the location of pre-placed cells 
 - Define the combinational operation in terms of gates
 - Cut them into parts, in this case may be 2 parts or 2 separate blocks. Each block will be implemented separately.
 - Extend the IO pins and black box the two blocks
-- Separate the black boxes as separate IPs or modules. The advantage of this is these IPs or modules can be used multiple times in the chip as required. This is the concept of re-used modules. Similarly there are other IPs available such as memory, clock gating cell, comparator, mux. 
+- Separate the black boxes as separate IPs or modules. The advantage of this is these IPs or modules can be used multiple times in the chip as required. This is the concept of re-used modules. Similarly there are other IPs available such as memory, clock gating cell, comparator, mux.
+- The arrangement of these IPs in a chip is called ***Floorplanning***.
+- These IPs/blocks have user-defined locations, hence are placed in chip before automated P&R and are called ***pre-placed cells***.
+- Automated P&R tools place the remaining logical cells in the design onto the chip.
 
 <img width="1168" alt="3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c6a7ba53-56cb-4d73-9c6b-62a3f1cecc8c">
 
-  <img width="1152" alt="4" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3451e244-a469-418f-ba8a-1f7f2f6fc682">
+<img width="1152" alt="4" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3451e244-a469-418f-ba8a-1f7f2f6fc682">
+
+<img width="1129" alt="5" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2dd000f4-fdbf-4f1a-a481-f35b01b0d459">
+
+
+## De-coupling capacitor
+
+Steps to surround the pre-placed cells with de-coupling capacitor
+-
 
 </details>
 
