@@ -81,3 +81,35 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 </details>
 
 </details>
+
+<details> 
+  <summary> Day 2 - Good floorplan vs bad floorplan and introduction to library cells </summary>
+
+# Day 2 - Good floorplan vs bad floorplan and introduction to library cells
+
+<details>
+  <summary> 1 - Chip Floorplan Considerations </summary>
+  
+  # 1 - Chip Floorplan Considerations
+  
+<details>
+  <summary> Theory </summary>
+  
+## Utilization Factor and Aspect Ratio
+
+Steps to define the height and width of the core and die 
+- Define the netlist which is the connectivity between all the components
+- Convert the symbols of gates into the physical dimension
+- Find out the dimensions of standard cells (not wires as of now). Let's assume the rough dimensions of standard cells as 1unit X 1unit. Thus area is 1 sq. unit.
+- With the help of this information, next, we can calculate the area occupied by the netlist on a silicon wafer. The total are occupied by this netlist will be no. of cells X 1sq. unit.
+
+<img width="1201" alt="1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/41a290f0-da05-4dfd-a6d3-bc9bfb8f81c7">
+
+<img width="1175" alt="2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/04b8fadc-c5c7-4735-b685-85afcac71706">
+
+  
+</details>
+  
+</details>
+
+</details>
