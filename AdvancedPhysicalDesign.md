@@ -84,6 +84,8 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
    - `sc` stands for standard cell
    - `hd` stands for high density
 2. Change the directory to `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane`.
+3. set alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u
+
 3. Invoke the tool by the command `./flow.tcl -interactive`. Without `-interactive` it will run the complete flow. But at this stage we want to do step-by-step.
 4. 
 
