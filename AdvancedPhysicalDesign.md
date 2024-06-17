@@ -79,12 +79,13 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 
   ## Open Source EDA Tools Introduction
   
-1. Change the directory to `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane`.
-2. The libraries are located in `/home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref`. We will be working with `sky130_fd_sc_hd` library.
+1.The libraries are located in `/home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref`. We will be working with `sky130_fd_sc_hd` library.
    - `sky130_fd` is skywater foundry library
    - `sc` stands for standard cell
    - `hd` stands for high density
-3. 
+2. Change the directory to `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane`.
+3. Invoke the tool by the command `./flow.tcl -interactive`. Without `-interactive` it will run the complete flow. But at this stage we want to do step-by-step.
+4. 
 
 
   
