@@ -134,8 +134,22 @@ Steps to define the location of pre-placed cells
 
 ## De-coupling capacitor
 
-Steps to surround the pre-placed cells with de-coupling capacitor
--
+Decoupling capacitors, also known as bypass capacitors, are critical components in VLSI (Very-Large-Scale Integration) design for several reasons:
+
+- Power Supply Stabilization: VLSI circuits can draw significant and rapidly changing amounts of current, especially during switching operations. These sudden changes can cause fluctuations in the power supply voltage. Decoupling capacitors help stabilize the voltage by providing or absorbing current as needed, ensuring a steady supply to the circuit.
+
+- Noise Reduction: High-speed switching in VLSI circuits generates noise, which can propagate through the power supply lines and affect the performance of other parts of the chip. Decoupling capacitors filter out this high-frequency noise, reducing its impact on sensitive components.
+
+- Signal Integrity: Variations in the power supply can lead to signal integrity issues, causing errors in data transmission and processing. Decoupling capacitors maintain a consistent voltage level, helping to preserve the integrity of signals within the chip.
+
+- Transient Response Improvement: When a circuit suddenly switches states, the demand for current can spike. Without decoupling capacitors, the inductance and resistance in the power delivery network can prevent the power supply from responding quickly enough, leading to voltage dips. Decoupling capacitors provide the necessary current during these transitions, improving the transient response.
+
+- Prevention of Ground Bounce and Supply Droop: Ground bounce occurs when multiple outputs switch simultaneously, causing a temporary rise in ground voltage. Similarly, supply droop happens when the supply voltage drops due to a sudden increase in current demand. Decoupling capacitors mitigate these effects by providing a local reservoir of charge.
+
+- Reduction of Electromagnetic Interference (EMI): Switching noise can radiate as electromagnetic interference, affecting nearby circuits and systems. Decoupling capacitors help in suppressing this noise, reducing EMI.
+
+  <img width="948" alt="6" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e3553809-72a1-4a45-812d-44464929489e">
+
 
 </details>
 
