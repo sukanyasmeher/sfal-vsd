@@ -76,7 +76,7 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 
 <details>
   <summary> Lab </summary>
-
+1. change the directory to 
   
 </details>
 
