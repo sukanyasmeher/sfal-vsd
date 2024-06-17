@@ -76,7 +76,17 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 
 <details>
   <summary> Lab </summary>
-1. change the directory to 
+
+  ## Open Source EDA Tools Introduction
+  
+1. Change the directory to `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane`.
+2. The libraries are located in `/home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref`. We will be working with `sky130_fd_sc_hd` library.
+   - `sky130_fd` is skywater foundry library
+   - `sc` stands for standard cell
+   - `hd` stands for high density
+3. 
+
+
   
 </details>
 
