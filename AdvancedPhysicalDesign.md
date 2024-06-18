@@ -75,9 +75,14 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 </details>
 
 <details>
-  <summary> Lab </summary>
+  <summary> Lab - Download VirtualBox in MAC OS </summary>
+  
+</details>
 
-## Open Source EDA Tools Introduction
+<details>
+  <summary> Lab - Introduction to Open Source EDA Tool - OpenLane </summary>
+
+## Introduction to Open Source EDA Tools  - OpenLane
 
 Refer the link for more information - https://github.com/The-OpenROAD-Project/OpenLane
   
