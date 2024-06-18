@@ -157,13 +157,13 @@ The screenshot is shown below
 <details>
   <summary> Theory </summary>
 
-Following are the considerations for chip floorplan
+Following steps are considered for chip floorplan
   - Define the height and width of the core and die
   - Define the location of pre-placed cells
   - Surround the pre-placed cells with de-coupling capacitor
   - Power planning
   - Pin placement and logical cell placement blockage
-  -   
+    
 ## Utilization Factor and Aspect Ratio
 
 Steps to define the height and width of the core and die 
@@ -257,6 +257,51 @@ The screenshot shows how the design looks after pin placement and logical cell p
   <summary> Lab </summary>
 </details>
   
+</details>
+
+<details>
+  <summary> 2 - Library Binding and Placement </summary>
+
+  # 2 - Library Binding and Placement
+
+  The following steps are considered for library binding and placement
+  - Bind netlist with physical cells
+  - Placement of the cells on the floorplan
+
+<details>
+  <summary> Theory </summary>
+  
+  ## Netlist binding and initial place design
+
+Steps for netlist binding and initial place design
+- Give the cells physical dimensions (width and height). The cells are present in a library which includes physical information, timing information such as delay information, and required condition of the cells. The library has different flavors of each cell.
+- Place the netlist onto the floorplan. the netlsit contains connectivity information of the design.
+- Placement makes sure that the pre-placed locations are not affected. There will be no cells placed in these locations.
+- Place the FF cells closer to the IO pins and combinational cells close to FF. This way we can maintain the timing requirements. Sometimes the cells are abutted which is a good example of high frequency circuits.
+
+<img width="1198" alt="16" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/97c2f68f-8841-4525-b686-1667d8835429">
+
+<img width="1209" alt="17" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/33e076e1-9c1c-4680-8677-5178942d1cfa">
+
+<img width="1205" alt="18" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/efd7fe1d-a74d-432b-8bc0-d516f44c7ec4">
+
+## Optimize placement using estimated wire length and capacitance
+
+Steps to optimize placement using estimated wire length and capacitance
+- We estimate the wire length and capacitance and insert repeaters (buffers) based on that. If the wire length is longer, both the capacitance and resistance increase. This way signal integrity is maintained. This tradeoff with the area.
+- If the wire length and capacitance are not large, no repeater is inserted.
+- Since there are no clocks yet, verify if the data path is correct considering the ideal clock such as setup timing analysis. Hold timing analysis is irrelevant without a clock.
+- 
+
+  <img width="1206" alt="19" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/150f3124-0560-4706-96c4-cb02315aa5fa">
+
+
+</details>
+
+<details>
+  <summary> Lab </summary>
+    
+</details>
 </details>
 
 </details>
