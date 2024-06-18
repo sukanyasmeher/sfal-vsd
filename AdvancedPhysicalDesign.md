@@ -137,8 +137,6 @@ The screenshot is shown below
 -rw-r--r-- 1 vsduser vsduser 816771 Jun 18 06:19 2-opensta.rpt
 -rw-r--r-- 1 vsduser vsduser  74793 Jun 18 06:19 2-opensta.slew.rpt
 ```
-
-
   
 </details>
 
@@ -251,10 +249,11 @@ The screenshot shows how the design looks after pin placement and logical cell p
 
 <img width="1203" alt="15" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/98cfb6c8-1e33-4657-a716-51ac46208e4f">
 
+
 </details>
 
 <details>
-  <summary> Lab </summary>
+  <summary> Lab -  </summary>
 </details>
   
 </details>
@@ -264,12 +263,13 @@ The screenshot shows how the design looks after pin placement and logical cell p
 
   # 2 - Library Binding and Placement
 
+  <details>
+  <summary> Theory </summary>
+
   The following steps are considered for library binding and placement
   - Bind netlist with physical cells
   - Placement of the cells on the floorplan
-
-<details>
-  <summary> Theory </summary>
+  - Optimize placement using estimated wire length and capacitance
   
   ## Netlist binding and initial place design
 
@@ -294,15 +294,105 @@ Steps to optimize placement using estimated wire length and capacitance
 
   <img width="1206" alt="19" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/150f3124-0560-4706-96c4-cb02315aa5fa">
 
-## Need for libraries and characterization
+</details>
 
+<details>
+  <summary> Lab - Congestion aware placement using RePlAce </summary>
+
+  ## Congestion aware placement using RePlAce
+    
+</details>
 
 </details>
 
 <details>
-  <summary> Lab </summary>
+  <summary> 3 - Cell Design and Characterization Flow </summary>
+
+  # 3 - Cell Design and Characterization Flow
+  <details>
+    <summary> Theory </summary>
+
+  Cell design flow involves 3 steps
+  - Inputs
+  - Design steps
+  - Outputs
     
+  ## Inputs for cell design flow
+
+  Inputs for cell design flow are 
+  - Process design kit (PDK) including DRC and LVS rules
+  - Spice models
+  - Library and user-defined specs like cell height, width, supply voltage,metal layers, pin locations, drawn gate length etc
+
+Cell height is defined by the separation between the power and ground rails.  
+Cell width is defined by the drive strength of the cell.
+  
+<img width="1136" alt="20" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/85001ef0-6f8a-4aed-8f54-ee130bb23ac1">
+
+<img width="1152" alt="21" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/881d06d2-2d8a-4e4b-bbe8-8f9b0076705b">
+
+<img width="1155" alt="22" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f622f6c9-9603-40a9-8233-0f93ca2f2e04">
+
+<img width="1154" alt="23" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/08aebbd2-a9a4-4043-93a3-8c3008c675c9">
+
+## Design steps for cell design flow
+
+Design steps for cell design flow are
+- Circuit design
+- Layout design
+- Characterization
+
+Circuit design involves 2 steps:
+1) Implement the functionality itself using CMOS or other technology
+2) Model the PMOS and NMOS in such a fashion to meet library requirements
+   
+Both of them are based on spice simulation. The output we get from circuit design is called ***circuit description language*** or CDL.
+
+<img width="1143" alt="24" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0ea739e4-c582-472a-8d13-f87c3031288e">
+
+Layout design involves the following steps:
+1) Get the function implemented through MOS transistors or PMOS and NMOS connections
+2) Get the NMOS and PMOS network graph
+3) Obtain the Euler's path - path traced only once
+4) Draw the stick diagram
+5) Convert the stick diagram to layout adhering to layout rules (DRC) from the foundry
+6) Extract the parasitics and characterize it in terms of timing
+
+The output of layout design is GDSII, LEF and extracted spice netlist (.cir) which is after parasitic extraction.
+
+ <img width="1161" alt="25" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f1f3d7f2-3555-41b3-af66-c8d9b23d6bfd">
+
+Characterization flow involves the following steps:
+1) Read in the models for PMOS and NMOS
+2) Read the extracted spice netlist
+3) Recognize the behavior of buffer (2 inverters in series)
+4) Read the sub-circuit of inverter
+5) Attach the necessary power sources
+6) Apply the stimulus
+7) Provide the necessary output capacitance or load
+8) Provide the necessary simulation command (like .tran, .dc)
+
+Characterization software is called ***GUNA*** which takes the input from step 1 to 8 in a configuration file. Characterization is further divided into timing characterization, power characterization, and noise characterization. 
+The output of characterization is timing, noise, power .libs, function.
+
+<img width="1184" alt="26" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7511ebeb-22c5-4071-8742-4f083d036dad">
+
+  </details>
+  
 </details>
+
+<details>
+  <summary> 4 - General Timing Characterization Parameters </summary>
+  
+# 4 - General Timing Characterization Parameters
+
+<details>
+  <summary> Theory </summary>
+  
+</details>
+  
 </details>
 
 </details>
+
+
