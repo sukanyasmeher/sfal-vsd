@@ -121,7 +121,21 @@ The screenshot is shown below
 ![16](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/73d4c00b-72d5-46bf-8330-073a184316db)
 
 9. Next task is to find the ***flop ratio*** which is ratio of number of D flip flops and total number of standard cells which is 1613/14876=0.10843.
-10. Reports are present in ``
+10. Synthesis reports are present in `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/reports/synthesis`. The reports are
+```
+    total 1736
+-rw-r--r-- 1 vsduser vsduser   1216 Jun 18 06:18 1-yosys_pre.stat
+-rw-r--r-- 1 vsduser vsduser    866 Jun 18 06:18 1-yosys_dff.stat
+-rw-r--r-- 1 vsduser vsduser  20479 Jun 18 06:19 1-yosys_4.chk.rpt
+-rw-r--r-- 1 vsduser vsduser   2674 Jun 18 06:19 1-yosys_4.stat.rpt
+-rw-r--r-- 1 vsduser vsduser     12 Jun 18 06:19 2-opensta_tns.rpt
+-rw-r--r-- 1 vsduser vsduser     11 Jun 18 06:19 2-opensta_wns.rpt
+-rw-r--r-- 1 vsduser vsduser 816771 Jun 18 06:19 2-opensta.timing.rpt
+-rw-r--r-- 1 vsduser vsduser  17763 Jun 18 06:19 2-opensta.min_max.rpt
+-rw-r--r-- 1 vsduser vsduser 816771 Jun 18 06:19 2-opensta.rpt
+-rw-r--r-- 1 vsduser vsduser  74793 Jun 18 06:19 2-opensta.slew.rpt
+```
+
 
   
 </details>
