@@ -212,6 +212,24 @@ Decoupling capacitors, also known as bypass capacitors, are critical components 
 
   <img width="948" alt="6" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e3553809-72a1-4a45-812d-44464929489e">
 
+## Power Planning
+
+Disadvantage of single power supply is shown below
+
+<img width="1113" alt="10" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4534bd64-c36d-469d-b1e2-2b89c282af42">
+
+<img width="1169" alt="7" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c5b2753b-da61-49f5-9c5e-77539ed5ba13">
+
+<img width="1135" alt="8" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4908e38f-f418-4d49-9d3f-0f8a5a3751dc">
+
+<img width="1118" alt="9" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f04a3c2e-fdd9-4fdc-b893-b2f1183aa104">
+
+Solution is to have a power and ground supply mesh so that circuit could tap from the nearest source
+
+<img width="1094" alt="11" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5a3e8427-fb17-466d-9e9c-0d7786d5edbf">
+
+<img width="1169" alt="12" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9d16f26c-cd1b-40ad-a4bb-62b6a9fe5515">
+
 
 </details>
 
