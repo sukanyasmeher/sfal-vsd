@@ -77,7 +77,9 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 <details>
   <summary> Lab </summary>
 
-  ## Open Source EDA Tools Introduction
+## Open Source EDA Tools Introduction
+
+Refer the link for more information - https://github.com/The-OpenROAD-Project/OpenLane
   
 1. The libraries are located in `/home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref`. We will be working with `sky130_fd_sc_hd` library.
    - `sky130_fd` is skywater foundry library
@@ -92,11 +94,20 @@ The screenshot after invoking is shown below
 
 ![14](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/efbb9fea-0829-42d4-bdf4-300426efdda8)
 
-6. Input required package for openlane flow, prep the design and then run synthesis. The command for package is 
+6. Command for input required package for openlane flow is
 ```
 package require openlane 0.9
 ```
-7. The designs are already located in the folder `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs`. 
+7. The designs are already located in the folder `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs`. We will run the design `picorv32a`. The settings are present in config.tcl. However, the precedence Opnelane takes is openlane setting < config.tcl < sky130A_sky130_fd_sc_hd_config.tcl. Command to prepare the file system and design setup is
+```
+prep -design picorv32a
+```
+A new directory called `runs` is created inside `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a`. It has all the necessary files and folder reuired for synthesis.
+8. The command to run the synthesis is
+   ```
+   run_synthesis
+   ```
+   
 
 
 
