@@ -161,7 +161,9 @@ Following are the considerations for chip floorplan
   - Define the height and width of the core and die
   - Define the location of pre-placed cells
   - Surround the pre-placed cells with de-coupling capacitor
-  
+  - Power planning
+  - Pin placement and logical cell placement blockage
+  -   
 ## Utilization Factor and Aspect Ratio
 
 Steps to define the height and width of the core and die 
@@ -230,6 +232,24 @@ Solution is to have a power and ground supply mesh so that circuit could tap fro
 
 <img width="1169" alt="12" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9d16f26c-cd1b-40ad-a4bb-62b6a9fe5515">
 
+## Pin Placement and Logical Cell Placement Blockage
+
+Let's consider the design as shown below.
+
+<img width="1135" alt="13" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/09d878a6-e0c6-45af-9cf1-32452859bc01">
+
+Steps for pin placement and logical cell placement blockage
+- The pins are placed based on where the cells are placed. Goal is to keep the pins closer.
+- Clock input ports are bigger in size than the data ports. As the clock ports continuously sends signal to all the flips flops, it needs a least resistance path for clocks. And bigger the size, the lower the resistance.
+- Similarly for clock output ports as we need clock signals to move out o fthe chip as fast as possible because the clock is driven continuously.
+- We need to make sure that the automated P&R doesn't place any cell in the pin placement area. For this, we place the logical cell placement blockage.
+- floorplan is ready for placement and routing step.
+
+The screenshot shows how the design looks after pin placement and logical cell placement blockage.
+
+<img width="1196" alt="14" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/729955ce-555b-4213-91c1-a77de7b67614">
+
+<img width="1203" alt="15" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/98cfb6c8-1e33-4657-a716-51ac46208e4f">
 
 </details>
 
