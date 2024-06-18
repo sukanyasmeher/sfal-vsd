@@ -107,7 +107,7 @@ package require openlane 0.9
 ```
 prep -design picorv32a
 ```
-A new directory called `runs` is created inside `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a`. It has all the necessary files and folder reuired for synthesis.
+A new directory called `runs` is created inside `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a`. It has all the necessary files and folder required for synthesis.  
 8. The command to run the synthesis is
    ```
    run_synthesis
