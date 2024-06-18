@@ -87,11 +87,15 @@ PDKs are used throughout the IC design flow, from initial schematic capture and 
 3. set alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u
 4. Invoke OpenLane using `docker` command
 5. Run OpenLane in interactive mode using the command `./flow.tcl -interactive`. Without `-interactive` it will run the complete flow. But at this stage, we want to do step-by-step.
+   
 The screenshot after invoking is shown below
 
 ![14](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/efbb9fea-0829-42d4-bdf4-300426efdda8)
 
-
+6. Input required package for openlane flow, prep the design and then run synthesis. The command for package is 
+```
+package require openlane 0.9
+```
 
 
   
