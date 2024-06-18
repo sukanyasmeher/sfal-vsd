@@ -96,6 +96,8 @@ The screenshot after invoking is shown below
 ```
 package require openlane 0.9
 ```
+7. The designs are already located in the folder `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs`. 
+
 
 
   
