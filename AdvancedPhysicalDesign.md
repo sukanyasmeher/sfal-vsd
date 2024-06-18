@@ -108,13 +108,20 @@ package require openlane 0.9
 prep -design picorv32a
 ```
 A new directory called `runs` is created inside `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a`. It has all the necessary files and folder required for synthesis.  
+
+The screenshot is shown below
+![15](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b65ebf6a-3903-4302-bcbb-15494810972f)
+
 8. The command to run the synthesis is
    ```
    run_synthesis
    ```
+   After successful synthesis, the output is shown below.
    
+![16](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/73d4c00b-72d5-46bf-8330-073a184316db)
 
-
+9. Next task is to find the ***flop ratio*** which is ratio of number of D flip flops and total number of standard cells which is 1613/14876=0.10843.
+10. Reports are present in ``
 
   
 </details>
