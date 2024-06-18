@@ -10,7 +10,7 @@
 ## From Software Applications to Hardware 
 
 - Application software (Apps) enters into system software which converts the apps into binary language to be understood by hardware.
-- Major components of system software are operating system, compiler and assembler.
+- Major components of system software are operating system, compiler, and assembler.
   
 <img width="811" alt="1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d4ed9a15-c832-425f-8912-366cfc5ee863">
 
@@ -120,7 +120,9 @@ The screenshot is shown below
    
 ![16](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/73d4c00b-72d5-46bf-8330-073a184316db)
 
-9. Next task is to find the ***flop ratio*** which is ratio of number of D flip flops and total number of standard cells which is 1613/14876=0.10843.
+9. Next task is to find the ***flop ratio*** which is ratio of number of D flip flops and the total number of standard cells which is 1613/14876=0.10843.
+ ![17](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9bd1c07a-4af6-49e6-980e-959ef7192dec)
+
 10. Synthesis reports are present in `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/reports/synthesis`. The reports are
 ```
     total 1736
