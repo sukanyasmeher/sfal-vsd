@@ -289,11 +289,12 @@ Steps for netlist binding and initial place design
 
 Steps to optimize placement using estimated wire length and capacitance
 - We estimate the wire length and capacitance and insert repeaters (buffers) based on that. If the wire length is longer, both the capacitance and resistance increase. This way signal integrity is maintained. This tradeoff with the area.
-- If the wire length and capacitance are not large, no repeater is inserted.
+- No repeater is inserted if the wire length and capacitance are not large.
 - Since there are no clocks yet, verify if the data path is correct considering the ideal clock such as setup timing analysis. Hold timing analysis is irrelevant without a clock.
-- 
 
   <img width="1206" alt="19" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/150f3124-0560-4706-96c4-cb02315aa5fa">
+
+## Need for libraries and characterization
 
 
 </details>
