@@ -266,14 +266,22 @@ Steps for the floorplan
    
    ![2](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8451a90a-e6fe-467f-a410-36db31379ab9)
 
-3. However, the precedence Opnelane takes is openlane setting < config.tcl < sky130A_sky130_fd_sc_hd_config.tcl.
-4. Command to run floorplan is `run_floorplan`and the successful completion is shown below.
+3. However, the precedence Opnelane takes is openlane setting < config.tcl < sky130A_sky130_fd_sc_hd_config.tcl. A screenshot of sky130A_sky130_fd_sc_hd_config.tcl is shown below.
+![4](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/911b689a-60a0-4521-91e6-6cccbd291c88)
+
+4. The command to run floorplan is `run_floorplan`and the successful completion is shown below.
    
    ![3](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/429a6363-9711-4e78-ba63-7c01e37922a5)
 
-5. Check the floorplan by opening `picorv32a.floorplan.def` inside the directory `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan`
-6. Calculate the die area
+5. Check the floorplan by opening `picorv32a.floorplan.def` inside the directory `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan`. Screenshot of picorv32a.floorplan.def is shown below.
+   
+   ![5](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/baf99883-95b8-474d-8bcc-6a211dc944c3)
+
+6. Calculate the die area  
    1um = 1000 unit distance
+   Die width = 660685/1000 = 660.685um  
+   Die height = 671405/1000 = 671.405um
+   Area = width x height = 660.685 x 671.405 = 443587.212 um<sup>2<sup>
    
 
   
