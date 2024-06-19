@@ -271,7 +271,9 @@ Steps for the floorplan
    
    ![3](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/429a6363-9711-4e78-ba63-7c01e37922a5)
 
-
+5. Check the floorplan by opening `picorv32a.floorplan.def` inside the directory `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan`
+6. Calculate the die area
+   1um = 1000 unit distance
    
 
   
