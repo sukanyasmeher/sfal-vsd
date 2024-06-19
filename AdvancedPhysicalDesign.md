@@ -253,7 +253,28 @@ The screenshot shows how the design looks after pin placement and logical cell p
 </details>
 
 <details>
-  <summary> Lab -  </summary>
+  <summary> Lab - Floorplan using OpenLane </summary>
+  
+# Lab - Floorplan using OpenLane
+
+Steps for the floorplan
+1. The variables or switches for the OpenLane design flow are mentioned `README.md` inside the directory `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/configuration/floorplan.tcl` as shown below.
+ 
+   ![1](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ea0c3e2f-d491-4189-bcfb-a4b41b4117fa)
+
+2. The parameters for floorplan are set in `floorplan.tcl` in the same directory as highlighted below.
+   
+   ![2](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8451a90a-e6fe-467f-a410-36db31379ab9)
+
+3. However, the precedence Opnelane takes is openlane setting < config.tcl < sky130A_sky130_fd_sc_hd_config.tcl.
+4. Command to run floorplan is `run_floorplan`and the successful completion is shown below.
+   
+   ![3](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/429a6363-9711-4e78-ba63-7c01e37922a5)
+
+
+   
+
+  
 </details>
   
 </details>
