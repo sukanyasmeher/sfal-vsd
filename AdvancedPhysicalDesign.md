@@ -266,18 +266,24 @@ Steps for the floorplan
    
    ![2](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8451a90a-e6fe-467f-a410-36db31379ab9)
 
-3. However, the precedence Opnelane takes is openlane setting < config.tcl < sky130A_sky130_fd_sc_hd_config.tcl. A screenshot of sky130A_sky130_fd_sc_hd_config.tcl is shown below.
+3. However, the precedence Opnelane takes is openlane setting < config.tcl < sky130A_sky130_fd_sc_hd_config.tcl. A screenshot of config.tcl and sky130A_sky130_fd_sc_hd_config.tcl is shown below.
+   
+  ***config.tcl***
+  ![7](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/49de2ce8-7581-4c06-b5c7-30cdcd69b3a9)
+
+
+***sky130A_sky130_fd_sc_hd_config.tcl***   
 ![4](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/911b689a-60a0-4521-91e6-6cccbd291c88)
 
-4. The command to run floorplan is `run_floorplan`and the successful completion is shown below.
+5. The command to run floorplan is `run_floorplan`and the successful completion is shown below.
    
    ![3](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/429a6363-9711-4e78-ba63-7c01e37922a5)
 
-5. Check the floorplan by opening `picorv32a.floorplan.def` inside the directory `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan`. Screenshot of picorv32a.floorplan.def is shown below.
+6. Check the floorplan by opening `picorv32a.floorplan.def` inside the directory `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan`. Screenshot of picorv32a.floorplan.def is shown below.
    
    ![5](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/baf99883-95b8-474d-8bcc-6a211dc944c3)
 
-6. Calculate the die area  
+7. Calculate the die area  
    1um = 1000 unit distance
    
    Die width = 660685/1000 = 660.685um
@@ -286,11 +292,15 @@ Steps for the floorplan
    
    Area = width x height = 660.685 x 671.405 = 443587.212 um<sup>2<sup>
    
-7. Next we load the generated floorplan.def in magic tool and exploring it. Change directory to folder containing floorplan.def and then load floorplan.def in magic tool with the command
+8. Next we load the generated floorplan.def in Magic tool and exploring it. Change directory to folder containing floorplan.def and then load floorplan.def in magic tool with the command
 ```
 cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 ```
+The screenshot shows the layout of floorplan in Magic
+8. Nest we review the floorplan layout in Magic.
+- Input and output pins are placed equidistant
+  
 </details>
   
 </details>
