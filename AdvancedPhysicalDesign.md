@@ -279,12 +279,18 @@ Steps for the floorplan
 
 6. Calculate the die area  
    1um = 1000 unit distance
-   Die width = 660685/1000 = 660.685um  
+   
+   Die width = 660685/1000 = 660.685um
+   
    Die height = 671405/1000 = 671.405um
+   
    Area = width x height = 660.685 x 671.405 = 443587.212 um<sup>2<sup>
    
-
-  
+7. Next we load the generated floorplan.def in magic tool and exploring it. Change directory to folder containing floorplan.def and then load floorplan.def in magic tool with the command
+```
+cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
 </details>
   
 </details>
