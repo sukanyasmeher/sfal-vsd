@@ -317,7 +317,6 @@ The screenshot shows the layout of floorplan in Magic.
   ![11](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/05efd79c-d147-4c5c-8b1e-2f187419971e)
 
 - If changes are needed for the design, it is always prefered to make it at `sky130A_sky130_fd_sc_hd_config.tcl` level.
-
   
 </details>
   
@@ -375,12 +374,12 @@ Steps to optimize placement using estimated wire length and capacitance
    ![12](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1b96b9dd-9c0c-414f-83ab-7eeb83408a44)
 
 2. Open generated placement.def in magic tool using the following commands
-```
-cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/06-04_16-22/results/placement
-magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def & 
-```
-The placement of cells in placement.def are shown below
-![13](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1c38d4fe-1feb-42eb-b21b-ab9beb7a5301)
+    ```
+    cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/06-04_16-22/results/placement
+    magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def & 
+    ```
+    The placement of cells in placement.def are shown below
+    ![13](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1c38d4fe-1feb-42eb-b21b-ab9beb7a5301)
 
 3. If we zoom in, we can see the standard cells are correctly places on the rows and not overlaping each other.
    ![14](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c327919d-4fb4-4be0-9d54-37b60554a7f7)
