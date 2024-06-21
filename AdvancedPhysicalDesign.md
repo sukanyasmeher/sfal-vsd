@@ -275,15 +275,15 @@ Steps for the floorplan
 ***sky130A_sky130_fd_sc_hd_config.tcl***   
 ![4](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/911b689a-60a0-4521-91e6-6cccbd291c88)
 
-5. The command to run floorplan is `run_floorplan`and the successful completion is shown below.
+4. The command to run floorplan is `run_floorplan`and the successful completion is shown below.
    
    ![3](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/429a6363-9711-4e78-ba63-7c01e37922a5)
 
-6. Check the floorplan by opening `picorv32a.floorplan.def` inside the directory `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan`. Screenshot of picorv32a.floorplan.def is shown below.
+5. Check the floorplan by opening `picorv32a.floorplan.def` inside the directory `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan`. Screenshot of picorv32a.floorplan.def is shown below.
    
    ![5](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/baf99883-95b8-474d-8bcc-6a211dc944c3)
 
-7. Calculate the die area  
+6. Calculate the die area  
    1um = 1000 unit distance
    
    Die width = 660685/1000 = 660.685um
@@ -292,7 +292,7 @@ Steps for the floorplan
    
    Area = width x height = 660.685 x 671.405 = 443587.212 um<sup>2<sup>
    
-8. Next we load the generated floorplan.def in Magic tool and exploring it. Change directory to folder containing floorplan.def and then load floorplan.def in magic tool with the command
+7. Next we load the generated floorplan.def in Magic tool and exploring it. Change directory to folder containing floorplan.def and then load floorplan.def in magic tool with the command
 ```
 cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
@@ -300,12 +300,25 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 The screenshot shows the layout of floorplan in Magic.
 ![6](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0126182f-715b-4d91-bf07-491b5072621c)
 
-9. Next we review the floorplan layout in Magic.
+8. Next we review the floorplan layout in Magic.
 - Input and output pins are placed almost equidistant
   
   ![8](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8a326ece-5692-4059-a024-61b213475534)
-  
 
+- Identify the metal of the pin by placing the cursor and type 's'. Then `tkcon` window type 'what` which shows the metal layer of the pin or port as shown below.
+    ![9](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/923a61d9-ee6e-417b-a5d1-798d23b883c9)
+  
+- From the above figure, you can see that the decap cell locations are at the end of the row as they are set as endcap in config.tcl.
+  
+- Tap cells are equidistant from the diagonal tap cells as shown below. Tap cells connect the substrate (or wells) to a fixed potential, typically the power supply (VDD) or ground (VSS). This is necessary to prevent floating substrate or well potentials, which can lead to latch-up conditions or leakage currents.
+  ![10](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9016550b-5df6-4e69-95d3-1a406c63e766)
+
+- The floorplan doesn't take into consideration the placement of standard cells. But standard cells are present here at the origin.
+  ![11](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/05efd79c-d147-4c5c-8b1e-2f187419971e)
+
+- If changes are needed for the design, it is always prefered to make it at `sky130A_sky130_fd_sc_hd_config.tcl` level.
+
+  
 </details>
   
 </details>
