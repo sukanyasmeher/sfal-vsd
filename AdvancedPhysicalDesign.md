@@ -297,10 +297,15 @@ Steps for the floorplan
 cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/18-06_00-09/results/floorplan
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 ```
-The screenshot shows the layout of floorplan in Magic
-8. Nest we review the floorplan layout in Magic.
-- Input and output pins are placed equidistant
+The screenshot shows the layout of floorplan in Magic.
+![6](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0126182f-715b-4d91-bf07-491b5072621c)
+
+9. Next we review the floorplan layout in Magic.
+- Input and output pins are placed almost equidistant
   
+  ![8](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8a326ece-5692-4059-a024-61b213475534)
+  
+
 </details>
   
 </details>
@@ -435,6 +440,29 @@ The output of characterization is timing, noise, power .libs, function.
 
 <details>
   <summary> Theory </summary>
+
+  ## Timing threshold definations
+  Different timing threshold definations are 
+  - slew_low_rise_thr -  calculate the slope or slew of the particular waveform at the lower side towards 0. Typical value is 20% of VDD.
+  - slew_high_rise_thr - calculate the slope or slew of the particular waveform at the higher side towards VDD. Typical value is 80% of VDD.
+  - slew_low_fall_thr - Typical value is 20%
+  - slew_high_fall_thr - Typical value is 80%
+  - in_rise_thr - Typical value is 50%
+  - in_fall_thr - Typical value is 50%
+  - out_rise_thr - Typical value is 50%
+  - out_fall_thr - Typical value is 50%
+
+    <img width="1151" alt="27" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/043ed329-5ec8-4c47-99c8-e53cdb145d9d">
+
+    ## Propagation delay
+    Propagation delay = time(out_x_thr)-time(in_x_thr)
+    
+    <img width="1154" alt="28" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2550b95b-c2d3-4bac-8c6a-f276e6cda715">
+
+    ## Transition time
+    <img width="1127" alt="29" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4a83b775-1140-4945-9c62-031215aa2ddf">
+
+    
   
 </details>
   
