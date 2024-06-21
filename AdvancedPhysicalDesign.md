@@ -365,7 +365,21 @@ Steps to optimize placement using estimated wire length and capacitance
   <summary> Lab - Congestion aware placement using RePlAce </summary>
 
   ## Congestion aware placement using RePlAce
-    
+  - Placement happens in two stages
+      - Global placement - Main objective is reduce the wire length. In OpenLane we used half half-perimeter wire length (HPWL)
+      - Detailed placement
+  - Standard cells are placed in rows, abutted with each other and there should be no overlap. this is called legalization, which is important for timing point.
+  - Global placement - We need to converge overflow. As the overflow value decreases, the design is converged.
+
+1. Run the congestion aware placement using the command `run_placement` the result is shown below
+2. Open generated placement.def in magic tool using the following commands
+```
+cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/06-04_16-22/results/placement
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def & 
+```
+
+
+
 </details>
 
 </details>
