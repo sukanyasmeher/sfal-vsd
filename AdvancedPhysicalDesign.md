@@ -609,7 +609,33 @@ Steps to open the CMOS Inverter layout in Magic
 
 <img width="1110" alt="19" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/24101fd8-20f9-46b0-a3e9-8aee221f805e">
 
-### 4. 
+### 4. Formation of 'gate'
+
+<img width="1197" alt="20" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b21e54fa-9ed6-4f3f-809a-80d3d9475ea0">
+
+<img width="1213" alt="21" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/2b7a76f0-94d7-43e1-8251-e779e3408ab1">
+
+<img width="1167" alt="22" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/50f51fea-b45c-480d-a31e-3d032a69c1b5">
+
+<img width="1139" alt="23" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/54ac8017-7cd5-49f1-ade7-901035a6b2b5">
+
+<img width="1103" alt="24" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/398b0819-8dc9-4482-9995-6c9069464d65">
+
+<img width="1148" alt="25" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/76da2515-3088-450c-a1c8-85328d0d3b55">
+
+<img width="1158" alt="26" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f3771b28-829d-4bcd-93f0-97e170f4cda2">
+
+<img width="1157" alt="27" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/87575fab-0c41-4b1c-88ad-b92a828cbc60">
+
+<img width="1127" alt="28" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8455865e-81ba-44d5-b87f-3697c6d71361">
+
+<img width="1151" alt="29" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/cdec34a9-d921-4c34-a578-76b4ab64ab92">
+
+<img width="1136" alt="30" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/52542172-9f62-4065-91a2-cadf9baed133">
+
+<img width="1107" alt="31" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7876361c-d9e0-405d-8e6f-c6e346599dbb">
+
+
 
 
 </details>
