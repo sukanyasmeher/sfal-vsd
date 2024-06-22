@@ -552,10 +552,26 @@ Steps to open the CMOS Inverter layout in Magic
     magic -T sky130A.tech sky130_inv.mag &
     ```
     The layout of CMOS inverter is shown below.
-    
+    <img width="1255" alt="7" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/fc261c69-1857-4978-a410-7e5ef7f8af87">
 
 </details>
     
+</details>
+
+<details>
+  <summary> 2 - Inception of Layout Â CMOS fabrication process </summary>
+
+  # 2 - Inception of Layout Â CMOS fabrication process
+<details>
+  <summary> Theory </summary>
+  
+</details>
+
+<details>
+  <summary> Lab </summary>
+  
+</details>
+
 </details>
   
 </details>
