@@ -590,6 +590,8 @@ Steps to open the CMOS Inverter layout in Magic
 
 <details>
     <summary>  Lab steps to create std cell layout and extract spice netlist </summary>
+
+
   
 </details>
 
