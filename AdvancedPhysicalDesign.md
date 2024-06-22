@@ -588,7 +588,28 @@ Steps to open the CMOS Inverter layout in Magic
 
 <img width="1187" alt="9" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/88c60c55-99d0-4e0b-a0dc-91cf49cadaf0">
 
+### 3. N-well and P-well formation
+<img width="1155" alt="10" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/01fa1998-54f2-4ba0-aa71-122b006ea68e">
 
+<img width="1170" alt="11" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c8189073-c7f6-43b5-a2d0-715f75f96ff7">
+
+<img width="1143" alt="12" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/38431f85-47c4-4cbc-bbde-f336609bbd73">
+
+<img width="1108" alt="13" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/db6e4963-e682-4cce-9fca-4749ad037ae8">
+
+<img width="1135" alt="14" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0f956753-89ee-4af5-9393-b9847bb39417">
+
+<img width="1138" alt="15" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9d9890ca-920e-49e9-9457-62f7a61eb7c3">
+
+<img width="1142" alt="16" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b697dbf9-7eed-4218-9307-13f644ce7fe6">
+
+<img width="1126" alt="17" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9f62b57a-17c3-43a9-9660-e0d3543f351a">
+
+<img width="1116" alt="18" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d06f3400-69f5-4848-bb98-608380ce24e8">
+
+<img width="1110" alt="19" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/24101fd8-20f9-46b0-a3e9-8aee221f805e">
+
+### 4. 
 
 
 </details>
