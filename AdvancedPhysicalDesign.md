@@ -495,12 +495,47 @@ The output of characterization is timing, noise, power .libs, function.
     ## Transition time
     <img width="1127" alt="29" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4a83b775-1140-4945-9c62-031215aa2ddf">
 
-    
   
 </details>
   
 </details>
 
+</details>
+
+<details>
+  <summary> Day 3 - Design library cell using Magic Layout and ngspice characterization </summary>
+
+  # Day 3 - Design library cell using Magic Layout and ngspice characterization
+
+<details> 
+    <summary> 1- Labs for CMOS inverter ngspice simulations </summary>
+
+  # 1- Labs for CMOS inverter ngspice simulations
+
+<details>
+  <summary> Theory </summary>
+
+## CMOS Inverter SPICE deck
+![1](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f10dd884-43a6-4f5c-971e-94b6a6414b7f)
+
+![2](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/e916c6d7-efc0-4e06-b88d-dc0301a25fe3)
+
+![3](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ed41ad48-fa61-456c-9a1f-ff2eb0982370)
+
+![4](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/83c51aa1-4cf8-4492-8868-02c0ddc43a6c)
+
+Parameters that define the robustness of CMOS inverter
+- Switching threshold, Vm - It is a point at which Vin = Vout (or Vgs = Vds). It is the point where both NMOS and PMOS are ON or in saturation region leading to leakage current. The screenshots below shows the Vm for two different sizes of inverters.
+
+![5](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1ee941c6-3d6e-4ac5-b3ff-eab0234330ca)
+
+![6](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/99c413d9-3d48-4e5a-a90b-9df4bc2aa9c3)
+
+
+</details>
+    
+</details>
+  
 </details>
 
 
