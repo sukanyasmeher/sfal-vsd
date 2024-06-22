@@ -589,10 +589,34 @@ Steps to open the CMOS Inverter layout in Magic
 </details>
 
 <details>
-    <summary>  Lab steps to create std cell layout and extract spice netlist </summary>
+    <summary>  Lab - Steps to create standard cell layout and extract spice netlist </summary>
+    
+
+Steps to verify the DRC errors and extract the spice netlist
+
+1. Magic Tool is an interactive DRC platform. Select the design by typing `s` and move your mouse to create a box. Press `Control+D` to delete the layer and you will see DRC error shown below. You can see DRC reports in `tkcon` window.
+   
+   <img width="1257" alt="12" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0ffaef68-1a9f-4a4d-bfc9-8f1c1a59485b">
+
+2. Next we extract the spice netlist. For this, type the following command in `tkcon` window to extract sky130_inv into sky130_inv.ext in present working directory. 
+   ```
+   extract all
+   ```
+   The sky130_inv.ext file is shown below
+   <img width="1046" alt="13" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6126b232-f2f5-4768-a265-250efc649563">
+   
+3.  Command to enable the parasitic extraction with resistors and capacitors before converting ext to spice. No new file is created.
+    ```
+    ext2spice cthresh 0 rthresh 0
+    ```
+4. Command to convert .ext file to .spice file
+   ```
+   ext2spice
+   ```
+   The sky130_inv.spice file is shown below
+   <img width="1606" alt="14" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/37cdf165-d0d0-4abf-847f-b7a7e6aef067">
 
 
-  
 </details>
 
 </details>
