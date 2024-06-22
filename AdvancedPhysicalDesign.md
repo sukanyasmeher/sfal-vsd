@@ -538,10 +538,15 @@ Parameters that define the robustness of CMOS inverter
   
 1. Change the directory to OpenLane directory  where the lab will be done `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane`.
 2. Clone the repository https://github.com/nickson-jose/vsdstdcelldesign which has custom inverter design into the directory
-```
-git clone https://github.com/nickson-jose/vsdstdcelldesign
-```
-     
+  ```
+  git clone https://github.com/nickson-jose/vsdstdcelldesign
+  ```
+3. Change into working repository directory with the command `cd vsdstdcelldesign`.
+4. Copy magic tech file to the repo directory for easy access and which will be used to open the layout. The command is
+   ```
+   cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
+   ```
+ 5.   
 </details>
     
 </details>
