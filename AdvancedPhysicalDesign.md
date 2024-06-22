@@ -564,7 +564,33 @@ Steps to open the CMOS Inverter layout in Magic
   # 2 - Inception of Layout Â CMOS fabrication process
 <details>
   <summary> Theory </summary>
+
+  ## Steps to create a 16-mask CMOS process
   
+  ### 1. Select a substrate - We created a P-type substrate
+  <img width="1186" alt="1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/afb7c637-4db5-409f-8aaf-db42698d56f8">
+  
+  ### 2. Create active region for transistors
+  
+  <img width="1179" alt="2" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8aa1bf52-165d-47e0-8971-a4c1559a9e86">
+  
+ <img width="1194" alt="3" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/42050dd2-7780-4025-9a0a-813deb42718a">
+ 
+ <img width="1184" alt="4" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d44fb068-e4a4-4e7e-9844-34eb683074ed">
+ 
+<img width="1192" alt="5" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/fcd5caa9-3edb-4ce1-a57f-a2c118e9ef41">
+
+<img width="1193" alt="6" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/61706cbc-afd3-4e14-aa58-1a8cce879f1b">
+
+<img width="1176" alt="7" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/43ffe86b-4bb3-4482-ab10-cd2889b2e5fd">
+
+<img width="1189" alt="8" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/71648f7a-142f-4aba-a80a-ef330800ccf1">
+
+<img width="1187" alt="9" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/88c60c55-99d0-4e0b-a0dc-91cf49cadaf0">
+
+
+
+
 </details>
 
 <details>
