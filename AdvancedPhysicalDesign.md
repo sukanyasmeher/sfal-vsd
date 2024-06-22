@@ -535,7 +535,8 @@ Parameters that define the robustness of CMOS inverter
 
 <details>
   <summary> Lab </summary>
-  
+
+Steps to open the CMOS Inverter layout in Magic  
 1. Change the directory to OpenLane directory  where the lab will be done `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane`.
 2. Clone the repository https://github.com/nickson-jose/vsdstdcelldesign which has custom inverter design into the directory
    ```
@@ -546,7 +547,13 @@ Parameters that define the robustness of CMOS inverter
    ```
    cp /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech .
    ```
- 5.   
+ 5. Command to open custom inverter layout in magic
+    ```
+    magic -T sky130A.tech sky130_inv.mag &
+    ```
+    The layout of CMOS inverter is shown below.
+    
+
 </details>
     
 </details>
