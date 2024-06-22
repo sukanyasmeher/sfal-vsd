@@ -635,7 +635,7 @@ Steps to open the CMOS Inverter layout in Magic
 
 <img width="1107" alt="31" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7876361c-d9e0-405d-8e6f-c6e346599dbb">
 
-### 5 - Lightly doped drain (LDD) formation
+### 5. Lightly doped drain (LDD) formation
 
 <img width="1136" alt="32" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8ab0f376-7765-4bf5-8ae5-0e13816e4e81">
 
@@ -657,7 +657,23 @@ Steps to open the CMOS Inverter layout in Magic
 
 <img width="1101" alt="41" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/0115ef35-d0ff-46e1-8fa0-445c2248be95">
 
+### 6. Source and drain formation
 
+<img width="1128" alt="42" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/8d53c1ee-bba2-4c5d-960b-382587e511f7">
+
+<img width="1082" alt="43" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/85e582de-794e-4bf1-bd6f-1b768e576e42">
+
+<img width="1123" alt="44" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d2fabc77-0971-406c-b38c-ff3cd58ad1ec">
+
+<img width="1108" alt="45" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c18daf15-a32a-45c9-a0f5-9828c1c2817d">
+
+<img width="1122" alt="46" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1aa0326b-aea4-4b82-8dc5-a254d9e1cbad">
+
+<img width="1071" alt="47" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/08b3444c-6ee8-4cf4-8744-b67a6e4e1f54">
+
+<img width="1130" alt="48" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c14f87d9-4076-4feb-b477-6d291f81f27d">
+
+<img width="1082" alt="49" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ddbe6964-d172-46a9-ad53-b77b881e031a">
 
 
 </details>
