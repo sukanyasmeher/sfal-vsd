@@ -571,11 +571,25 @@ Steps to open the CMOS Inverter layout in Magic
   <summary> Lab -  Introduction to Sky130 basic layers layout and LEF using inverter </summary>
 
   Steps to identify various layers in the CMOS inverter layout
+  
   1. To identify NMOS, keep the mouse pointer around the n-diffusion layer (green) and press `s`. In `tkcon` type `what`. It outputs NMOS pointing to the device in the layout as shown below.
      <img width="1262" alt="8" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/64ac35ba-8460-4aab-8097-24aed040fc05">
+     
   2. To identify PMOS, keep the mouse pointer around the p-device layer (red) and press `s`. In `tkcon` type `what`. It outputs PMOS pointing to the device in the layout as shown below.
      <img width="1260" alt="9" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/beea843c-efcc-445c-b1f0-303d440863e7">
+     
+  3. According to the definition, source of PMOS should be connected to VDD and source of NMOS should be connected to GND. For PMOS source connectivity check, keep the cursor on the source contact of PMOS and press `s` three times. The connection between PMOS source and VDD is highlighted as shown below.
+     <img width="1257" alt="10" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/51eedaa9-9964-4136-a17b-018a4e1a63f3">
 
+  4. For NMOS source connectivity check, keep the cursor on the source contact of NMOS and press `s` two times. The connection between NMOS source and GND is highlighted as shown below.
+     <img width="1258" alt="11" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/c2a1f51f-1fb1-4c64-91c8-0320c70c49c0">
+     
+ The inverter from scratch is described in https://github.com/nickson-jose/vsdstdcelldesign
+  
+</details>
+
+<details>
+    <summary>  Lab steps to create std cell layout and extract spice netlist </summary>
   
 </details>
 
