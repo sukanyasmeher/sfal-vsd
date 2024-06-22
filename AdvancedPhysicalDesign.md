@@ -531,7 +531,17 @@ Parameters that define the robustness of CMOS inverter
 
 ![6](https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/99c413d9-3d48-4e5a-a90b-9df4bc2aa9c3)
 
+</details>
 
+<details>
+  <summary> Lab </summary>
+  
+1. Change the directory to OpenLane directory  where the lab will be done `/home/vsduser/Desktop/work/tools/openlane_working_dir/openlane`.
+2. Clone the repository https://github.com/nickson-jose/vsdstdcelldesign which has custom inverter design into the directory
+```
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+```
+     
 </details>
     
 </details>
