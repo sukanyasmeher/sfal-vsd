@@ -568,7 +568,14 @@ Steps to open the CMOS Inverter layout in Magic
 </details>
 
 <details>
-  <summary> Lab </summary>
+  <summary> Lab -  Introduction to Sky130 basic layers layout and LEF using inverter </summary>
+
+  Steps to identify various layers in the CMOS inverter layout
+  1. To identify NMOS, keep the mouse pointer around the n-diffusion layer (green) and press `s`. In `tkcon` type `what`. It outputs NMOS pointing to the device in the layout as shown below.
+     <img width="1262" alt="8" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/64ac35ba-8460-4aab-8097-24aed040fc05">
+  2. To identify PMOS, keep the mouse pointer around the p-device layer (red) and press `s`. In `tkcon` type `what`. It outputs PMOS pointing to the device in the layout as shown below.
+     <img width="1260" alt="9" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/beea843c-efcc-445c-b1f0-303d440863e7">
+
   
 </details>
 
