@@ -783,6 +783,47 @@ Steps to verify the DRC errors and extract the spice netlist
 </details>
 
 </details>
+
+<details>
+  <summary> 3 - Sky130 Tech File Labs</summary>
+  
+  # 3 - Sky130 Tech File Labs
+
+  <details> 
+    <summary> Lab 1 - Lab steps to create final SPICE deck using Sky130 tech </summary>
+    
+1. Details on the netlist
+<img width="1606" alt="14" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/7e95641f-a697-48e3-91aa-eec545b94a22">
+
+- nfet stands for NMOS, Y- drain, A-gate, VGND-source, VGND-substrate
+- pfet stands for PMOS, Y- drain, A-gate, VPWR-source, VPWR-substrate
+
+2. Edit the dimension of scale in the netlist (sky130_inv.spice) to the dimension of the box which is 0.01um
+   ```
+  .option scale=0.01u
+  ```
+3. Include the PMOS and NMOS lib files in the netlist file as shown below
+  ```
+  .include ./libs/pshort.lib
+  .include ./libs/nshort.lib
+  ```
+4. Since we are trying to include the controls for transient analysis, comment out the lines `.subckt` and `.ends` with //. Add a definition for the supply voltage and ground as shown below
+  ```
+  VDD VPWR 0 3.3V
+  VSS VGND 0 0V
+  ```
+5. Add definition for input source as shown below
+  ```
+  
+
+
+
+
+
+
+</details>
+  
+</details>
   
 </details>
 
