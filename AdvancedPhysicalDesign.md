@@ -834,8 +834,32 @@ Steps to verify the DRC errors and extract the spice netlist
     cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
     ngspice sky130_inv.spice
     ```
-  
+## Debugging errors
+1. While running ngspice there were some errors such as shown below. Ngspice was installed using the command.
+    ```
+    Command 'ngspice' not found, but can be installed with:
+    sudo apt install ngspice
+    ```
+2. When the command `ngspice sky130_inv.spice` was run, there were some error for not able to correctly recognize the models for NMOS and PMOS as shown below.
+    ```
+    ******
+    ** ngspice-27 : Circuit level simulation program
+    ** The U. C. Berkeley CAD Group
+    ** Copyright 1985-1994, Regents of the University of California.
+    ** Please get your ngspice manual from http://ngspice.sourceforge.net/docs.html
+    ** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html
+    ** Creation Date: Tue Dec 26 17:10:20 UTC 2017
+    ******
 
+    Circuit: * spice3 file created from sky130_inv.ext - technology: sky130a
+
+    Error: unknown subckt: x0 y a vgnd vgnd nshort_model.0 w=35 l=23
+    ```
+    This was corrected by providing appropriate names to NMOS and PMOS as highlighted below. The reference for this is taken from the tutorial video as well as from `https://github.com/Subhasis-Sahu/VSD_Digital_SoC_Design?tab=readme-ov-file`.
+    ```
+    M1001 Y A VGND VGND nshort_model.0 ad=1.44n pd=0.152m as=1.37n ps=0.148m w=35 l=23
+    M1000 Y A VPWR VPWR pshort_model.0 ad=1.44n pd=0.152m as=1.52n ps=0.156m w=37 l=23
+    ```
 
 
 
