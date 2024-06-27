@@ -824,7 +824,16 @@ Steps to verify the DRC errors and extract the spice netlist
     .endc
     .end
     ```
-
+7. Specify the correct model names for NMOS and PMOS by checking the names in model files.The changed syntax is mentioned below
+    ```
+    X0 Y A VGND VGND nshort_model.0 ad=1.44n pd=0.152m as=1.37n ps=0.148m w=35 l=23
+    X1 Y A VPWR VPWR pshort_model.0 ad=1.44n pd=0.152m as=1.52n ps=0.156m w=37 l=23
+    ```
+8. The command to run the netlist in NGspice is shown below along with the screenshot of succeesful run.
+    ```
+    cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+    ngspice sky130_inv.spice
+    ```
   
 
 
