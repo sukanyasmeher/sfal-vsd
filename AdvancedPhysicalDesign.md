@@ -675,6 +675,31 @@ Steps to open the CMOS Inverter layout in Magic
 
 <img width="1082" alt="49" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ddbe6964-d172-46a9-ad53-b77b881e031a">
 
+### 7. Local interconnect formation
+
+<img width="1102" alt="50" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9dc8fc30-ecaf-4b1c-864d-b8a0f057c60d">
+
+<img width="1111" alt="51" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/876f3086-dac0-4f1c-aa4d-038ef9ec7276">
+
+<img width="1111" alt="52" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b378d992-c395-4775-8fb3-15a758dfdfde">
+
+<img width="1073" alt="53" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/ff5afc57-e110-4780-9e91-0aac6a8556fa">
+
+<img width="1051" alt="54" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/de02f89b-1cf6-4c30-b9d1-efaf706bfe3d">
+
+<img width="1171" alt="55" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/85040eb5-65fd-44ae-8d32-740c6abb316c">
+
+<img width="1123" alt="56" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a7e7ff6e-3e24-425c-a0c5-9314b0d126ba">
+
+<img width="1102" alt="57" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/5b091f7b-ef42-4f93-be66-ddd1b1fed621">
+
+<img width="1163" alt="58" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/6fbc55c1-451b-4624-8c67-5ed984b6c12e">
+
+<img width="1122" alt="59" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/f0763fd2-c228-4b89-b001-7df3be83b2af">
+
+<img width="1139" alt="60" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/29b5e182-0577-47aa-9515-82c8779f3581">
+
+
 
 </details>
 
