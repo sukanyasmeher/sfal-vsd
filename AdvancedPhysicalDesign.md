@@ -812,7 +812,7 @@ Steps to verify the DRC errors and extract the spice netlist
   VDD VPWR 0 3.3V
   VSS VGND 0 0V
   ```
-5. Add definition for input source as shown below
+5. Add the definition for input source as shown below
   ```
   
 
