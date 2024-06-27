@@ -813,11 +813,11 @@ Steps to verify the DRC errors and extract the spice netlist
     VSS VGND 0 0V
     ```
 5. Add the definition for input source as shown below
+   ```
+    Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
     ```
-      Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
-  ```
 6. Specify the type of analysis to be performed. We are doing transient analysis in this case.
-    ```
+   ```
     .tran 1n 20n
     .control
     run
@@ -828,10 +828,10 @@ Steps to verify the DRC errors and extract the spice netlist
     <img width="1039" alt="15" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b7b70435-cede-435a-9991-8736409461f3">
 
     The changed syntax is mentioned below
-    ```
-    X0 Y A VGND VGND nshort_model.0 ad=1.44n pd=0.152m as=1.37n ps=0.148m w=35 l=23
-    X1 Y A VPWR VPWR pshort_model.0 ad=1.44n pd=0.152m as=1.52n ps=0.156m w=37 l=23
-    ```
+      ```
+      X0 Y A VGND VGND nshort_model.0 ad=1.44n pd=0.152m as=1.37n ps=0.148m w=35 l=23
+      X1 Y A VPWR VPWR pshort_model.0 ad=1.44n pd=0.152m as=1.52n ps=0.156m w=37 l=23
+      ```
 8. The command to run the netlist in NGspice is shown below along with the screenshot of succeesful run.
     ```
     cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
