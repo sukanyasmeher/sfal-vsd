@@ -817,6 +817,7 @@ Steps to verify the DRC errors and extract the spice netlist
   Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
   ```
 6. Specify the type of analysis to be performed. We are doing transient analysis in this case.
+
   ```
   .tran 1n 20n
   .control
@@ -826,7 +827,6 @@ Steps to verify the DRC errors and extract the spice netlist
   ```
 
   
-
 
 
 
