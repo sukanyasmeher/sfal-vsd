@@ -824,7 +824,10 @@ Steps to verify the DRC errors and extract the spice netlist
     .endc
     .end
     ```
-7. Specify the correct model names for NMOS and PMOS by checking the names in model files.The changed syntax is mentioned below
+7. Specify the correct model names for NMOS and PMOS by checking the names in model files.
+    <img width="1039" alt="15" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b7b70435-cede-435a-9991-8736409461f3">
+
+    The changed syntax is mentioned below
     ```
     X0 Y A VGND VGND nshort_model.0 ad=1.44n pd=0.152m as=1.37n ps=0.148m w=35 l=23
     X1 Y A VPWR VPWR pshort_model.0 ad=1.44n pd=0.152m as=1.52n ps=0.156m w=37 l=23
@@ -834,7 +837,9 @@ Steps to verify the DRC errors and extract the spice netlist
     cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
     ngspice sky130_inv.spice
     ```
-## Debugging errors
+
+ ## Debugging errors
+
 1. While running ngspice there were some errors such as shown below. Ngspice was installed using the command.
     ```
     Command 'ngspice' not found, but can be installed with:
@@ -860,8 +865,9 @@ Steps to verify the DRC errors and extract the spice netlist
     M1001 Y A VGND VGND nshort_model.0 ad=1.44n pd=0.152m as=1.37n ps=0.148m w=35 l=23
     M1000 Y A VPWR VPWR pshort_model.0 ad=1.44n pd=0.152m as=1.52n ps=0.156m w=37 l=23
     ```
+After this, the command runs successfully as shown below.
 
-
+<img width="1078" alt="16" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9e098d69-0cc4-4b95-a70e-93501fa5e104">
 
 
 </details>
