@@ -559,7 +559,7 @@ Steps to open the CMOS Inverter layout in Magic
 </details>
 
 <details>
-  <summary> 2 - Inception of Layout Â CMOS fabrication process </summary>
+  <summary> 2 - Inception of Layout and CMOS fabrication process </summary>
 
   # 2 - Inception of Layout and CMOS fabrication process
 <details>
