@@ -799,31 +799,31 @@ Steps to verify the DRC errors and extract the spice netlist
 - pfet stands for PMOS, Y- drain, A-gate, VPWR-source, VPWR-substrate
 
 2. Edit the dimension of scale in the netlist (sky130_inv.spice) to the dimension of the box which is 0.01um
-   ```
-  .option scale=0.01u
-  ```
+     ```
+    .option scale=0.01u
+    ```
 3. Include the PMOS and NMOS lib files in the netlist file as shown below
-  ```
-  .include ./libs/pshort.lib
-  .include ./libs/nshort.lib
-  ```
+    ```
+    .include ./libs/pshort.lib
+    .include ./libs/nshort.lib
+    ```
 4. Since we are trying to include the controls for transient analysis, comment out the lines `.subckt` and `.ends` with //. Add a definition for the supply voltage and ground as shown below
-  ```
-  VDD VPWR 0 3.3V
-  VSS VGND 0 0V
-  ```
+    ```
+    VDD VPWR 0 3.3V
+    VSS VGND 0 0V
+    ```
 5. Add the definition for input source as shown below
-  ```
-  Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
+    ```
+      Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
   ```
 6. Specify the type of analysis to be performed. We are doing transient analysis in this case.
-  ```
-  .tran 1n 20n
-  .control
-  run
-  .endc
-  .end
-  ```
+    ```
+    .tran 1n 20n
+    .control
+    run
+    .endc
+    .end
+    ```
 
   
 
