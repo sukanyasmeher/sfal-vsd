@@ -814,6 +814,17 @@ Steps to verify the DRC errors and extract the spice netlist
   ```
 5. Add the definition for input source as shown below
   ```
+  Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
+  ```
+6. Specify the type of analysis to be performed. We are doing transient analysis in this case.
+  ```
+  .tran 1n 20n
+  .control
+  run
+  .endc
+  .end
+  ```
+
   
 
 
