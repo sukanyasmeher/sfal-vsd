@@ -561,13 +561,14 @@ Steps to open the CMOS Inverter layout in Magic
 <details>
   <summary> 2 - Inception of Layout Â CMOS fabrication process </summary>
 
-  # 2 - Inception of Layout Â CMOS fabrication process
+  # 2 - Inception of Layout and CMOS fabrication process
 <details>
   <summary> Theory </summary>
 
   ## Steps to create a 16-mask CMOS process
   
-  ### 1. Select a substrate - We created a P-type substrate
+  ### 1. Select a substrate 
+  We created a P-type substrate
   <img width="1186" alt="1" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/afb7c637-4db5-409f-8aaf-db42698d56f8">
   
   ### 2. Create active region for transistors
@@ -699,7 +700,33 @@ Steps to open the CMOS Inverter layout in Magic
 
 <img width="1139" alt="60" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/29b5e182-0577-47aa-9515-82c8779f3581">
 
+### 8. Higher level metal formation
 
+<img width="1092" alt="61" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3189807c-8aa5-4d3a-8776-6e36fad599fe">
+
+<img width="1112" alt="62" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1b6266c4-3fc7-408e-a6d5-4f3369b1bd70">
+
+<img width="1024" alt="63" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/08cd3952-6d65-4aa5-8bca-1425a6d372ea">
+
+<img width="1050" alt="64" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/456e1117-5be0-44c2-a13f-45306dab6f94">
+
+<img width="1142" alt="65" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/025666d7-8e47-4b36-aa10-b041c136f6f3">
+
+<img width="1184" alt="66" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/fdacdbc2-fcfb-4e5d-995d-0058e4aa4d5f">
+
+<img width="1080" alt="67" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/95e95933-b588-46ef-a8e4-0bfd0ed8beb2">
+
+<img width="1114" alt="68" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/781ea214-9ff8-4a68-91b1-7a4824481ed2">
+
+<img width="1120" alt="69" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/4e76d90c-f92e-439a-9278-90c0153d04a2">
+
+<img width="1177" alt="70" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1a6a2b20-5d16-49f6-a449-3c9d72d64f40">
+
+<img width="1188" alt="71" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/d550aef9-43ed-4e7d-ab0d-a8c83a7de5d2">
+
+<img width="1170" alt="72" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/3a44e624-8d7e-413a-8cb0-d3a47ac012cf">
+
+<img width="993" alt="73" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/b3d68647-0774-4f4f-ba4a-1441346ed2b1">
 
 </details>
 
