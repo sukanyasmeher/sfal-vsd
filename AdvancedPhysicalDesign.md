@@ -884,6 +884,26 @@ After this, the command runs successfully as shown below.
 
 The output after increasing the load is shown below
 <img width="1497" alt="18" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/761c9b8a-a574-4fe2-8bba-6d76f48098f7">
+3. Next we move on to characterizing a cell on these 4 parameters
+  - Rise transition time = Time taken for signal to rise from 20% of final value to 80% of final value
+  - Fall transition time = Time taken for signal to fall from 80% of the final value to 20% of final value 
+  - Rise cell delay = Time taken for output to rise to 50% - Time taken for input to fall to 50%
+  - Fall cell delay = Time taken for output to fall to 50% - Time taken for input to rise to 50%
+
+To check the rise transition time
+- 20% of 3.3V=0.66V at time 2.18ns
+- 80% of 3.3V=2.64V at time 2.24ns
+- So rise time is 2.24-2.18=0.06ns
+
+Time at 20% of 3.3V 
+<img width="1493" alt="19" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9359060a-9577-4a4c-9edb-40a1ac834a29">
+Time at 80% of 3.3V
+<img width="1482" alt="20" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a4f67105-4583-4dc0-863a-8ed6366d7b6b">
+
+To check the rise cell delay we check the time at 50% of 3.3V (1.65V) for both input and output which is 2.207ns-2.149ns=0.058ns or 58ps.the snapshot of capture is provided below.
+<img width="1494" alt="21" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a96421f1-51a4-4988-9fc2-f6e821648e2a">
+
+All these characterizations are at room temperature i.e, 27C.
 
 
    
