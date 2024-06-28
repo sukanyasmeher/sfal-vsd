@@ -860,7 +860,7 @@ Steps to verify the DRC errors and extract the spice netlist
 
     Error: unknown subckt: x0 y a vgnd vgnd nshort_model.0 w=35 l=23
     ```
-    This was corrected by providing appropriate names to NMOS and PMOS as highlighted below. The reference for this is taken from the tutorial video as well as from `https://github.com/Subhasis-Sahu/VSD_Digital_SoC_Design?tab=readme-ov-file`.
+    This was corrected by providing appropriate names to NMOS and PMOS as highlighted below. The reference for this is taken from the tutorial video as well as from https://github.com/Subhasis-Sahu/VSD_Digital_SoC_Design?tab=readme-ov-file.
     ```
     M1001 Y A VGND VGND nshort_model.0 ad=1.44n pd=0.152m as=1.37n ps=0.148m w=35 l=23
     M1000 Y A VPWR VPWR pshort_model.0 ad=1.44n pd=0.152m as=1.52n ps=0.156m w=37 l=23
@@ -870,6 +870,23 @@ After this, the command runs successfully as shown below.
 <img width="1078" alt="16" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/9e098d69-0cc4-4b95-a70e-93501fa5e104">
 
 
+</details>
+
+<details>
+  <summary> Lab 2 - Lab steps to characterize inverter using sky130 model files </summary>
+
+1. Next we want to plot the output vs time with respect to the input. The syntax is
+   ```
+   plot y vs time a
+   ```
+2. However there's a big spike during the falling edge of the output signal as shown below. So the output load C3 is increased from 0.257pF to 2pF
+<img width="1510" alt="17" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/1950ab3f-1d6a-4a95-ae16-ae82413148af">
+
+The output after increasing the load is shown below
+<img width="1497" alt="18" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/761c9b8a-a574-4fe2-8bba-6d76f48098f7">
+
+
+   
 </details>
   
 </details>
