@@ -904,9 +904,14 @@ To check the rise cell delay we check the time at 50% of 3.3V (1.65V) for both i
 <img width="1494" alt="21" src="https://github.com/sukanyasmeher/sfal-vsd/assets/166566124/a96421f1-51a4-4988-9fc2-f6e821648e2a">
 
 All these characterizations are at room temperature i.e, 27C.
-
-
    
+</details>
+<details>
+  <summary> Lab 3 - Lab introduction to Magic tool options and DRC rules </summary>
+
+
+
+  
 </details>
   
 </details>
