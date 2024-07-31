@@ -948,14 +948,15 @@ This section contains:
 LEF files are often used in conjunction with Design Exchange Format (DEF) files to provide a complete representation of an IC's physical layout during the design process.
 
 Citations:
-[1] https://en.wikipedia.org/wiki/Library_Exchange_Format
-[2] https://www.layouteditor.org/layout/file-formats/lef
-[3] https://teamvlsi.com/2020/05/lef-lef-file-in-asic-design.html
+[1] https://en.wikipedia.org/wiki/Library_Exchange_Format 
+[2] https://www.layouteditor.org/layout/file-formats/lef 
+[3] https://teamvlsi.com/2020/05/lef-lef-file-in-asic-design.html 
 
 The layout of the inverter is shown below
 <img width="1255" alt="7" src="https://github.com/user-attachments/assets/49af1793-9c0e-433a-b755-5425b2ce55e6">
 
 From the screenshot about track.info, lets take the example of the first line `li1 X 0.23 0.46` which means li1 layer along the horizontal (X) axis, having an offset of 0.23um and pitch of 0.46um.
+
 ![2](https://github.com/user-attachments/assets/ccb4e6c4-cf92-47cc-a2d5-fa013626a019)
 
 Changing the track information for the layout looks as shown below
