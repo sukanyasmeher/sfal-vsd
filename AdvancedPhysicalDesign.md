@@ -908,14 +908,62 @@ All these characterizations are at room temperature i.e, 27C.
 </details>
 <details>
   <summary> Lab 3 - Lab introduction to Magic tool options and DRC rules </summary>
-
-
-
   
 </details>
   
 </details>
   
+</details>
+
+<details>
+  <summary> Day 4 - Pre-layout timing analysis and importance of good clock tree </summary>
+
+# Day 4 - Pre-layout timing analysis and importance of good clock tree
+
+  <details>
+    <summary> 1 - Timing modelling using delay tables </summary>
+    
+  # 1 - Timing modelling using delay tables
+
+  <details>
+    <summary> Lab 1 - Lab steps to convert grid info to track info </summary>
+
+The ***Library Exchange Format (LEF)*** is a specification used in integrated circuit (IC) design to represent the physical layout of an IC in an ASCII format. This format includes essential design rules and abstract information about standard cells, enabling efficient use of resources by providing only the necessary data for CAD tools, thus minimizing memory overhead.
+
+LEF files are typically divided into two main parts:
+
+### Technology LEF
+This section includes:
+- Information on metal interconnects and vias
+- Design rules for the back end of the line (BEOL)
+- Details on routing layers, including pitch, width, spacing, and direction
+- Manufacturing grid definitions and other technological parameters.
+
+### Cell LEF
+This section contains:
+- Abstract views of standard cells and macros
+- Cell geometry, including size, symmetry, and pin locations
+- Pin attributes such as direction, use, and layer information.
+
+LEF files are often used in conjunction with Design Exchange Format (DEF) files to provide a complete representation of an IC's physical layout during the design process.
+
+Citations:
+[1] https://en.wikipedia.org/wiki/Library_Exchange_Format
+[2] https://www.layouteditor.org/layout/file-formats/lef
+[3] https://teamvlsi.com/2020/05/lef-lef-file-in-asic-design.html
+
+The layout of the inverter is shown below
+<img width="1255" alt="7" src="https://github.com/user-attachments/assets/49af1793-9c0e-433a-b755-5425b2ce55e6">
+
+From the screenshot about track.info, lets take the example of the first line `li1 X 0.23 0.46` which means li1 layer along the horizontal (X) axis, having an offset of 0.23um and pitch of 0.46um.
+![2](https://github.com/user-attachments/assets/ccb4e6c4-cf92-47cc-a2d5-fa013626a019)
+
+Changing the track information for the layout looks as shown below
+![1](https://github.com/user-attachments/assets/a1021b9b-7aa9-48df-8ce8-3abbcb86f9fe)
+
+  </details>
+    
+  </details>
 </details>
 
 
